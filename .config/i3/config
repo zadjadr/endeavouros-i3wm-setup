@@ -47,14 +47,14 @@ workspace_layout default
 ##############################
 
 #border indicator on windows:
-new_window pixel 1
+new_window pixel 1 
 
 # thin borders
 # hide_edge_borders both
 
 # Set inner/outer gaps
-gaps inner 6
-gaps outer 3
+gaps inner 0
+gaps outer 0
 
 # show window title bars (not officially supported with i3gaps)
 #default_border normal
@@ -142,7 +142,7 @@ bindcode $mod+Shift+81 	 move container to workspace  $ws9
 bindcode $mod+Shift+90 	 move container to workspace  $ws10
 
 # resize window (you can also use the mouse for that):
-#mode "resize" {
+mode "resize" {
 # These bindings trigger as soon as you enter the resize mode
 # Pressing left will shrink the window's width.
 # Pressing right will grow the window's width.
@@ -154,24 +154,24 @@ bindcode $mod+Shift+90 	 move container to workspace  $ws10
 #        bindsym ntilde resize grow width 10 px or 10 ppt
 
 # same bindings, but for the arrow keys
-#	bindsym Left resize shrink width 10 px or 10 ppt
-#        bindsym Down resize grow height 10 px or 10 ppt
-#        bindsym Up resize shrink height 10 px or 10 ppt
-#        bindsym Right resize grow width 10 px or 10 ppt
+	bindsym Left resize shrink width 10 px or 10 ppt
+        bindsym Down resize grow height 10 px or 10 ppt
+        bindsym Up resize shrink height 10 px or 10 ppt
+        bindsym Right resize grow width 10 px or 10 ppt
 
 # back to normal: Enter or Escape
 #	bindsym Return mode "default"
-#        bindsym Escape mode "default"
-#}
+        bindsym Escape mode "default"
+}
 
-#bindsym $mod+r mode "resize"
+bindsym $mod+r mode "resize"
 
 ######################################
 # keybindings for different actions: #
 ######################################
 
 # start a terminal
-bindsym $mod+Return exec xfce4-terminal
+bindsym $mod+Return exec alacritty 
 
 # kill focused window
 bindsym $mod+q kill
@@ -449,7 +449,7 @@ for_window [class="Pamac-manager"] floating enable
 for_window [window_role="About"] floating enable
 
 # set border of floating window
-for_window [class="urxvt"] border pixel 1
+for_window [class="alacritty"] border pixel 1
 
 # set size of floating window
 #for_window [window_role="(?i)GtkFileChooserDialog"] resize set 640 480 #to set size of file choose dialog
@@ -491,8 +491,8 @@ client.urgent		    	$urgentred	$urgentred	$white		$yellowbrown	$yellowbrown
 bar {
 		font pango: Noto Sans Regular 10
 		status_command i3blocks -c ~/.config/i3/i3blocks.conf
-	    	position bottom
-#	    	i3bar_command i3bar --transparency
+	    position top
+        i3bar_command i3bar --transparency
 # it could be that you have no primary display set: set one (xrandr --output <output> --primary)
 # reference: https://i3wm.org/docs/userguide.html#_tray_output
 		    #tray_output primary
@@ -501,8 +501,8 @@ bar {
 # When strip_workspace_numbers is set to yes,
 # any workspace that has a name of the form
 # “[n][:][NAME]” will display only the name.
-strip_workspace_numbers yes
-##strip_workspace_name no
+strip_workspace_numbers no
+# strip_workspace_name no
 
 		    colors {
 		    separator          $purple
