@@ -1,2 +1,2 @@
-export TERMINAL=xfce4-terminal
+export TERMINAL=alacritty
 #export QT_QPA_PLATFORMTHEME=qt5ct

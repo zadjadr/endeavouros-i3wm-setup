@@ -9,8 +9,8 @@
 * background handled by [feh](https://feh.finalrewind.org/)
 * gtk3 theme handled by [lxappearance-gtk3](https://wiki.lxde.org/de/LXAppearance)
 * Filebrowser = [Thunar](https://docs.xfce.org/xfce/thunar/start)
-* default Terminal-Emulator = [xfce4-terminal](https://docs.xfce.org/apps/terminal/start)
-  * This is set also inside ~/.profile (export TERMINAL=xfce4-terminal) so remind to change it there too if you want to change4 default terminal.
+* default Terminal-Emulator = [alacritty](https://docs.xfce.org/apps/terminal/start)
+  * This is set also inside ~/.profile (export TERMINAL=alacritty) so remind to change it there too if you want to change4 default terminal.
 * Text-Editor = [xed](https://github.com/linuxmint/xed)
 * [dex](https://github.com/jceb/dex) : autostarting apps from /etc/xdg/autostart/ (*)
 * Notifications are done with [dunst](https://dunst-project.org): CONFIG FILE = ~/.config/dunst/dunstrc
