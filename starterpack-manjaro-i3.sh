@@ -22,12 +22,12 @@
 sudo pacman -Syy
 sudo pacman -R palemoon-bin \
     manjaro-i3-settings \
-    urxvt-perls \
+    urxvt-perls rxvt-unicode rxvt-unicode-terminfo \
     xterm \
-    conky-i3 \
+    conky conky-i3 \
+    clipit xclip \
+    mousepad \
     pamac-gtk pamac-cli
-
-sudo pacman -Qtdq | pacman -Rns -
 
 sudo pacman -S firefox alacritty i3blocks rofi manjaro-settings-manager
 
