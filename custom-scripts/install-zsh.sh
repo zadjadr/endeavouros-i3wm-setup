@@ -10,7 +10,11 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 chsh -s $(which zsh)
 sudo chsh -s $(which zsh)
 
-cp .zshrc ~/.zshrc
+rm -f ~/.zshrc ~/.zshenv
+ln -s \
+    "$PWD"/.zshrc \
+    "$PWD"/.zshenv \
+    ~/
 
 # Install plugins
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting

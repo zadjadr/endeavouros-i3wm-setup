@@ -259,7 +259,7 @@ bindsym $mod+e layout toggle split
 bindsym $mod+Shift+space floating toggle
 
 # change focus between tiling / floating windows
-bindsym $mod+space focus mode_toggle
+# bindsym $mod+space focus mode_toggle
 
 # focus the parent container
 bindsym $mod+a focus parent
@@ -306,11 +306,11 @@ bindsym $mod+Shift+p exec ~/.config/i3/scripts/power-profiles
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
 set $ws1 "1:"
-set $ws2 "2:"
-set $ws3 "3:"
+set $ws2 "2:"
+set $ws3 "3:"
 set $ws4 "4:"
 set $ws5 "5:"
-set $ws6 "6"
+set $ws6 "6:"
 set $ws7 "7"
 set $ws8 "8"
 set $ws9 "9"
@@ -326,16 +326,20 @@ set $ws10 "10"
 #workspace $ws5 output HDMI-0
 
 # bind program to workspace and focus to them on startup:
-assign [class="Alacritty"] $ws1
-assign [class="(?i)firefox"] $ws2
-assign [class="Thunar"] $ws3
+# assign [class="Alacritty"] $ws1
+assign [class="code"] $ws2
+assign [class="Lapce"] $ws2
+assign [class="(?i)chromium"] $ws3
 assign [class="Thunderbird"] $ws4
 assign [class="TelegramDesktop"] $ws5
+assign [class="Ranger"] $ws6
 
 # automatic set focus new window if it opens on another workspace than the current:
 for_window [class=Alacritty] focus
-for_window [class=(?i)firefox] focus
-for_window [class=Thunar] focus
+for_window [class=(?i)chromium] focus
+for_window [class=code] focus
+for_window [class=Lapce] focus
+for_window [class=Ranger] focus
 for_window [class=Thunderbird] focus
 for_window [class=TelegramDesktop] focus
 
@@ -397,7 +401,7 @@ exec --no-startup-id dex --autostart --environment i3
 
 # start a script to setup displays
 # uncomment the next line, use arandr to setup displays and save the file as monitor:
-exec --no-startup-id ~/.screenlayout/monitor.sh
+# exec --no-startup-id ~/.screenlayout/monitor.sh
 
 # set wallpaper
 # exec --no-startup-id sleep 2 && nitrogen --restore
@@ -430,8 +434,9 @@ exec --no-startup-id dbus-launch dunst --config ~/.config/dunst/dunstrc
 
 # Autostart apps as you like
 #exec --no-startup-id sleep 2 && alacritty
-#exec --no-startup-id sleep 7 && firefox https://github.com/endeavouros-team/endeavouros-i3wm-setup/blob/main/force-knowledge.md
-#exec --no-startup-id sleep 3 && thunar
+#exec --no-startup-id sleep 7 && chromium https://github.com/endeavouros-team/endeavouros-i3wm-setup/blob/main/force-knowledge.md
+#exec --no-startup-id sleep 3 && alacritty -e ranger
+#exec_always --no-startup-id /usr/bin/albert
 
 ###############
 # system tray #
@@ -468,7 +473,11 @@ for_window [class="MEGAsync"] floating enable
 for_window [class="MEGAsync" instance="Settings"] move position center 
 for_window [class="MEGAsync" instance="Transfer manager"] move position center
 for_window [class="Nitrogen"] floating enable resize set 640 480 
-for_window [class="Nitrogen"] floating enable move position center
+for_window [class="Nitrogen"] move position center
+for_window [class="zoom"] floating enable move position center
+for_window [class="zoom" title="Zoom Meeting"] move position center resize set 660 480
+for_window [class="VirtualBox" title=".*Settings"] floating enable move position center
+for_window [class="albert" title="Settings"] floating enable move position center
 
 # set border of floating window
 #for_window [class="urxvt"] border pixel 1
