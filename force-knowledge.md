@@ -4,10 +4,10 @@
 
 i3 is a dynamic tiling window manager inspired by wmii that is primarily targeted at developers and advanced users. The configuration file for endeavouros-i3 can be found at `~/.config/i3/config`. Edit this file to make changes and use <kbd>$mod+Shift+r</kbd> to restart i3 in place.
  
-To disable firefox from autostarting comment out this line:
+To disable chromium from autostarting comment out this line:
 
 ```
-exec --no-startup-id sleep 7 && firefox https://github.com/endeavouros-team/endeavouros-i3wm-setup/blob/main/force-knowledge.md
+exec --no-startup-id sleep 7 && chromium https://github.com/endeavouros-team/endeavouros-i3wm-setup/blob/main/force-knowledge.md
 ```
 
 ## No transparency
