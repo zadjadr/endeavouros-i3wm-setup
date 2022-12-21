@@ -1,4 +1,4 @@
-#/bin/bash
+#!/bin/bash
 set -euxo pipefail
 
 git config --global user.name "Zadjad Rezai"
