@@ -6,7 +6,7 @@
 [![Maintenance](https://img.shields.io/maintenance/yes/2022.svg)]()
 
 # Tutorial for i3-wm settings:
-* background handled by [feh](https://feh.finalrewind.org/)
+* background handled by [nitrogen](https://github.com/l3ib/nitrogen)
 * gtk3 theme handled by [lxappearance-gtk3](https://wiki.lxde.org/de/LXAppearance)
 * Filebrowser = [Ranger](https://github.com/ranger/ranger)
 * default Terminal-Emulator = [alacritty](https://github.com/alacritty/alacritty)

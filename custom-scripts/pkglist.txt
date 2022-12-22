@@ -17,3 +17,4 @@ obsidian
 ranger
 atool
 w3m
+nitrogen
