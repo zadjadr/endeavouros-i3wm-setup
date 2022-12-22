@@ -3,13 +3,19 @@
 set -euxo pipefail
 
 # Install nerd fonts
-git clone --filter=blob:none --sparse https://github.com/ryanoasis/nerd-fonts.git /tmp/nerd-fonts
+sudo pacman -S ttf-firacode-nerd
 
-cd /tmp/nerd-fonts
-git sparse-checkout add patched-fonts/Hack
-git sparse-checkout add patched-fonts/FiraCode
+# Install icons
+## papirus
+sudo pacman -S papirus-icon-theme
 
-chmod +x ./install
+## fix hardcoded paths to icons
+git clone https://github.com/Foggalong/hardcode-fixer.git /tmp/hardcode-fixer
+cd /tmp/hardcode-fixer
+chmod +x fix.sh
+sudo ./fix.sh
 
-./install Hack FiraCode
-
+## fix hardcoded paths to tray icons
+yay -S hardcode-tray
+sudo -E hardcode-tray --conversion-tool RSVGConvert --size 24 --theme Papirus
+sudo pacman -R hardcode-tray
