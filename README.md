@@ -6,7 +6,7 @@
 [![Maintenance](https://img.shields.io/maintenance/yes/2023.svg)]() [![](https://img.shields.io/github/contributors/endeavouros-team/endeavouros-i3wm-setup.svg?style=flat)](https://github.com/endeavouros-team/endeavouros-i3wm-setup/graphs/contributors)
 
 # Tutorial for i3-wm settings:
-* background handled by [feh](https://feh.finalrewind.org/)
+* background handled by [nitrogen](https://github.com/l3ib/nitrogen)
 * gtk3 theme handled by [lxappearance-gtk3](https://wiki.lxde.org/de/LXAppearance)
 * Filebrowser = [Ranger](https://github.com/ranger/ranger)
 * default Terminal-Emulator = [alacritty](https://github.com/alacritty/alacritty)
