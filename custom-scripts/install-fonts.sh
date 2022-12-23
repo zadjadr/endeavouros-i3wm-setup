@@ -11,9 +11,11 @@ sudo pacman -S papirus-icon-theme
 
 ## fix hardcoded paths to icons
 git clone https://github.com/Foggalong/hardcode-fixer.git /tmp/hardcode-fixer
-cd /tmp/hardcode-fixer
-chmod +x fix.sh
-sudo ./fix.sh
+
+SCRIPT_DIR=/tmp/hardcode-fixer
+cd "$SCRIPT_DIR"
+chmod +x "$SCRIPT_DIR"/fix.sh
+sudo "$SCRIPT_DIR"/fix.sh
 
 ## fix hardcoded paths to tray icons
 yay -S hardcode-tray
