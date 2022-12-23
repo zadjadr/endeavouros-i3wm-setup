@@ -4,11 +4,11 @@ set -uxo pipefail
 
 sudo pacman -Sy
 
-sudo pacman -R --noconfirm - < rmpkglist.txt
+sudo pacman -R --noconfirm - < custom-scripts/rmpkglist.txt
 
 set -euxo pipefail
 
-sudo pacman -S --needed --noconfirm - < pkglist.txt
+sudo pacman -S --needed --noconfirm - < custom-scripts/pkglist.txt
 
 # Install Rust
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
@@ -17,8 +17,8 @@ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 if ! grep -rnwe 'home_manuelschneid3r_Arch' /etc/pacman.conf; then
     sudo tee -a /etc/pacman.conf > /dev/null <<EOT
 
-    [home_manuelschneid3r_Arch]
-    Server = https://download.opensuse.org/repositories/home:/manuelschneid3r/Arch/\$arch
+[home_manuelschneid3r_Arch]
+Server = https://download.opensuse.org/repositories/home:/manuelschneid3r/Arch/\$arch
 EOT
 fi
 
