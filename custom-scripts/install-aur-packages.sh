@@ -4,10 +4,14 @@ set -euxo pipefail
 
 # Install AUR packages
 ## Install timeshift
-yay -S timeshift-bin
+yay -S --removemake --cleanafter --norebuild --noredownload \
+    timeshift-bin
+    
+sudo systemctl enable cronie
+sudo systemctl start cronie
 
-## timeshift seems to have a bug where it does not create a crontab as expected
-## run this after installation and creation of your backup schedule
-# timeshift --check
-## create empty crontab
-# crontab -e
+# create empty cronfiles, otherwise 'crontab -l' will fail in timeshift
+touch /var/spool/cron/$USER
+sudo touch /var/spool/cron/root
+
+sudo mkdir /etc/crontab
