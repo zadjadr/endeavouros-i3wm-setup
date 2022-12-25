@@ -11,7 +11,8 @@ rm -rf \
 	~/.config/alacritty \
 	~/.config/albert \
 	~/.config/autostart \
-    ~/.config/dunst \
+	~/.config/autorandr \
+	~/.config/dunst \
 	~/.config/gtk-3.0 \
 	~/.config/gtk-4.0 \
 	~/.config/nitrogen \
@@ -25,6 +26,7 @@ ln -s \
 	"$PWD"/.config/alacritty \
 	"$PWD"/.config/albert \
 	"$PWD"/.config/autostart \
+	"$PWD"/.config/autorandr \
     "$PWD"/.config/dunst \
 	"$PWD"/.config/gtk-3.0 \
 	"$PWD"/.config/gtk-4.0 \
