@@ -214,8 +214,8 @@ bindsym $mod+F1 exec ~/.config/i3/scripts/keyhint-2
 # bindsym $mod+F1 exec xed ~/.config/i3/keybindings
 
 # Backlight control
-bindsym XF86MonBrightnessUp exec xbacklight +5 && notify-send ">҉< $(xbacklight -get | cut -d '.' -f 1)%"
-bindsym XF86MonBrightnessDown exec xbacklight -5 && notify-send ">҉< $(xbacklight -get | cut -d '.' -f 1)%"
+bindsym XF86MonBrightnessUp exec xbacklight +5 && VALUE=$(xbacklight -get | cut -d '.' -f 1) && notify-send --urgency=low --app-name=Backlight ">҉    $VALUE%" -h int:value:${VALUE}
+bindsym XF86MonBrightnessDown exec xbacklight -5 && VALUE=$(xbacklight -get | cut -d '.' -f 1) && notify-send --urgency=low --app-name=Backlight ">҉    $VALUE%" -h int:value:${VALUE}
 
 # change focus
 bindsym $mod+j focus left
@@ -270,15 +270,15 @@ bindsym $mod+Shift+n exec ~/.config/i3/scripts/empty_workspace
 # Multimedia Keys
 
 # volume
-bindsym XF86AudioRaiseVolume exec amixer -D pulse sset Master 5%+ && pkill -RTMIN+1 i3blocks
-bindsym XF86AudioLowerVolume exec amixer -D pulse sset Master 5%- && pkill -RTMIN+1 i3blocks
+bindsym XF86AudioRaiseVolume exec VALUE=$(awk -F"[][]" '/Left:/ { print $2 }' <(amixer -D pulse sset Master 5%+)) && notify-send --urgency=low --app-name=Volume "    $VALUE%" -h int:value:${VALUE}
+bindsym XF86AudioLowerVolume exec VALUE=$(awk -F"[][]" '/Left:/ { print $2 }' <(amixer -D pulse sset Master 5%-)) && notify-send --urgency=low --app-name=Volume "    $VALUE%" -h int:value:${VALUE}
 
 # gradular volume control
-bindsym $mod+XF86AudioRaiseVolume exec amixer -D pulse sset Master 1%+ && pkill -RTMIN+1 i3blocks
-bindsym $mod+XF86AudioLowerVolume exec amixer -D pulse sset Master 1%- && pkill -RTMIN+1 i3blocks
+bindsym $mod+XF86AudioRaiseVolume exec amixer -D pulse sset Master 1%+
+bindsym $mod+XF86AudioLowerVolume exec amixer -D pulse sset Master 1%-
 
 # mute
-bindsym XF86AudioMute exec amixer sset Master toggle && killall -USR1 i3blocks
+bindsym XF86AudioMute exec amixer sset Master toggle && killall -USR1 i3blocks && notify-send --urgency=low "" -h int:value:0
 
 # audio control
 bindsym XF86AudioPlay exec playerctl play
@@ -294,7 +294,7 @@ bindsym $mod+w exec /usr/bin/chromium
 bindsym $mod+c exec /usr/bin/code
 bindsym $mod+n exec /usr/bin/alacritty --class Ranger --title Ranger --command ranger
 bindsym $mod+space exec /usr/bin/albert show
-# bindsym Print exec scrot ~/%Y-%m-%d-%T-screenshot.png && notify-send "Screenshot saved to ~/$(date +"%Y-%m-%d-%T")-screenshot.png"
+# bindsym Print exec scrot ~/%Y-%m-%d-%T-screenshot.png && notify-send --urgency=low "Screenshot saved to ~/$(date +"%Y-%m-%d-%T")-screenshot.png"
 
 bindsym $mod+p exec --no-startup-id ~/.config/i3/scripts/pomodoro
 
@@ -500,7 +500,7 @@ for_window [class="Arandr"] move position center
 
 # # Define colors variables:
 set $darkbluetrans	#08052be6
-set $darkblue		#08052b
+set $darkblue		#08314a
 set $lightblue		#5294e2
 set $urgentred		#e53935
 set $white		#ffffff

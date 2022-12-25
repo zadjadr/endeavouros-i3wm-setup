@@ -5,7 +5,6 @@
 # If you click on the notification, it will disappear and the next notification will start immediately
 #
 # The notification will be shown even if you switch workspaces
-# icon from https://icons8.com/icons/set/pomodoro
 SHORT_BREAK=300 # 5m
 LONG_BREAK=900  # 15m
 FOCUS_TIME=1500 # 25m
