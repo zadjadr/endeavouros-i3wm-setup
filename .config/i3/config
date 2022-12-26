@@ -438,8 +438,8 @@ exec --no-startup-id dbus-launch dunst --config ~/.config/dunst/dunstrc
 #exec --no-startup-id sleep 2 && alacritty
 #exec --no-startup-id sleep 7 && chromium https://github.com/endeavouros-team/endeavouros-i3wm-setup/blob/main/force-knowledge.md
 #exec --no-startup-id sleep 3 && alacritty -e ranger
-#exec_always --no-startup-id /usr/bin/albert
 exec --no-startup-id /usr/bin/redshift -O 3000
+exec --no-startup-id ~/.config/i3/scripts/lid
 
 ###############
 # system tray #
