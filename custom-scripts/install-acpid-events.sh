@@ -1,5 +1,7 @@
 #!/bin/bash
 # Allows to automatically disable/enable the laptop screen when the lid is opend/closed
+#
+# Set the autorandr profile according to your needs
 
 sudo pacman -S acpid --needed --noconfirm
 
@@ -10,16 +12,15 @@ sudo tee /etc/acpi/actions/lid.sh > /dev/null <<EOT
 # Automatically enable/disable output to Laptop (LVDS1) when lid close/open event happens
 
 export XAUTHORITY=/home/$USER/.Xauthority
-export DISPLAY=":0.0"
 
 case "$3" in
     close)
         logger 'LID closed'
-        xrandr --output LVDS1 --off
+        DISPLAY=':0.0' xrandr --output LVDS1 --off
         ;;
     open)
         logger 'LID opened'
-        xrandr --output LVDS1 --auto
+        autorandr --batch --change t430_laptop_monitor
         ;;
     *)
         logger "ACPI action undefined: $3"
