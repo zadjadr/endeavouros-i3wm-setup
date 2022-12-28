@@ -12,12 +12,10 @@ gnome-disk-utility
 gnome-keyring
 go
 keepassxc
-neovim
 nitrogen
 obsidian
 python
-ranger
 redshift
 salt
-w3m
+vim
 zsh-completions

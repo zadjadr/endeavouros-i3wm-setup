@@ -8,7 +8,7 @@
 # Tutorial for i3-wm settings:
 * background handled by [nitrogen](https://github.com/l3ib/nitrogen)
 * gtk3 theme handled by [lxappearance-gtk3](https://wiki.lxde.org/de/LXAppearance)
-* Filebrowser = [Ranger](https://github.com/ranger/ranger)
+* Filebrowser = [Thunar](https://docs.xfce.org/xfce/thunar/start)
 * default Terminal-Emulator = [alacritty](https://github.com/alacritty/alacritty)
   * This is set also inside ~/.profile (export TERMINAL=alacritty) so remind to change it there too if you want to change4 default terminal.
 * Text-Editor = [xed](https://github.com/linuxmint/xed)
