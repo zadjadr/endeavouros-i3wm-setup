@@ -3,6 +3,6 @@ feh
 galculator
 nano
 nano-syntax-highlighting 
-xed 
+xed
 xfce4-terminal
 xterm
