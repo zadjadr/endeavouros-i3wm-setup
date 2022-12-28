@@ -292,7 +292,8 @@ bindsym XF86AudioPrev exec playerctl previous
 ## App shortcuts
 bindsym $mod+w exec /usr/bin/chromium
 bindsym $mod+c exec /usr/bin/code
-bindsym $mod+n exec /usr/bin/alacritty --class Ranger --title Ranger --command ranger
+# bindsym $mod+n exec /usr/bin/alacritty --class Ranger --title Ranger --command ranger
+bindsym $mod+n exec /usr/bin/thunar
 bindsym $mod+space exec /usr/bin/albert show
 # bindsym Print exec scrot ~/%Y-%m-%d-%T-screenshot.png && notify-send --urgency=low "Screenshot saved to ~/$(date +"%Y-%m-%d-%T")-screenshot.png"
 
@@ -334,14 +335,14 @@ assign [class="Lapce"] $ws2
 assign [class="(?i)chromium"] $ws3
 assign [class="Thunderbird"] $ws4
 assign [class="TelegramDesktop"] $ws5
-assign [class="Ranger"] $ws6
+assign [class="Thunar"] $ws6
 
 # automatic set focus new window if it opens on another workspace than the current:
 for_window [class=Alacritty] focus
 for_window [class=(?i)chromium] focus
 for_window [class=code] focus
 for_window [class=Lapce] focus
-for_window [class=Ranger] focus
+for_window [class=Thunar] focus
 for_window [class=Thunderbird] focus
 for_window [class=TelegramDesktop] focus
 

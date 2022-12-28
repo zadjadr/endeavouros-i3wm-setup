@@ -3,9 +3,6 @@ feh
 galculator
 nano
 nano-syntax-highlighting 
-thunar
-thunar-archive-plugin
-thunar-volman
 xed 
 xfce4-terminal
 xterm
