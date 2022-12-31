@@ -6,3 +6,4 @@ nano-syntax-highlighting
 xed
 xfce4-terminal
 xterm
+htop
