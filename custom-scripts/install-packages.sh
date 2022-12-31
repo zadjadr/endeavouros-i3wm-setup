@@ -4,7 +4,9 @@ set -uxo pipefail
 
 sudo pacman -Sy
 
-sudo pacman -R --noconfirm - < custom-scripts/rmpkglist.txt
+# pacman -R breaks if the package is not installed
+sudo pacman -D --asdeps $(cat custom-scripts/rmpkglist.txt)
+sudo pacman -Rns $(pacman -Qqtd)
 
 set -euxo pipefail
 
