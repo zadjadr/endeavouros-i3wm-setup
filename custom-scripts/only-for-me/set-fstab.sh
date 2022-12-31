@@ -2,7 +2,7 @@
 #
 set -euxo pipefail
 
-sudo tee -a /etc/fstab > dev/null <<EOT
+sudo tee -a /etc/fstab > /dev/null <<EOT
 #######################################################################
 # to automount my specific partitions
 #
