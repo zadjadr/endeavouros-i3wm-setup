@@ -218,10 +218,10 @@ bindsym XF86MonBrightnessUp exec xbacklight +5 && VALUE=$(xbacklight -get | cut 
 bindsym XF86MonBrightnessDown exec xbacklight -5 && VALUE=$(xbacklight -get | cut -d '.' -f 1) && notify-send --urgency=low --app-name=Backlight ">҉    $VALUE%" -h int:value:${VALUE}
 
 # change focus
-bindsym $mod+j focus left
-bindsym $mod+k focus down
-bindsym $mod+b focus up
-bindsym $mod+o focus right
+# bindsym $mod+j focus left
+# bindsym $mod+k focus down
+# bindsym $mod+b focus up
+# bindsym $mod+o focus right
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Left focus left
@@ -252,7 +252,7 @@ bindsym $mod+f fullscreen toggle
 
 # change container layout (stacked, tabbed, toggle split)
 bindsym $mod+s layout stacking
-bindsym $mod+g layout tabbed
+bindsym $mod+w layout tabbed
 bindsym $mod+e layout toggle split
 
 # toggle tiling / floating
@@ -290,7 +290,7 @@ bindsym XF86AudioPrev exec playerctl previous
 # bindsym $mod+p exec /usr/local/bin/switch-audio-port
 
 ## App shortcuts
-bindsym $mod+w exec /usr/bin/chromium
+bindsym $mod+o exec /usr/bin/chromium
 bindsym $mod+c exec /usr/bin/code
 # bindsym $mod+n exec /usr/bin/alacritty --class Ranger --title Ranger --command ranger
 bindsym $mod+n exec /usr/bin/thunar
