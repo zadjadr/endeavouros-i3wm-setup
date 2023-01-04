@@ -223,7 +223,6 @@ bindsym $mod+r mode "resize"
     # bindsym --locked XF86AudioRaiseVolume exec pamixer -ui 2
     # bindsym --locked XF86AudioLowerVolume exec pamixer -ud 2
     # bindsym --locked XF86AudioMute exec pamixer -t
-
     # Control volume directly trough pactl
     bindsym --locked XF86AudioRaiseVolume exec $volume_up
     bindsym --locked XF86AudioLowerVolume exec $volume_down
@@ -243,11 +242,11 @@ bindsym $mod+r mode "resize"
 #
 # App shortcuts
 #
-bindsym $mod+o exec /usr/bin/firefox
-bindsym $mod+c exec /usr/bin/code
-bindsym $mod+n exec /usr/bin/thunar
-bindsym $mod+space exec /usr/bin/albert show
-bindsym $mod+p exec --no-startup-id ~/.config/i3status-rust/scripts/pomodoro
+    bindsym $mod+o exec /usr/bin/firefox
+    bindsym $mod+c exec /usr/bin/code
+    bindsym $mod+n exec /usr/bin/thunar
+    bindsym $mod+space exec /usr/bin/albert show
+    bindsym $mod+p exec --no-startup-id ~/.config/i3status-rust/scripts/pomodoro
 #
 # Screenshots
 #

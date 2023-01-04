@@ -31,11 +31,11 @@ set $darkblue		#08314a
 set $lightblue		#5294e2
 set $urgentred		#e53935
 set $urgentpurple	#A020F0
-set $white		    #ffffff
-set $black		    #000000
-set $purple		    #e345ff
+set $white		#ffffff
+set $black		#000000
+set $purple		#e345ff
 set $darkgrey		#383c4a
-set $grey		    #b0b5bd
+set $grey		#b0b5bd
 set $mediumgrey		#8b8b8b
 set $yellowbrown	#e1b700
 

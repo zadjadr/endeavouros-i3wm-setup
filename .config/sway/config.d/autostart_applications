@@ -22,3 +22,4 @@ exec dex -a -s /etc/xdg/autostart/:~/.config/autostart/
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 
 exec --no-startup-id ~/.config/i3status-rust/scripts/clean-custom-blocks
+# exec_always pkill kanshi; exec kanshi
