@@ -1,9 +1,7 @@
 akm
 alacritty
-arandr
 atool
 atuin
-autorandr
 code
 firefox
 gnome-disk-utility
@@ -20,3 +18,5 @@ redshift
 seahorse
 vim
 xreader
+wlr-randr
+kanshi
