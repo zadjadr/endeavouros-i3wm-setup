@@ -5,7 +5,7 @@
 
 sudo pacman -S acpid --needed --noconfirm
 
-sudo mkdir /etc/acpi/actions
+sudo mkdir -p /etc/acpi/actions
 
 sudo tee /etc/acpi/actions/lid.sh > /dev/null <<EOT
 #!/bin/bash
@@ -13,7 +13,7 @@ sudo tee /etc/acpi/actions/lid.sh > /dev/null <<EOT
 
 export XAUTHORITY=/home/$USER/.Xauthority
 
-case "$3" in
+case "\$3" in
     close)
         logger 'LID closed'
         DISPLAY=':0.0' xrandr --output LVDS1 --off
@@ -23,7 +23,7 @@ case "$3" in
         autorandr --batch --change t430_laptop_monitor
         ;;
     *)
-        logger "ACPI action undefined: $3"
+        logger "ACPI action undefined: \$3"
         ;;
 esac
 EOT
@@ -36,7 +36,7 @@ EOT
 sudo chmod +x /etc/acpi/actions/lid.sh
 
 # remove 'anything' event handler
-sudo rm /etc/acpi/events/anything
+sudo rm -f /etc/acpi/events/anything
 
 # restart & enable acpid
 sudo systemctl stop acpid

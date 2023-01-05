@@ -1,2 +1,6 @@
 .config/albert/core.db
 .config/nitrogen/nitrogen.cfg
+
+.vscode
+.venv
+__pycache__
