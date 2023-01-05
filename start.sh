@@ -7,6 +7,11 @@
 ./custom-scripts/install-configs.sh
 ./custom-scripts/install-fonts.sh
 ./custom-scripts/install-acpid-events.sh
+# ./custom-scripts/install-albert.sh
+# ./custom-scripts/install-work-tools.sh
+# ./custom-scripts/install-acpid-events.sh
 ./custom-scripts/git-config.sh
+./custom-scripts/fix-login-issues.sh
+
 
 ./custom-scripts/install-zsh.sh 
