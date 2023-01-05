@@ -106,3 +106,6 @@ export VISUAL='vim'
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+export GPG_TTY=$(tty)
+export PATH=/home/xcalizorz/.local/bin:$PATH
