@@ -439,8 +439,11 @@ exec --no-startup-id dbus-launch dunst --config ~/.config/dunst/dunstrc
 #exec --no-startup-id sleep 2 && alacritty
 #exec --no-startup-id sleep 7 && chromium https://github.com/endeavouros-team/endeavouros-i3wm-setup/blob/main/force-knowledge.md
 #exec --no-startup-id sleep 3 && alacritty -e ranger
-exec --no-startup-id /usr/bin/redshift -O 3000
+exec --no-startup-id /usr/bin/redshift -x && /usr/bin/redshift -O 3000
 exec --no-startup-id ~/.config/i3/scripts/lid
+
+# make sure that gnome-keyring starts an SSH agent
+exec --no-startup-id /usr/bin/gnome-keyring-daemon --start --components=pkcs11,secrets,ssh
 
 ###############
 # system tray #
@@ -514,7 +517,7 @@ set $yellowbrown	#e1b700
 
 # define colors for windows:
 #class		        		border		bground		text		indicator		child_border
-client.focused		    	$lightblue	$darkblue	$white		$urgentred		$lightblue
+client.focused		    	$lightblue	$darkblue	$white		$yellowbrown	$lightblue
 client.unfocused	    	$darkblue	$darkblue	$grey		$darkgrey		$darkgrey
 client.focused_inactive		$darkblue	$darkblue	$grey		$black			$black
 client.urgent		    	$urgentred	$urgentred	$white		$yellowbrown	$yellowbrown
