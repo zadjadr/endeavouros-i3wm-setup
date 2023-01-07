@@ -109,3 +109,6 @@ export VISUAL='vim'
 
 export GPG_TTY=$(tty)
 export PATH=/home/xcalizorz/.local/bin:$PATH
+
+# Use gnome-keyring ssh-agent
+export SSH_AUTH_SOCK=/run/user/1000/keyring/ssh
