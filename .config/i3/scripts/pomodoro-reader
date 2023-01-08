@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+#
+# Helper to create i3blocks output for my pomodoro tool at .config/i3/scripts/pomodoro
+#
+set -euxo pipefail
+
+TEXT=$(cat /tmp/pomodoro 2>/dev/null)
+COLOR='#FFFFFF'         # White
+
+echo "$TEXT  : :"     # long text
+echo                    # short text
+
+if [[ "$TEXT" == "BREAK" ]]; then
+    COLOR='#7DF9FF'     # Electric Blue
+fi
+
+echo "$COLOR"           # color

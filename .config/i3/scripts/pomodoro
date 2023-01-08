@@ -2,23 +2,41 @@
 #
 # Shows a simple notification with the focus and break times
 # If you don't click on the notification, it will stay there until the next event starts
-# If you click on the notification, it will disappear and the next notification will start immediately
+# You can click on the notification to close it. The next one will start when ready.
 #
 # The notification will be shown even if you switch workspaces
 SHORT_BREAK=300 # 5m
 LONG_BREAK=900  # 15m
 FOCUS_TIME=1500 # 25m
+ICON=/usr/share/icons/Papirus-Dark/32x32/apps/pomodoneapp.svg
+NOTIFY_WAIT=$(( 60 * 1000 ))
 
-notify-send --app-name=Pomodoro -t $((FOCUS_TIME * 1000)) --category=presence --hint=BOOLEAN:suppress-sound:true --urgency=low --icon /usr/share/icons/Papirus-Dark/32x32/apps/pomodoneapp.svg "[Pomodoro] Focus for $((FOCUS_TIME / 60))m" && sleep "$FOCUS_TIME"
-notify-send --app-name=Pomodoro -t $((SHORT_TIME * 1000)) --category=presence --hint=BOOLEAN:suppress-sound:true --urgency=critical --icon /usr/share/icons/Papirus-Dark/32x32/apps/pomodoneapp.svg "[Pomodoro] Break for $((SHORT_BREAK / 60))m" && sleep "$SHORT_TIME"
+notify-send --app-name=Pomodoro --category=presence --hint=BOOLEAN:suppress-sound:true -t $NOTIFY_WAIT --urgency=low --icon "$ICON" "[Pomodoro] Focus for $((FOCUS_TIME / 60))m" \
+    && echo -n "FOCUS" > /tmp/pomodoro \
+    && sleep $FOCUS_TIME
+notify-send --app-name=Pomodoro --category=presence --hint=BOOLEAN:suppress-sound:true -t $NOTIFY_WAIT --urgency=critical --icon "$ICON" "[Pomodoro] Break for $((SHORT_BREAK / 60))m" \
+    && echo -n "BREAK" > /tmp/pomodoro \
+    && sleep $SHORT_BREAK
  
-notify-send --app-name=Pomodoro -t $((FOCUS_TIME * 1000)) --category=presence --hint=BOOLEAN:suppress-sound:true --urgency=low --icon /usr/share/icons/Papirus-Dark/32x32/apps/pomodoneapp.svg "[Pomodoro] Focus for $((FOCUS_TIME / 60))m" && sleep "$FOCUS_TIME"
-notify-send --app-name=Pomodoro -t $((SHORT_TIME * 1000)) --category=presence --hint=BOOLEAN:suppress-sound:true --urgency=critical --icon /usr/share/icons/Papirus-Dark/32x32/apps/pomodoneapp.svg "[Pomodoro] Break for $((SHORT_BREAK / 60))m"&& sleep "$SHORT_BREAK"
+notify-send --app-name=Pomodoro --category=presence --hint=BOOLEAN:suppress-sound:true -t $NOTIFY_WAIT --urgency=low --icon "$ICON" "[Pomodoro] Focus for $((FOCUS_TIME / 60))m" \
+    && echo -n "FOCUS" > /tmp/pomodoro \
+    && sleep $FOCUS_TIME
+notify-send --app-name=Pomodoro --category=presence --hint=BOOLEAN:suppress-sound:true -t $NOTIFY_WAIT --urgency=critical --icon "$ICON" "[Pomodoro] Break for $((SHORT_BREAK / 60))m" \
+    && echo -n "BREAK" > /tmp/pomodoro \
+    && sleep $SHORT_BREAK
 
-notify-send --app-name=Pomodoro -t $((FOCUS_TIME * 1000)) --category=presence --hint=BOOLEAN:suppress-sound:true --urgency=low --icon /usr/share/icons/Papirus-Dark/32x32/apps/pomodoneapp.svg "[Pomodoro] Focus for $((FOCUS_TIME / 60))m" && sleep "$FOCUS_TIME"
-notify-send --app-name=Pomodoro -t $((SHORT_TIME * 1000)) --category=presence --hint=BOOLEAN:suppress-sound:true --urgency=critical --icon /usr/share/icons/Papirus-Dark/32x32/apps/pomodoneapp.svg "[Pomodoro] Break for $((SHORT_BREAK / 60))m" && sleep "$SHORT_BREAK"
+notify-send --app-name=Pomodoro --category=presence --hint=BOOLEAN:suppress-sound:true -t $NOTIFY_WAIT --urgency=low --icon "$ICON" "[Pomodoro] Focus for $((FOCUS_TIME / 60))m" \
+    && echo -n "FOCUS" > /tmp/pomodoro \
+    && sleep $FOCUS_TIME
+notify-send --app-name=Pomodoro --category=presence --hint=BOOLEAN:suppress-sound:true -t $NOTIFY_WAIT --urgency=critical --icon "$ICON" "[Pomodoro] Break for $((SHORT_BREAK / 60))m" \
+    && echo -n "BREAK" > /tmp/pomodoro \
+    && sleep $SHORT_BREAK
 
-notify-send --app-name=Pomodoro -t $((FOCUS_TIME * 1000)) --category=presence --hint=BOOLEAN:suppress-sound:true --urgency=low --icon /usr/share/icons/Papirus-Dark/32x32/apps/pomodoneapp.svg "[Pomodoro] Focus for $((FOCUS_TIME / 60))m" && sleep "$FOCUS_TIME"
-notify-send --app-name=Pomodoro -t $((SHORT_TIME * 1000)) --category=presence --hint=BOOLEAN:suppress-sound:true --urgency=critical --icon /usr/share/icons/Papirus-Dark/32x32/apps/pomodoneapp.svg "[Pomodoro] Break for $((SHORT_BREAK / 60))m" && sleep "$SHORT_BREAK"
+notify-send --app-name=Pomodoro --category=presence --hint=BOOLEAN:suppress-sound:true -t $NOTIFY_WAIT --urgency=low --icon "$ICON" "[Pomodoro] Focus for $((FOCUS_TIME / 60))m" \
+    && echo -n "FOCUS" > /tmp/pomodoro \
+    && sleep $FOCUS_TIME
+notify-send --app-name=Pomodoro --category=presence --hint=BOOLEAN:suppress-sound:true -t $NOTIFY_WAIT --urgency=critical --icon "$ICON" "[Pomodoro] Break for $((LONG_BREAK / 60))m" \
+    && echo -n "BREAK" > /tmp/pomodoro \
+    && sleep $LONG_BREAK
 
-notify-send --app-name=Pomodoro -t $((LONG_BREAK * 1000)) --category=presence --hint=BOOLEAN:suppress-sound:true --urgency=normal --icon /usr/share/icons/Papirus-Dark/32x32/apps/pomodoneapp.svg "[Pomodoro] Break for $((LONG_BREAK / 60))m" && sleep "$LONG_BREAK"
+rm /tmp/pomodoro
