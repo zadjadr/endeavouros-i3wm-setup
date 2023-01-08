@@ -17,3 +17,8 @@ yay -S --removemake --cleanafter --norebuild --noredownload --noconfirm \
 
 sudo -E hardcode-tray --conversion-tool RSVGConvert --size 24 --theme Papirus-Dark
 sudo pacman -R hardcode-tray --noconfirm
+
+sudo tee /usr/share/icons/default/index.theme > /dev/null <<EOT
+[Icon Theme]
+Inherits=Qogir-dark
+EOT
