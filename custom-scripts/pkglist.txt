@@ -3,11 +3,11 @@ alacritty
 arandr
 atool
 autorandr
-chromium
 code
 docker
 docker-buildx
 docker-compose
+firefox
 gnome-disk-utility
 gnome-keyring
 go
