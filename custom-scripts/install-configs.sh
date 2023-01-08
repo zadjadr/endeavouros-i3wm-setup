@@ -16,10 +16,11 @@ rm -rf \
 	~/.config/gtk-3.0 \
 	~/.config/gtk-4.0 \
 	~/.config/nitrogen \
+	~/.config/onedrive \
 	~/.config/ranger \
 	~/.config/rofi \
 	~/.config/wezterm \
-	~/.config/yay \
+	~/.config/yay
 
 ln -s \
 	"$PWD"/.config/i3 \
@@ -31,6 +32,7 @@ ln -s \
 	"$PWD"/.config/gtk-3.0 \
 	"$PWD"/.config/gtk-4.0 \
 	"$PWD"/.config/nitrogen \
+	"$PWD"/.config/onedrive \
 	"$PWD"/.config/ranger \
 	"$PWD"/.config/rofi \
 	"$PWD"/.config/wezterm \
