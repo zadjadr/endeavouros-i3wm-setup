@@ -290,7 +290,7 @@ bindsym XF86AudioPrev exec playerctl previous
 # bindsym $mod+p exec /usr/local/bin/switch-audio-port
 
 ## App shortcuts
-bindsym $mod+o exec /usr/bin/chromium
+bindsym $mod+o exec /usr/bin/firefox
 bindsym $mod+c exec /usr/bin/code
 # bindsym $mod+n exec /usr/bin/alacritty --class Ranger --title Ranger --command ranger
 bindsym $mod+n exec /usr/bin/thunar
@@ -310,7 +310,7 @@ bindsym $mod+Shift+p exec ~/.config/i3/scripts/power-profiles
 # We use variables to avoid repeating the names in multiple places.
 set $ws1 "1:"
 set $ws2 "2:"
-set $ws3 "3:"
+set $ws3 "3:"
 set $ws4 "4:"
 set $ws5 "5:"
 set $ws6 "6:"
@@ -332,14 +332,14 @@ set $ws10 "10"
 # assign [class="Alacritty"] $ws1
 assign [class="code"] $ws2
 assign [class="Lapce"] $ws2
-assign [class="(?i)chromium"] $ws3
+assign [class="(?i)firefox"] $ws3
 assign [class="Thunderbird"] $ws4
 assign [class="TelegramDesktop"] $ws5
 assign [class="Thunar"] $ws6
 
 # automatic set focus new window if it opens on another workspace than the current:
 for_window [class=Alacritty] focus
-for_window [class=(?i)chromium] focus
+for_window [class=(?i)firefox] focus
 for_window [class=code] focus
 for_window [class=Lapce] focus
 for_window [class=Thunar] focus
@@ -437,7 +437,7 @@ exec --no-startup-id dbus-launch dunst --config ~/.config/dunst/dunstrc
 
 # Autostart apps as you like
 #exec --no-startup-id sleep 2 && alacritty
-#exec --no-startup-id sleep 7 && chromium https://github.com/endeavouros-team/endeavouros-i3wm-setup/blob/main/force-knowledge.md
+#exec --no-startup-id sleep 7 && firefox https://github.com/endeavouros-team/endeavouros-i3wm-setup/blob/main/force-knowledge.md
 #exec --no-startup-id sleep 3 && alacritty -e ranger
 exec --no-startup-id /usr/bin/redshift -x && /usr/bin/redshift -O 3000
 exec --no-startup-id ~/.config/i3/scripts/lid
