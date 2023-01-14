@@ -14,4 +14,3 @@ sudo pacman -S --needed --noconfirm - < custom-scripts/pkglist.txt
 
 # Ensure pip is installed
 python -m ensurepip --upgrade
-echo "export PATH=/home/$USER/.local/bin:\$PATH" >> .zshrc

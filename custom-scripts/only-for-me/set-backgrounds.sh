@@ -45,3 +45,4 @@ i3lock --nofork --show-failed-attempts --image "$RESIZED_BG"
 EOT
 
 chmod +x $HOME/.config/i3/scripts/lock
+nitrogen --restore
