@@ -2,5 +2,6 @@
     "editor.fontFamily": "'FiraCode Nerd Font', 'Droid Sans Mono', 'monospace', monospace",
     "editor.codeLensFontFamily": "'FiraCode Nerd Font'",
     "editor.fontLigatures": true,
-    "window.zoomLevel": -1
+    "files.trimFinalNewlines": true,
+    "files.insertFinalNewline": true
 }
