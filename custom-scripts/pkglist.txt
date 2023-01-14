@@ -4,9 +4,6 @@ arandr
 atool
 autorandr
 code
-docker
-docker-buildx
-docker-compose
 firefox
 gnome-disk-utility
 gnome-keyring
@@ -19,4 +16,3 @@ redshift
 seahorse
 vim
 xreader
-zsh-completions

@@ -44,8 +44,5 @@ rm -rf ~/.Xresources
 ln -s "$PWD"/.Xresources ~/
 
 ## VScode
-rm -rf ~/.config/Code\ -\ OSS/User/settings.json
-ln -s "$PWD"/.config/Code\ -\ OSS/User/settings.json ~/.config/Code\ -\ OSS/User
-
-## (neo)vim
-curl -sLf https://spacevim.org/install.sh | bash
+rm -rf "$HOME/.config/Code - OSS/User/settings.json"
+ln -s "$PWD/.config/Code - OSS/User/settings.json" "$HOME/.config/Code - OSS/User/settings.json"
