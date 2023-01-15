@@ -106,6 +106,7 @@ export VISUAL='vim'
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+alias k=kubectl
 
 export GPG_TTY=$(tty)
 
