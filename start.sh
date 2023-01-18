@@ -5,6 +5,7 @@
 ./custom-scripts/install-aur-packages.sh
 ./custom-scripts/install-docker.sh
 ./custom-scripts/install-configs.sh
+./custom-scripts/install-mirrorlist-updater.sh
 # ./custom-scripts/install-albert.sh
 # ./custom-scripts/install-work-tools.sh
 # ./custom-scripts/install-acpid-events.sh
