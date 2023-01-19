@@ -327,6 +327,8 @@ set $ws10 "10"
 #workspace $ws3 output HDMI-0
 #workspace $ws4 output HDMI-0
 #workspace $ws5 output HDMI-0
+bindsym $mod+Control+Right move workspace to output right
+bindsym $mod+Control+Left move workspace to output left
 
 # bind program to workspace and focus to them on startup:
 # assign [class="Alacritty"] $ws1
