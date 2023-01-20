@@ -166,6 +166,21 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
+
+# autorandr
+bindsym $mod+Shift+a mode "$mode_autorandr"
+set $mode_autorandr autorandr (c)ycle, (1) t430___monitor, (2) t430_monitor_monitor, (3) t430_laptop
+mode "$mode_autorandr" {
+    bindsym c exec --no-startup-id autorandr --cycle, mode "default"
+    bindsym 1 exec --no-startup-id autorandr t430___monitor, mode "default"
+    bindsym 2 exec --no-startup-id autorandr t430_monitor_monitor, mode "default"
+    bindsym 3 exec --no-startup-id autorandr t430_laptop, mode "default"
+
+    # exit system mode: "Enter" or "Escape"
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+}
+
 ######################################
 # keybindings for different actions: #
 ######################################
