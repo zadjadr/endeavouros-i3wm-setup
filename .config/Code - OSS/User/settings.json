@@ -3,5 +3,6 @@
     "editor.codeLensFontFamily": "'FiraCode Nerd Font'",
     "editor.fontLigatures": true,
     "files.trimFinalNewlines": true,
-    "files.insertFinalNewline": true
+    "files.insertFinalNewline": true,
+    "explorer.confirmDelete": false
 }
