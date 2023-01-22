@@ -524,21 +524,22 @@ set $darkbluetrans	#08052be6
 set $darkblue		#08314a
 set $lightblue		#5294e2
 set $urgentred		#e53935
-set $white		#ffffff
-set $black		#000000
-set $purple		#e345ff
+set $urgentpurple	#A020F0
+set $white		    #ffffff
+set $black		    #000000
+set $purple		    #e345ff
 set $darkgrey		#383c4a
-set $grey		#b0b5bd
+set $grey		    #b0b5bd
 set $mediumgrey		#8b8b8b
 set $yellowbrown	#e1b700
 
 # define colors for windows:
-#class		        		border		bground		text		indicator		child_border
-client.focused		    	$lightblue	$darkblue	$white		$yellowbrown	$lightblue
-client.unfocused	    	$darkblue	$darkblue	$grey		$darkgrey		$darkgrey
-client.focused_inactive		$darkblue	$darkblue	$grey		$black			$black
-client.urgent		    	$urgentred	$urgentred	$white		$yellowbrown	$yellowbrown
-client.placeholder      	$black 		$black 		$white 		$black   		$black
+#class		        		border		    bground		    text		indicator		child_border
+client.focused		    	$lightblue	    $darkblue	    $white		$yellowbrown	$lightblue
+client.unfocused	    	$darkblue	    $darkblue	    $grey		$darkgrey		$darkgrey
+client.focused_inactive		$darkblue	    $darkblue	    $grey		$black			$black
+client.urgent		    	$urgentred	    $urgentred	    $white		$yellowbrown	$yellowbrown
+client.placeholder      	$black 		    $black 		    $white 		$black   		$black
 client.background       	$white
 
 ############################################
@@ -568,11 +569,11 @@ strip_workspace_numbers no
 		    separator          $purple
 		    background         $darkgrey
 		    statusline         $white
-#                          		border 		        bg		txt		indicator
-		focused_workspace	$mediumgrey	   	$grey		$darkgrey	$purple
-		active_workspace	$lightblue      	$mediumgrey	$darkgrey	$purple
-		inactive_workspace	$darkgrey   		$darkgrey	$grey		$purple
-		urgent_workspace	$urgentred	    	$urgentred	$white		$purple
+#                           border 		        bg		        txt		    indicator
+		focused_workspace	$mediumgrey	   	    $grey		    $darkgrey	$purple
+		active_workspace	$lightblue      	$mediumgrey	    $darkgrey	$purple
+		inactive_workspace	$darkgrey   		$darkgrey	    $grey		$purple
+		urgent_workspace	$urgentpurple	    $urgentpurple	$white		$purple
 	}
 }
 
@@ -599,11 +600,11 @@ strip_workspace_numbers no
 #		separator          $purple
 #		background         $darkbluetrans
 #        	statusline         $white
-#					border		bg		txt		indicator
-#		focused_workspace	$lighterblue	$lighterblue	$darkblue	$purple
-#		active_workspace	$lightdblue	$lightdblue	$darkblue	$purple
-#		inactive_workspace	$darkblue	$darkblue	$lightdblue	$purple
-#		urgent_workspace	$urgentred	$urgentred	$white		$purple
+#		                    border		    bg		        txt		        indicator
+#		focused_workspace	$lighterblue	$lighterblue	$darkblue	    $purple
+#		active_workspace	$lightdblue	    $lightdblue	    $darkblue	    $purple
+#		inactive_workspace	$darkblue	    $darkblue	    $lightdblue	    $purple
+#		urgent_workspace	$urgentpurple	$urgentpurple	$white		    $purple
 #	}
 #}
 
