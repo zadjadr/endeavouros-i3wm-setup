@@ -1,8 +1,7 @@
 #!/bin/bash
 set -euxo pipefail
 
-sudo pacman -Sy
-sudo pacman -S --needed --noconfirm zsh zsh-completions
+sudo pacman -Sy --needed --noconfirm zsh zsh-completions
 
 rm -f ~/.zshrc ~/.zshenv
 ln -s \

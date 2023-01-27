@@ -3,24 +3,24 @@
 #
 # Set the autorandr profile according to your needs
 
-sudo pacman -S acpid --needed --noconfirm
+sudo pacman -Sy acpid --needed --noconfirm
 
 sudo mkdir -p /etc/acpi/actions
 
 sudo tee /etc/acpi/actions/lid.sh > /dev/null <<EOT
 #!/bin/bash
-# Automatically enable/disable output to Laptop (LVDS1) when lid close/open event happens
+# Automatically enable/disable output to Laptop (${1:-LVDS1}) when lid close/open event happens
 
 export XAUTHORITY=/home/$USER/.Xauthority
 
 case "\$3" in
     close)
         logger 'LID closed'
-        DISPLAY=':0.0' xrandr --output LVDS1 --off
+        DISPLAY=':0.0' xrandr --output ${1:=LVDS1} --off
         ;;
     open)
         logger 'LID opened'
-        autorandr --batch --change t430_laptop_monitor
+        autorandr --batch --change ${2:-t430_laptop_monitor}
         ;;
     *)
         logger "ACPI action undefined: \$3"

@@ -19,7 +19,6 @@ rm -rf \
 	~/.config/onedrive \
 	~/.config/ranger \
 	~/.config/rofi \
-	~/.config/wezterm \
 	~/.config/yay
 
 ln -s \
@@ -35,7 +34,6 @@ ln -s \
 	"$PWD"/.config/onedrive \
 	"$PWD"/.config/ranger \
 	"$PWD"/.config/rofi \
-	"$PWD"/.config/wezterm \
 	"$PWD"/.config/yay \
 	~/.config
 

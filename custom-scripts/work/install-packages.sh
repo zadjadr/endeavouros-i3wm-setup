@@ -4,23 +4,24 @@ set -euxo pipefail
 
 # Install pacman packages
 sudo pacman -Sy --needed --noconfirm \
-    pass \
-    python-dotenv \
     bitwarden \
+    pass \
+    pyenv \
+    python-dotenv \
     ruby
 
 # Install pip packages
 python -m pip install --user --upgrade \
     pipenv \
-    sops \
-    salt-lint
+    salt-lint \
+    sops
 
 # Install AUR packages
 yay -S --removemake --cleanafter --norebuild --noredownload --noconfirm \
-    tfswitch-bin \
     keybase-bin \
+    onedrive-abraunegg \
     slack-desktop \
-    onedrive-abraunegg
+    tfswitch-bin
 
 # Setup onedrive as systemd service
 sudo systemctl stop onedrive@$USER.service

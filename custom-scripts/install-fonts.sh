@@ -2,6 +2,8 @@
 #
 set -euxo pipefail
 
+sudo pacman -Sy
+
 # Install nerd fonts
 sudo pacman -S ttf-firacode-nerd --needed --noconfirm
 
