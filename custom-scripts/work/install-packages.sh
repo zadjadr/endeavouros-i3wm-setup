@@ -8,7 +8,10 @@ sudo pacman -Sy --needed --noconfirm \
     pass \
     pyenv \
     python-dotenv \
-    ruby
+    ruby \
+    vagrant \
+    virtualbox \
+    virtualbox-guest-iso
 
 # Install pip packages
 python -m pip install --user --upgrade \
