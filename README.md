@@ -15,7 +15,7 @@
 * [dex](https://github.com/jceb/dex) : autostarting apps from /etc/xdg/autostart/ (*)
 * Notifications are done with [dunst](https://dunst-project.org): CONFIG FILE = ~/.config/dunst/dunstrc
 
-**dex is enabled by default in config to autostart like on a DE. To disable, comment out the line:** 
+**dex is enabled by default in config to autostart like on a DE. To disable, comment out the line:**
 
 `exec --no-startup-id dex --autostart --environment i3`
 
@@ -52,7 +52,7 @@ this will handle to set display on each login.
 alternatively, you could manually make a script with xrandr.
 
 # Tiling:
-is set to default for i3wm and can be changed to: 
+is set to default for i3wm and can be changed to:
 * stacking:
 Only the focused window in the container is displayed. You get a list of windows at the top of the container.
 
@@ -81,7 +81,7 @@ get your api key here: https://openweathermap.org/appid and City code: https://o
 ![alt text](https://raw.githubusercontent.com/endeavouros-team/screenshots/master/ppd-i3.png "power-profiles")
 * let you easely switch powermodes from the i3-bar.
 
-## theming/colorshemes:   
+## theming/colorshemes:
 
 **for rofi menus (application menu and Logout menu):**
 
@@ -101,13 +101,13 @@ colors are in rgba calling transparency in the last colum:
 
 `rgba ( 26, 28, 35, 100 % )`
 
-**General theming // gtk3 and icons:**   
+**General theming // gtk3 and icons:**
 * `~/.config/gtk-3.0`
-* `~/.Xresources`   
-There is ![LXAppearance](https://wiki.lxde.org/en/LXAppearance) installed where you can browse and set GTK3 theme, icons and Xcursortheme.   
+* `~/.Xresources`
+There is ![LXAppearance](https://wiki.lxde.org/en/LXAppearance) installed where you can browse and set GTK3 theme, icons and Xcursortheme.
 But Xcursor  needs to be set inside the `~/.Xresources`  manually if you change it in LXAppearance to get applied for all apps.
 
-# Tutorial to install EndeavourOS-i3 setup from scratch 
+# Tutorial to install EndeavourOS-i3 setup from scratch
 **for later installs, if you have installed another DE on initial install from the ISO**
 
 1. get the dot files:
@@ -124,7 +124,7 @@ But Xcursor  needs to be set inside the `~/.Xresources`  manually if you change 
 
 3. Scripts inside `~/.config/i3/scripts` must be executable:
 
-`chmod -R +x ~/.config/i3/scripts` 
+`chmod -R +x ~/.config/i3/scripts`
 
 4. set theming for xed texteditor:
 
@@ -134,7 +134,7 @@ But Xcursor  needs to be set inside the `~/.Xresources`  manually if you change 
 
 `wget https://raw.githubusercontent.com/endeavouros-team/EndeavourOS-packages-lists/master/i3`
 
-`sudo pacman -S --needed - < i3`
+`sudo pacman -Sy --needed - < i3`
 
 or use the packages tool from our repo: `eos-packagelist --install "i3-Window-Manager"`
 
@@ -150,4 +150,3 @@ Make sure you backup users configs before running it on your own.
 
 # screenshot:
 ![i3-fresh-screenshot](https://raw.githubusercontent.com/endeavouros-team/screenshots/master/i3-eos-view-shot-nov21.png)
-

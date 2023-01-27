@@ -523,6 +523,7 @@ for_window [class="VirtualBox" title=".*Settings"] floating enable move position
 for_window [class="albert" title="Settings"] floating enable move position center
 for_window [class="Arandr"] floating enable resize set 640 480
 for_window [class="Arandr"] move position center
+for_window [class="Timeshift-gtk"] floating disable
 
 # set border of floating window
 #for_window [class="urxvt"] border pixel 1

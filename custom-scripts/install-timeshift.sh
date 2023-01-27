@@ -4,9 +4,8 @@ set -euxo pipefail
 
 # Install AUR packages
 yay -S --removemake --cleanafter --norebuild --noredownload \
-    timeshift-bin \
-    code-features-insiders
-    
+    timeshift-bin
+
 ## Setup timeshift
 sudo systemctl enable cronie
 sudo systemctl start cronie

@@ -4,9 +4,9 @@ set -euxo pipefail
 
 BG_DIR=/usr/share/backgrounds
 sudo rm -rf "$BG_DIR"
-sudo ln -s /mnt/BACKUP/MEGA/03_data/backgrounds /usr/share
+sudo ln -s ${1:-"/mnt/BACKUP/MEGA/03_data/backgrounds"} /usr/share
 
-BACKGROUND="106956.png"
+BACKGROUND=${2:-"106956.png"}
 EXTENSION="${BACKGROUND##*.}"
 
 SIZE=$(xdpyinfo | grep dimensions | sed -r 's/^[^0-9]*([0-9]+x[0-9]+).*$/\1/')

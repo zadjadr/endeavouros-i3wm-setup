@@ -4,5 +4,6 @@
     "editor.fontLigatures": true,
     "files.trimFinalNewlines": true,
     "files.insertFinalNewline": true,
-    "explorer.confirmDelete": false
+    "explorer.confirmDelete": false,
+    "files.trimTrailingWhitespace": true
 }

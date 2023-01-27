@@ -115,3 +115,8 @@ export SSH_AUTH_SOCK=/run/user/1000/keyring/ssh
 
 # PATH
 export PATH=$HOME/.local/bin:$HOME/go/bin:$PATH
+
+# PYENV
+export PYENV_ROOT="$HOME/.pyenv"
+command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
