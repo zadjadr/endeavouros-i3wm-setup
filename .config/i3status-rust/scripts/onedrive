@@ -1,0 +1,26 @@
+#!/usr/bin/env bash
+#
+# Simple script to check the current status of OneDrive
+# OneDrive solution tested on: https://github.com/abraunegg/onedrive
+#
+LAST_LOG=$(journalctl -b --user-unit onedrive.service -r -n 1 | sed -e 's/.*: //g')
+
+case $LAST_LOG in
+    *complete)
+        TEXT='synced'
+    ;;
+    Starting*|Synching*|Moving*|Uploading*|Downloading*|Creating*)
+        TEXT='syncing'
+    ;;
+    *check*)
+        TEXT='checking'
+    ;;
+    Initializing*|Started*|Notification*|Config*|OneDrive*)
+        TEXT='init.'
+    ;;
+    *)
+        TEXT="$(echo $LAST_LOG | cut -d ' ' -f1).."
+    ;;
+esac
+
+echo -n "OneDrive: $TEXT" > $HOME/.meta/status/onedrive

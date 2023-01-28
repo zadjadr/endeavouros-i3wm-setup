@@ -1,9 +1,10 @@
 endeavouros-xfce4-terminal-colors
 feh
 galculator
+htop
+i3blocks
 nano
-nano-syntax-highlighting 
+nano-syntax-highlighting
 xed
 xfce4-terminal
 xterm
-htop

@@ -8,6 +8,7 @@ set -euxo pipefail
 ## i3 config
 rm -rf \
 	~/.config/i3 \
+	~/.config/i3status-rust \
 	~/.config/alacritty \
 	~/.config/albert \
 	~/.config/autostart \
@@ -23,6 +24,7 @@ rm -rf \
 
 ln -s \
 	"$PWD"/.config/i3 \
+	"$PWD"/.config/i3status-rust \
 	"$PWD"/.config/alacritty \
 	"$PWD"/.config/albert \
 	"$PWD"/.config/autostart \
@@ -44,3 +46,8 @@ ln -s "$PWD"/.Xresources ~/
 ## VScode
 rm -rf "$HOME/.config/Code - OSS/User/settings.json"
 ln -s "$PWD/.config/Code - OSS/User/settings.json" "$HOME/.config/Code - OSS/User/settings.json"
+
+## i3rust-status custom blocks
+mkdir -p ~/.meta/status
+touch ~/.meta/status/onedrive
+touch ~/.meta/status/pomodoro
