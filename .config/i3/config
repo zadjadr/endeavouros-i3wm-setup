@@ -327,7 +327,7 @@ bindsym $mod+n exec /usr/bin/thunar
 bindsym $mod+space exec /usr/bin/albert show
 # bindsym Print exec scrot ~/%Y-%m-%d-%T-screenshot.png && notify-send --urgency=low "Screenshot saved to ~/$(date +"%Y-%m-%d-%T")-screenshot.png"
 
-bindsym $mod+p exec --no-startup-id ~/.config/i3/scripts/pomodoro
+bindsym $mod+p exec --no-startup-id ~/.config/i3status-rust/scripts/pomodoro
 
 # Power Profiles menu switcher (rofi)
 bindsym $mod+Shift+p exec ~/.config/i3/scripts/power-profiles
@@ -397,10 +397,10 @@ for_window [class=TelegramDesktop] focus
 #
 # picom: https://wiki.archlinux.org/title/Picom
 # manpage: https://man.archlinux.org/man/picom.1.en
-# The default configuration is available in /etc/xdg/picom.conf 
+# The default configuration is available in /etc/xdg/picom.conf
 # For modifications, it can be copied to ~/.config/picom/picom.conf or ~/.config/picom.conf
 # install picom package (yay -S picom)
-# start using default config 
+# start using default config
 #exec_always --no-startup-id picom -b
 #
 # for custom config:
@@ -422,7 +422,7 @@ exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec --no-startup-id dex --autostart --environment i3
 
 # start welcome app
-#exec --no-startup-id sh /usr/share/endeavouros/scripts/welcome --startdelay=3 
+#exec --no-startup-id sh /usr/share/endeavouros/scripts/welcome --startdelay=3
 
 # num lock activated
 #exec --no-startup-id numlockx on
@@ -477,6 +477,7 @@ exec --no-startup-id /usr/bin/dunst
 #exec --no-startup-id sleep 3 && alacritty -e ranger
 exec --no-startup-id /usr/bin/redshift -x && /usr/bin/redshift -O 3000
 exec --no-startup-id ~/.config/i3/scripts/lid
+exec --no-startup-id ~/.config/i3/scripts/clean-custom-blocks
 
 # make sure that gnome-keyring starts an SSH agent
 exec --no-startup-id /usr/bin/gnome-keyring-daemon --start --components=pkcs11,secrets,ssh
@@ -513,9 +514,9 @@ for_window [class="Bluetooth-sendto" instance="bluetooth-sendto"] floating enabl
 for_window [window_role="About"] floating enable
 for_window [class="Gnome-disks"] floating enable move position center
 for_window [class="MEGAsync"] floating enable
-for_window [class="MEGAsync" instance="Settings"] move position center 
+for_window [class="MEGAsync" instance="Settings"] move position center
 for_window [class="MEGAsync" instance="Transfer manager"] move position center
-for_window [class="Nitrogen"] floating enable resize set 640 480 
+for_window [class="Nitrogen"] floating enable resize set 640 480
 for_window [class="Nitrogen"] move position center
 for_window [class="zoom"] floating enable move position center
 for_window [class="zoom" title="Zoom Meeting"] move position center resize set 660 480
@@ -530,7 +531,7 @@ for_window [class="Timeshift-gtk"] floating disable
 
 # set size of floating window
 #for_window [window_role="(?i)GtkFileChooserDialog"] resize set 640 480 #to set size of file choose dialog
-#for_window [class=".*"] resize set 640 480 #to change size of all floating windows 
+#for_window [class=".*"] resize set 640 480 #to change size of all floating windows
 
 # set position of floating window
 #for_window [class=".*"] move position center
@@ -569,32 +570,32 @@ client.background       	$white
 # Start i3bar to display a workspace bar
 # (plus the system information i3status finds out, if available)
 bar {
-		# font pango: FiraCode Nerd Font Retina 10
-		font pango: Noto Sans Regular 10
-		status_command i3blocks -c ~/.config/i3/i3blocks.conf
-	    	position top
-#	    	i3bar_command i3bar --transparency
+    # font pango: FiraCode Nerd Font Retina 10
+    font pango: Noto Sans Regular 10
+    status_command i3status-rs ~/.config/i3status-rust/config.toml
+    position top
+#	 i3bar_command i3bar --transparency
 # it could be that you have no primary display set: set one (xrandr --output <output> --primary)
 # reference: https://i3wm.org/docs/userguide.html#_tray_output
-		    #tray_output primary
-		    tray_padding 0
+#    tray_output primary
+    tray_padding 0
 
 # When strip_workspace_numbers is set to yes,
 # any workspace that has a name of the form
 # “[n][:][NAME]” will display only the name.
-strip_workspace_numbers no
+    strip_workspace_numbers no
 ##strip_workspace_name no
 
-		    colors {
-		    separator          $purple
-		    background         $darkgrey
-		    statusline         $white
+    colors {
+        separator          $purple
+        background         $darkgrey
+        statusline         $white
 #                           border 		        bg		        txt		    indicator
-		focused_workspace	$mediumgrey	   	    $grey		    $darkgrey	$purple
-		active_workspace	$lightblue      	$mediumgrey	    $darkgrey	$purple
-		inactive_workspace	$darkgrey   		$darkgrey	    $grey		$purple
-		urgent_workspace	$urgentpurple	    $urgentpurple	$white		$purple
-	}
+        focused_workspace	$mediumgrey	   	    $grey		    $darkgrey	$purple
+        active_workspace	$lightblue      	$mediumgrey	    $darkgrey	$purple
+        inactive_workspace	$darkgrey   		$darkgrey	    $grey		$purple
+        urgent_workspace	$urgentpurple	    $urgentpurple	$white		$purple
+    }
 }
 
 # you can add different bars for multidisplay setups on each display:

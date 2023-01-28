@@ -8,6 +8,7 @@ firefox
 gnome-disk-utility
 gnome-keyring
 go
+i3status-rust
 keepassxc
 nitrogen
 obsidian
