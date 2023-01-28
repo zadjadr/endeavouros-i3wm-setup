@@ -15,7 +15,6 @@ sudo pacman -Sy --needed --noconfirm \
 
 # Install pip packages
 python -m pip install --user --upgrade \
-    pipenv \
     salt-lint \
     sops
 

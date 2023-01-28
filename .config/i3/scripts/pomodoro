@@ -9,6 +9,7 @@ SHORT_BREAK=300 # 5m
 LONG_BREAK=900  # 15m
 FOCUS_TIME=1500 # 25m
 ICON=/usr/share/icons/Papirus-Dark/32x32/apps/pomodoneapp.svg
+OUTPUT_PATH=/tmp/pomodoro
 NOTIFY_WAIT=$(( 60 * 1000 ))
 
 RUNNING_PS=$(ps x | grep $HOME/.config/i3/scripts/pomodoro | wc -l)
@@ -19,31 +20,31 @@ if [[ $RUNNING_PS -gt 3 ]]; then
 fi
 
 notify-send --app-name=Pomodoro --category=presence --hint=BOOLEAN:suppress-sound:true -t $NOTIFY_WAIT --urgency=low --icon "$ICON" "[Pomodoro] Focus for $((FOCUS_TIME / 60))m" \
-    && echo -n "FOCUS" > /tmp/pomodoro \
+    && echo -n " FOCUS" > $OUTPUT_PATH \
     && sleep $FOCUS_TIME
 notify-send --app-name=Pomodoro --category=presence --hint=BOOLEAN:suppress-sound:true -t $NOTIFY_WAIT --urgency=critical --icon "$ICON" "[Pomodoro] Break for $((SHORT_BREAK / 60))m" \
-    && echo -n "BREAK" > /tmp/pomodoro \
-    && sleep $SHORT_BREAK
- 
-notify-send --app-name=Pomodoro --category=presence --hint=BOOLEAN:suppress-sound:true -t $NOTIFY_WAIT --urgency=low --icon "$ICON" "[Pomodoro] Focus for $((FOCUS_TIME / 60))m" \
-    && echo -n "FOCUS" > /tmp/pomodoro \
-    && sleep $FOCUS_TIME
-notify-send --app-name=Pomodoro --category=presence --hint=BOOLEAN:suppress-sound:true -t $NOTIFY_WAIT --urgency=critical --icon "$ICON" "[Pomodoro] Break for $((SHORT_BREAK / 60))m" \
-    && echo -n "BREAK" > /tmp/pomodoro \
+    && echo -n " BREAK" > $OUTPUT_PATH \
     && sleep $SHORT_BREAK
 
 notify-send --app-name=Pomodoro --category=presence --hint=BOOLEAN:suppress-sound:true -t $NOTIFY_WAIT --urgency=low --icon "$ICON" "[Pomodoro] Focus for $((FOCUS_TIME / 60))m" \
-    && echo -n "FOCUS" > /tmp/pomodoro \
+    && echo -n " FOCUS" > $OUTPUT_PATH \
     && sleep $FOCUS_TIME
 notify-send --app-name=Pomodoro --category=presence --hint=BOOLEAN:suppress-sound:true -t $NOTIFY_WAIT --urgency=critical --icon "$ICON" "[Pomodoro] Break for $((SHORT_BREAK / 60))m" \
-    && echo -n "BREAK" > /tmp/pomodoro \
+    && echo -n " BREAK" > $OUTPUT_PATH \
     && sleep $SHORT_BREAK
 
 notify-send --app-name=Pomodoro --category=presence --hint=BOOLEAN:suppress-sound:true -t $NOTIFY_WAIT --urgency=low --icon "$ICON" "[Pomodoro] Focus for $((FOCUS_TIME / 60))m" \
-    && echo -n "FOCUS" > /tmp/pomodoro \
+    && echo -n " FOCUS" > $OUTPUT_PATH \
+    && sleep $FOCUS_TIME
+notify-send --app-name=Pomodoro --category=presence --hint=BOOLEAN:suppress-sound:true -t $NOTIFY_WAIT --urgency=critical --icon "$ICON" "[Pomodoro] Break for $((SHORT_BREAK / 60))m" \
+    && echo -n " BREAK" > $OUTPUT_PATH \
+    && sleep $SHORT_BREAK
+
+notify-send --app-name=Pomodoro --category=presence --hint=BOOLEAN:suppress-sound:true -t $NOTIFY_WAIT --urgency=low --icon "$ICON" "[Pomodoro] Focus for $((FOCUS_TIME / 60))m" \
+    && echo -n " FOCUS" > $OUTPUT_PATH \
     && sleep $FOCUS_TIME
 notify-send --app-name=Pomodoro --category=presence --hint=BOOLEAN:suppress-sound:true -t $NOTIFY_WAIT --urgency=critical --icon "$ICON" "[Pomodoro] Break for $((LONG_BREAK / 60))m" \
-    && echo -n "BREAK" > /tmp/pomodoro \
+    && echo -n " BREAK" > $OUTPUT_PATH \
     && sleep $LONG_BREAK
 
-rm /tmp/pomodoro
+rm $OUTPUT_PATH
