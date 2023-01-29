@@ -14,6 +14,7 @@ keepassxc
 mpg123
 nitrogen
 obsidian
+openvpn
 python
 redshift
 seahorse
