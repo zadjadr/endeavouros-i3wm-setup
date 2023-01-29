@@ -2,6 +2,7 @@ akm
 alacritty
 arandr
 atool
+atuin
 autorandr
 code
 firefox

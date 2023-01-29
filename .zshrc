@@ -120,3 +120,6 @@ export PATH=$HOME/.local/bin:$HOME/go/bin:$PATH
 export PYENV_ROOT="$HOME/.pyenv"
 command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
+
+# Atuin
+eval "$(atuin init zsh)"
