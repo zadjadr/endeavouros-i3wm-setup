@@ -1,7 +1,7 @@
 #!/bin/bash
 set -euxo pipefail
 
-git config --global user.name ${1:-'Zadjad Rezai'}
+git config --global user.name ${1:-'xcalizorz'}
 
 git config --global core.editor vim
 git config --global init.defaultBranch main
