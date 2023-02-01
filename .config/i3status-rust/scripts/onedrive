@@ -18,6 +18,9 @@ case $LAST_LOG in
     Initializing*|Started*|Notification*|Config*|OneDrive*)
         TEXT='init.'
     ;;
+    *'resolve host name'*)
+        TEXT='no inet'
+    ;;
     *)
         TEXT="$(echo $LAST_LOG | cut -d ' ' -f1).."
     ;;
