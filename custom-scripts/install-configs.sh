@@ -51,3 +51,6 @@ ln -s "$PWD/.config/Code - OSS/User/settings.json" "$HOME/.config/Code - OSS/Use
 mkdir -p ~/.meta/status
 touch ~/.meta/status/onedrive
 touch ~/.meta/status/pomodoro
+
+## atuin cannot be symlinked
+cp -r "$PWD"/.config/atuin/config.toml "$HOME"/.config/atuin/config.toml
