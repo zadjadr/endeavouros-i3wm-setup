@@ -12,6 +12,7 @@ mv kubectl ~/.local/bin/kubectl
 curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3
 chmod 700 get_helm.sh
 ./get_helm.sh
+rm ./get_helm.sh
 
 ## kind
 go install sigs.k8s.io/kind@v0.17.0
@@ -22,4 +23,4 @@ CLI_ARCH=amd64
 curl -L --fail --remote-name-all https://github.com/cilium/cilium-cli/releases/download/${CILIUM_CLI_VERSION}/cilium-linux-${CLI_ARCH}.tar.gz{,.sha256sum}
 sha256sum --check cilium-linux-${CLI_ARCH}.tar.gz.sha256sum
 tar xzvfC cilium-linux-${CLI_ARCH}.tar.gz ~/.local/bin
-rm cilium-linux-amd64.tar.gz
+rm cilium-linux-${CLI_ARCH}.tar.gz*

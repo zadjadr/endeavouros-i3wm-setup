@@ -7,11 +7,13 @@ list:
 	@echo "3. make k8s"
 	@echo "4. make docker"
 	@echo "5. make albert"
-	@echo "6. make acpid"
-	@echo "7. make fstab"
-	@echo "8. make background"
-	@echo "9. make config"
-	@echo "10. make zsh"
+	@echo "7. make config 'user.name' 'user.mail'"
+	@echo "8. make fonts"
+	@echo "9. make zsh"
+	@echo "==== EXTRA ===="
+	@echo "10. make background BACKGROUNDS_DIR_PATH BACKGROUND_FULL_NAME"
+	@echo "11. make fstab (make sure to change this according to your needs)"
+	@echo "12. make acpid DISPLAY_NAME AUTORANDR_SETTING (its best to do this manually in the script)"
 
 acpid:
 	./custom-scripts/install-acpid-events.sh $(display_name) $(autorandr_setting)

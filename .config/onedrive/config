@@ -6,7 +6,7 @@
 # For explanations of all config options below see docs/USAGE.md or the man page.
 #
 # See here for more settings: https://raw.githubusercontent.com/abraunegg/onedrive/master/config
-sync_dir = "/mnt/BACKUP/OneDrive"
+sync_dir = "/home/zar/ONEDRIVE"
 # skip_file = "~*|.~*|*.tmp"
 # monitor_interval = "300"
 # skip_dir = ""
