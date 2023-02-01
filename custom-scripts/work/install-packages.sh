@@ -14,7 +14,10 @@ sudo pacman -Sy --needed --noconfirm \
     virtualbox-guest-iso
 
 # Install pip packages
+python -m pip install --upgrade pip
 python -m pip install --user --upgrade \
+    pipenv \
+    ruff \
     salt-lint \
     sops
 
@@ -31,4 +34,4 @@ sudo systemctl disable onedrive@$USER.service
 
 systemctl --user enable onedrive
 systemctl --user start onedrive
-systemctl --user status onedrive.service
+systemctl --user status onedrive.service | cat

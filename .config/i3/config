@@ -460,7 +460,7 @@ exec --no-startup-id dbus-launch dunst --config ~/.config/dunst/dunstrc
 #exec --no-startup-id sleep 3 && alacritty -e ranger
 exec --no-startup-id /usr/bin/redshift -x && /usr/bin/redshift -O 3000
 exec --no-startup-id ~/.config/i3/scripts/lid
-exec --no-startup-id ~/.config/i3/scripts/clean-custom-blocks
+exec --no-startup-id ~/.config/i3status-rust/scripts/clean-custom-blocks
 
 # make sure that gnome-keyring starts an SSH agent
 exec --no-startup-id /usr/bin/gnome-keyring-daemon --start --components=pkcs11,secrets,ssh
