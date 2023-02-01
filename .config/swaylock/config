@@ -3,7 +3,7 @@
 # daemonize
 indicator-caps-lock
 # datestr=%A
-image=/usr/share/backgrounds/1920x1200_106956.png
+image=~/.config/sway/swaylock.png
 scaling=fill
 font=UbuntuMono
 font-size=20
