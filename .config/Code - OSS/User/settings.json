@@ -1,9 +1,10 @@
 {
     "editor.fontFamily": "'FiraCode Nerd Font', 'Droid Sans Mono', 'monospace', monospace",
     "editor.codeLensFontFamily": "'FiraCode Nerd Font'",
-    "editor.fontLigatures": true,
+    "editor.fontLigatures": false,
     "files.trimFinalNewlines": true,
     "files.insertFinalNewline": true,
     "explorer.confirmDelete": false,
-    "files.trimTrailingWhitespace": true
+    "files.trimTrailingWhitespace": true,
+    "workbench.startupEditor": "none"
 }
