@@ -10,13 +10,10 @@ go
 i3status-rust
 keepassxc
 mpg123
-nitrogen
 obsidian
 openvpn
 python
-redshift
 seahorse
 vim
 xreader
-wlr-randr
 kanshi

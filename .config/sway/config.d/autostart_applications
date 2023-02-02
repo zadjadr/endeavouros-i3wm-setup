@@ -22,4 +22,4 @@ exec hash dbus-update-activation-environment 2>/dev/null && \
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 
 exec --no-startup-id ~/.config/i3status-rust/scripts/clean-custom-blocks
-# exec_always pkill kanshi; exec kanshi
+exec_always pkill kanshi; exec kanshi
