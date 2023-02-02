@@ -23,3 +23,6 @@ exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 
 exec --no-startup-id ~/.config/i3status-rust/scripts/clean-custom-blocks
 exec_always pkill kanshi; exec kanshi
+
+# make sure that gnome-keyring starts an SSH agent
+exec --no-startup-id /usr/bin/gnome-keyring-daemon --start --components=pkcs11,secrets,ssh
