@@ -255,4 +255,5 @@ bindsym $mod+r mode "resize"
 #
 # Keybindings List
 #
-    bindsym $mod+t exec xed ~/.config/sway/cheatsheet
+    bindsym $mod+Control+Right move workspace to output right
+    bindsym $mod+Control+Left move workspace to output left
