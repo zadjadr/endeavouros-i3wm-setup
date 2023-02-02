@@ -230,10 +230,10 @@ bindsym $mod+r mode "resize"
 #
 # Player
 #
-    bindsym XF86AudioPlay exec playerctl play
-    bindsym XF86AudioPause exec playerctl pause
-    bindsym XF86AudioNext exec playerctl next
-    bindsym XF86AudioPrev exec playerctl previous
+    # bindsym XF86AudioPlay exec playerctl play
+    # bindsym XF86AudioPause exec playerctl pause
+    # bindsym XF86AudioNext exec playerctl next
+    # bindsym XF86AudioPrev exec playerctl previous
 #
 # Backlight
 #
@@ -250,8 +250,8 @@ bindsym $mod+r mode "resize"
 #
 # Screenshots
 #
-    bindsym print exec /usr/share/sway/scripts/grimshot --notify save output
-    bindsym Shift+print exec ~/.config/sway/scripts/screenshot.sh
+    # bindsym print exec /usr/share/sway/scripts/grimshot --notify save output
+    # bindsym Shift+print exec ~/.config/sway/scripts/screenshot.sh
 #
 # Keybindings List
 #
