@@ -6,5 +6,6 @@
     "files.insertFinalNewline": true,
     "explorer.confirmDelete": false,
     "files.trimTrailingWhitespace": true,
-    "workbench.startupEditor": "none"
+    "workbench.startupEditor": "none",
+    "git.enableSmartCommit": true
 }

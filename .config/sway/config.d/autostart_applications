@@ -14,6 +14,7 @@ exec hash dbus-update-activation-environment 2>/dev/null && \
 
 # Welcome App
 # exec dex -a -s /etc/xdg/autostart/:~/.config/autostart/
+# exec --no-startup-id dex --autostart
 
 # Sway Fader
 # exec python3 ~/.config/sway/scripts/swayfader.py
@@ -25,4 +26,4 @@ exec --no-startup-id ~/.config/i3status-rust/scripts/clean-custom-blocks
 exec_always pkill kanshi; exec kanshi
 
 # make sure that gnome-keyring starts an SSH agent
-exec --no-startup-id /usr/bin/gnome-keyring-daemon --start --components=pkcs11,secrets,ssh
+exec --no-startup-id /usr/bin/gnome-keyring-daemon --replace --components=ssh,pkcs11,secrets --control-directory=/run/user/1000/keyring
