@@ -24,6 +24,15 @@ idle_fg = "#123456"
 
 [[block]]
 block = "custom"
+command = "echo   $(systemctl is-active docker.service)"
+interval = 30
+on_click = "if [[ $(systemctl is-active docker.service) == active ]]; then systemctl stop docker; else systemctl start docker; fi"
+[block.theme_overrides]
+idle_bg = "#1c92f4"
+idle_fg = "#123456"
+
+[[block]]
+block = "custom"
 command = "cat ~/.meta/status/onedrive"
 watch_files = ["~/.meta/status/onedrive"]
 interval = "once"
