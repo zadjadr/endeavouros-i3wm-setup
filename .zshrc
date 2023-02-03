@@ -114,7 +114,7 @@ export GPG_TTY=$(tty)
 export SSH_AUTH_SOCK=$XDG_RUNTIME_DIR/keyring/ssh
 
 # PATH
-export PATH=$HOME/.local/bin:$HOME/go/bin:$PATH
+export PATH=$HOME/.local/bin:$HOME/go/bin:$HOME/bin:$PATH
 
 # PYENV
 export PYENV_ROOT="$HOME/.pyenv"
