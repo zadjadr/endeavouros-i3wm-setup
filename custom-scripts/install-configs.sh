@@ -58,5 +58,3 @@ touch ~/.meta/status/pomodoro
 
 ## atuin cannot be symlinked
 cp -r "$PWD"/.config/atuin/config.toml "$HOME"/.config/atuin/config.toml
-rm -rf ~/.config/Code\ -\ OSS/User/settings.json
-ln -s "$PWD"/.config/Code\ -\ OSS/User/settings.json ~/.config/Code\ -\ OSS/User
