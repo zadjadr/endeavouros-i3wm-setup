@@ -45,6 +45,9 @@ fstab:
 k8s:
 	./custom-scripts/install-k8s.sh
 
+nvidia:
+	nvidia-inst
+
 packages:
 	./custom-scripts/install-packages.sh
 	./custom-scripts/install-external-packages.sh
