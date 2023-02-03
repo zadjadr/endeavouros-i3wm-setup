@@ -26,4 +26,4 @@ case $LAST_LOG in
     ;;
 esac
 
-echo -n "OneDrive: $TEXT" > $HOME/.meta/status/onedrive
+echo -n "  $TEXT" > $HOME/.meta/status/onedrive
