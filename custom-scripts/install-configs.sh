@@ -56,5 +56,7 @@ mkdir -p ~/.meta/status
 touch ~/.meta/status/onedrive
 touch ~/.meta/status/pomodoro
 
-## atuin cannot be symlinked
-cp -r "$PWD"/.config/atuin/config.toml "$HOME"/.config/atuin/config.toml
+## atuin
+rm -rf "$HOME"/.config/atuin
+mkdir -p "$HOME"/.config/atuin
+ln -s "$PWD"/.config/atuin/config.toml "$HOME"/.config/atuin/config.toml
