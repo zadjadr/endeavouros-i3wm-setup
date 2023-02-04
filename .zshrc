@@ -124,3 +124,6 @@ eval "$(pyenv init -)"
 # Atuin
 ATUIN_NOBIND=1 eval "$(atuin init zsh)"
 bindkey '^r' _atuin_search_widget
+
+# Direnv
+eval "$(direnv hook zsh)"
