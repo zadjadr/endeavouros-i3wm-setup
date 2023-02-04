@@ -18,5 +18,4 @@ rustup default stable
 
 # Install AUR packages
 yay -S --removemake --cleanafter --norebuild --noredownload --noconfirm\
-    code-features-insiders \
-    wl-gammarelay-rs
+    code-features-insiders
