@@ -53,7 +53,6 @@ ln -s "$PWD/.config/Code - OSS/User/settings.json" "$HOME/.config/Code - OSS/Use
 
 ## i3rust-status custom blocks
 mkdir -p ~/.meta/status
-touch ~/.meta/status/onedrive
 touch ~/.meta/status/pomodoro
 
 ## atuin
