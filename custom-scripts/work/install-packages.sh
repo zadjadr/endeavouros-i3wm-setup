@@ -5,9 +5,9 @@ set -euxo pipefail
 # Install pacman packages
 sudo pacman -Sy --needed --noconfirm \
     bitwarden \
+    direnv \
     pass \
     pyenv \
-    python-dotenv \
     ruby \
     vagrant \
     virtualbox \

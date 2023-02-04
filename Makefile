@@ -10,10 +10,12 @@ list:
 	@echo "7. make config 'user.name' 'user.mail'"
 	@echo "8. make fonts"
 	@echo "9. make zsh"
+	@echo "10. make system"
 	@echo "==== EXTRA ===="
-	@echo "10. make background BACKGROUNDS_DIR_PATH BACKGROUND_FULL_NAME"
-	@echo "11. make fstab (make sure to change this according to your needs)"
-	@echo "12. make acpid DISPLAY_NAME AUTORANDR_SETTING (its best to do this manually in the script)"
+	@echo "11. make background BACKGROUNDS_DIR_PATH BACKGROUND_FULL_NAME"
+	@echo "12. make fstab (make sure to change this according to your needs)"
+	@echo "13. make acpid DISPLAY_NAME AUTORANDR_SETTING (its best to do this manually in the script)"
+	@echo "14. make nvidia"
 
 acpid:
 	./custom-scripts/install-acpid-events.sh $(display_name) $(autorandr_setting)
@@ -52,6 +54,9 @@ packages:
 	./custom-scripts/install-packages.sh
 	./custom-scripts/install-external-packages.sh
 	./custom-scripts/install-timeshift.sh
+
+system:
+	./custom-scripts/system.sh
 
 work:
 	./custom-scripts/work/install-packages.sh
