@@ -122,4 +122,5 @@ command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
 
 # Atuin
-eval "$(atuin init zsh)"
+ATUIN_NOBIND=1 eval "$(atuin init zsh)"
+bindkey '^r' _atuin_search_widget

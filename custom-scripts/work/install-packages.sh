@@ -14,8 +14,8 @@ sudo pacman -Sy --needed --noconfirm \
     virtualbox-guest-iso
 
 # Install pip packages
-python -m pip install --upgrade pip
-python -m pip install --user --upgrade \
+python -m pip install --upgrade pip --no-warn-script-location
+python -m pip install --user --upgrade --no-warn-script-location \
     pipenv \
     ruff \
     salt-lint \

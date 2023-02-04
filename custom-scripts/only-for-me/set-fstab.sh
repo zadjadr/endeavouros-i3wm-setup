@@ -9,3 +9,6 @@ sudo tee -a /etc/fstab > /dev/null <<EOT
 LABEL=APPDATA /mnt/APPDATA auto nosuid,nodev,nofail,x-gvfs-show 0 0
 LABEL=BACKUP /mnt/BACKUP auto nosuid,nodev,nofail,x-gvfs-show 0 0
 EOT
+
+sudo chown $(whoami):$(whoami) /mnt/APPDATA
+sudo chown $(whoami):$(whoami) /mnt/BACKUP

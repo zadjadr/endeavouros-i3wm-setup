@@ -11,12 +11,12 @@ set -euxo pipefail
 sudo pacman -Sy --needed --noconfirm - < custom-scripts/pkglist.txt
 
 # Ensure pip is installed
-python -m ensurepip --upgrade
+python -m ensurepip --upgrade --no-warn-script-location
 
 # Install rust via rustup
 rustup default stable
 
 # Install AUR packages
-yay -S --removemake --cleanafter --norebuild --noredownload \
+yay -S --removemake --cleanafter --norebuild --noredownload --noconfirm\
     code-features-insiders \
     wl-gammarelay-rs
