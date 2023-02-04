@@ -13,6 +13,10 @@ sudo pacman -Sy --needed --noconfirm - < custom-scripts/pkglist.txt
 # Ensure pip is installed
 python -m ensurepip --upgrade
 
+# Install rust via rustup
+rustup default stable
+
 # Install AUR packages
 yay -S --removemake --cleanafter --norebuild --noredownload \
-    code-features-insiders
+    code-features-insiders \
+    wl-gammarelay-rs

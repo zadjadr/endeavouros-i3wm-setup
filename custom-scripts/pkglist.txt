@@ -8,12 +8,13 @@ gnome-disk-utility
 gnome-keyring
 go
 i3status-rust
+kanshi
 keepassxc
 mpg123
 obsidian
 openvpn
 python
+rustup
 seahorse
 vim
 xreader
-kanshi
