@@ -74,6 +74,14 @@ interval = 10
 format = "%a %d/%m %R"
 
 [[block]]
+block = "hueshift"
+hue_shifter = "wlgammarelayrs"
+step = 250
+click_temp = 3250
+max_temp = 4000
+min_temp = 2500
+
+[[block]]
 block = "networkmanager"
 on_click = "alacritty -e nmtui"
 interface_name_exclude = ['br\-[0-9a-f]{12}', 'docker\d+']
