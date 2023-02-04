@@ -32,14 +32,9 @@ idle_bg = "#1c92f4"
 idle_fg = "#123456"
 
 [[block]]
-block = "custom"
-command = "cat ~/.meta/status/onedrive"
-watch_files = ["~/.meta/status/onedrive"]
-interval = "once"
-hide_when_empty = true
-[block.theme_overrides]
-idle_bg = "#abcdef"
-idle_fg = "#123456"
+block = "custom_dbus"
+name = "OnedriveStatus"
+initial_text = "Init."
 
 [[block]]
 block = "custom"
