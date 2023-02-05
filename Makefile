@@ -54,6 +54,7 @@ packages:
 	./custom-scripts/install-packages.sh
 	./custom-scripts/install-external-packages.sh
 	./custom-scripts/install-timeshift.sh
+	./custom-scripts/install-firewall.sh
 
 system:
 	./custom-scripts/system.sh
