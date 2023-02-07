@@ -26,6 +26,7 @@ yay -S --removemake --cleanafter --norebuild --noredownload --noconfirm \
     keybase-bin \
     onedrive-abraunegg \
     slack-desktop \
+    teams \
     tfswitch-bin
 
 # Setup onedrive as systemd service
