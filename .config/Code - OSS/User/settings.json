@@ -7,5 +7,7 @@
     "explorer.confirmDelete": false,
     "files.trimTrailingWhitespace": true,
     "workbench.startupEditor": "none",
-    "git.enableSmartCommit": true
+    "git.enableSmartCommit": true,
+    "redhat.telemetry.enabled": false,
+    "security.workspace.trust.untrustedFiles": "open"
 }
