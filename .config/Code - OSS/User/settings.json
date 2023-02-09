@@ -9,5 +9,7 @@
     "workbench.startupEditor": "none",
     "git.enableSmartCommit": true,
     "redhat.telemetry.enabled": false,
-    "security.workspace.trust.untrustedFiles": "open"
+    "security.workspace.trust.untrustedFiles": "open",
+    "editor.tabSize": 2,
+    "editor.formatOnSave": true
 }
