@@ -48,6 +48,7 @@ k8s:
 	./custom-scripts/install-k8s.sh
 
 nvidia:
+	sudo pacman -Sy --needed --noconfirm nvidia-inst
 	nvidia-inst
 
 packages:
