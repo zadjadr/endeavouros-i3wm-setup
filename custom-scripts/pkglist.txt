@@ -7,6 +7,7 @@ firefox
 gnome-disk-utility
 gnome-keyring
 go
+gthumb
 i3status-rust
 kanshi
 keepassxc
