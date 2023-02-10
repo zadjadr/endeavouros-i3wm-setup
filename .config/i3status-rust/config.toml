@@ -35,6 +35,7 @@ idle_fg = "#123456"
 block = "custom_dbus"
 name = "OnedriveStatus"
 initial_text = "Init."
+on_click = "if [[ $(systemctl --user is-active onedrive.service) == active ]]; then notify-send 'Onedrive' 'Stopping..' && systemctl --user stop onedrive; else systemctl --user start onedrive; fi;"
 
 [[block]]
 block = "custom"
