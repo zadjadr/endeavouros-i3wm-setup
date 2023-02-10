@@ -15,6 +15,9 @@ case $LAST_LOG in
     Initializing*|Started*|Notification*|Config*|OneDrive*)
         busctl --user call i3.status.rs /OnedriveStatus i3.status.rs SetStatus sss init. weather_clouds Idle
     ;;
+    Stopped*)
+        busctl --user call i3.status.rs /OnedriveStatus i3.status.rs SetStatus sss inactive weather_rain Idle
+    ;;
     *'resolve host name'*)
         busctl --user call i3.status.rs /OnedriveStatus i3.status.rs SetStatus sss 'inet' weather_thunder Critical
     ;;
