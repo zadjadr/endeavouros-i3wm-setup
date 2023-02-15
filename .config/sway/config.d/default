@@ -273,7 +273,7 @@ bindsym $mod+r mode "resize"
 # Screenshots
 #
     bindsym print exec /usr/share/sway/scripts/grimshot --notify copy area
-    bindsym Shift+print exec /usr/share/sway/scripts/grimshot --notify copy window
+    bindsym Shift+print exec /usr/share/sway/scripts/grimshot --notify save area
 #
 # Keybindings List
 #
