@@ -73,7 +73,7 @@ format = "%a %d/%m %R"
 block = "networkmanager"
 on_click = "alacritty -e nmtui"
 interface_name_exclude = ['br\-[0-9a-f]{12}', 'docker\d+']
-interface_name_include = ['wlan0', 'enp\S+']
+interface_name_include = ['wlan\d+', 'enp\S+']
 ap_format = "{strength} {ssid^10}"
 device_format = "{icon} {ap}"
 
