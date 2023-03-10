@@ -114,7 +114,7 @@ export GPG_TTY=$(tty)
 export SSH_AUTH_SOCK=$XDG_RUNTIME_DIR/keyring/ssh
 
 # PATH
-export PATH=$HOME/.local/bin:$HOME/go/bin:$HOME/bin:$PATH
+export PATH=$HOME/.local/bin:$HOME/go/bin:$HOME/bin:$HOME/.cargo/bin:$PATH
 
 # PYENV
 export PYENV_ROOT="$HOME/.pyenv"
@@ -122,8 +122,14 @@ command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
 
 # Atuin
-ATUIN_NOBIND=1 eval "$(atuin init zsh)"
+ATUIN_NOBIND=1 eval "$(atuin init zsh --disable-up-arrow)"
 bindkey '^r' _atuin_search_widget
 
 # Direnv
 eval "$(direnv hook zsh)"
+
+# Fix zsh-syntax-highlight bug
+# https://github.com/alacritty/alacritty/issues/4357
+export TERM=xterm-256color
+
+export PASSWORD_STORE_DIR="$HOME"/.config/ioki/terraform.envrc
