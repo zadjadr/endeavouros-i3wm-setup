@@ -9,6 +9,7 @@ set -euxo pipefail
 rm -rf \
 	~/.config/i3 \
 	~/.config/i3status-rust \
+	~/.config/dunst \
 	~/.config/sway \
 	~/.config/swaylock \
 	~/.config/waybar \
@@ -17,6 +18,7 @@ rm -rf \
 	~/.config/alacritty \
 	~/.config/albert \
 	~/.config/autostart \
+	~/.config/autorandr \
 	~/.config/gtk-3.0 \
 	~/.config/gtk-4.0 \
 	~/.config/nitrogen \
@@ -29,6 +31,7 @@ rm -rf \
 ln -s \
 	"$PWD"/.config/i3 \
 	"$PWD"/.config/i3status-rust \
+	"$PWD"/.config/dunst \
 	"$PWD"/.config/sway \
 	"$PWD"/.config/swaylock \
 	"$PWD"/.config/waybar \
@@ -37,6 +40,7 @@ ln -s \
 	"$PWD"/.config/alacritty \
 	"$PWD"/.config/albert \
 	"$PWD"/.config/autostart \
+	"$PWD"/.config/autorandr \
 	"$PWD"/.config/gtk-3.0 \
 	"$PWD"/.config/gtk-4.0 \
 	"$PWD"/.config/nitrogen \
@@ -48,8 +52,8 @@ ln -s \
 	~/.config
 
 ## VScode
-rm -rf "$HOME/.config/Code - OSS/User/settings.json"
-ln -s "$PWD/.config/Code - OSS/User/settings.json" "$HOME/.config/Code - OSS/User/settings.json"
+rm -rf "$HOME/.config/Code/User/settings.json"
+ln -s "$PWD/.config/Code - OSS/User/settings.json" "$HOME/.config/Code/User/settings.json"
 
 ## i3rust-status custom blocks
 mkdir -p ~/.meta/status
