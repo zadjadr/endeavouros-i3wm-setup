@@ -9,7 +9,7 @@ case $LAST_LOG in
     *complete)
         echo " synched" > ~/.meta/status/onedrive
     ;;
-    Starting*|Synching*|Moving*|Uploading*|Downloading*|Creating*|Uploading*|Deleting*|Received*|done*|*check*|skipped*)
+    Starting*|Synching*|Moving*|Uploading*|Downloading*|Creating*|Uploading*|Deleting*|Received*|done*|*check*|skipped*|*300*)
         echo " syncing" > ~/.meta/status/onedrive
     ;;
     Initializing*|Started*|Notification*|Config*|OneDrive*)
