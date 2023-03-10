@@ -4,10 +4,10 @@
 # https://github.com/greshake/i3status-rust/blob/v0.22.0/examples/config.toml
 
 [icons]
-name = "material-nf"
+icons = "material-nf"
 
 [theme]
-name = "dracula"
+theme = "dracula"
 [theme.overrides]
 idle_bg = "#123456"
 idle_fg = "#abcdef"
@@ -25,17 +25,27 @@ idle_fg = "#123456"
 [[block]]
 block = "custom"
 command = "echo   $(systemctl is-active docker.service)"
-interval = 30
-on_click = "if [[ $(systemctl is-active docker.service) == active ]]; then systemctl stop docker; else systemctl start docker; fi"
+interval = 60
+hide_when_empty = true
+[[block.click]]
+button = "left"
+cmd = "if [[ $(systemctl is-active docker.service) == active ]]; then alacritty -e sudo systemctl stop docker; else alacritty -e sudo systemctl start docker; fi"
 [block.theme_overrides]
 idle_bg = "#1c92f4"
 idle_fg = "#123456"
 
 [[block]]
-block = "custom_dbus"
-name = "OnedriveStatus"
-initial_text = "Init."
-on_click = "if [[ $(systemctl --user is-active onedrive.service) == active ]]; then notify-send 'Onedrive' 'Stopping..' && systemctl --user stop onedrive; else systemctl --user start onedrive; fi;"
+block = "custom"
+command = "cat ~/.meta/status/onedrive"
+watch_files = ["~/.meta/status/onedrive"]
+interval = "once"
+hide_when_empty = true
+[[block.click]]
+button = "left"
+cmd = "if [[ $(systemctl --user is-active onedrive.service) == active ]]; then alacritty -e systemctl --user stop onedrive; else systemctl --user start onedrive; fi"
+[block.theme_overrides]
+idle_bg = "#ffa500"
+idle_fg = "#123456"
 
 [[block]]
 block = "custom"
@@ -46,37 +56,35 @@ hide_when_empty = true
 [[block]]
 block = "disk_space"
 path = "/"
-alias = "/"
 info_type = "available"
-unit = "GB"
+alert_unit = "GB"
 interval = 600
 warning = 20.0
 alert = 10.0
 
 [[block]]
 block = "memory"
-display_type = "memory"
-format_mem = "{mem_used_percents}"
-format_swap = "{swap_used_percents}"
+interval = 15
+format = "$icon $mem_avail.eng(prefix:M)/$mem_total.eng(prefix:M)($mem_total_used_percents.eng(w:2))"
 
 [[block]]
 block = "sound"
 step_width = 5
-on_click = "pavucontrol"
 
 [[block]]
-block = "time"
+block = "net"
+device = '^wl\S+|^en\S+'
 interval = 10
-format = "%a %d/%m %R"
-
-[[block]]
-block = "networkmanager"
-on_click = "alacritty -e nmtui"
-interface_name_exclude = ['br\-[0-9a-f]{12}', 'docker\d+']
-interface_name_include = ['wlan\d+', 'enp\S+']
-ap_format = "{strength} {ssid^10}"
-device_format = "{icon} {ap}"
 
 [[block]]
 block = "battery"
-if_command = "test -e /sys/class/power_supply/BAT0"
+format = "$percentage {$time |}"
+device = "DisplayDevice"
+driver = "upower"
+
+[[block]]
+block = "time"
+interval = 60
+[block.format]
+full = "$icon $timestamp.datetime(f:'%a %d.%m %R', l:de_DE)"
+short = "$icon $timestamp.datetime(f:%R)"

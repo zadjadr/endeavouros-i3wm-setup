@@ -7,22 +7,22 @@ LAST_LOG=$(journalctl -b --user-unit onedrive.service -r -n 1 | sed -e 's/.*: //
 
 case $LAST_LOG in
     *complete)
-        busctl --user call i3.status.rs /OnedriveStatus i3.status.rs SetStatus sss synced weather_clouds Good
+        echo " synched" > ~/.meta/status/onedrive
     ;;
-    Starting*|Synching*|Moving*|Uploading*|Downloading*|Creating*|Uploading*|Deleting*|Received*|done*|*check*)
-        busctl --user call i3.status.rs /OnedriveStatus i3.status.rs SetStatus sss syncing weather_default Info
+    Starting*|Synching*|Moving*|Uploading*|Downloading*|Creating*|Uploading*|Deleting*|Received*|done*|*check*|skipped*)
+        echo " syncing" > ~/.meta/status/onedrive
     ;;
     Initializing*|Started*|Notification*|Config*|OneDrive*)
-        busctl --user call i3.status.rs /OnedriveStatus i3.status.rs SetStatus sss init. weather_clouds Idle
+        echo " init." > ~/.meta/status/onedrive
     ;;
-    Stopped*)
-        busctl --user call i3.status.rs /OnedriveStatus i3.status.rs SetStatus sss inactive weather_rain Idle
+    Stopped*|"-- No entries --")
+        echo "󰏊 inactive" > ~/.meta/status/onedrive
     ;;
     *'resolve host name'*)
-        busctl --user call i3.status.rs /OnedriveStatus i3.status.rs SetStatus sss 'inet' weather_thunder Critical
+        echo "󰏊 inet" > ~/.meta/status/onedrive
     ;;
     *)
         TEXT="$(echo $LAST_LOG | cut -d ' ' -f1).."
-        busctl --user call i3.status.rs /OnedriveStatus i3.status.rs SetStatus sss "$TEXT" weather_thunder Warning
+        echo "󰏊 $TEXT" > ~/.meta/status/onedrive
     ;;
 esac
