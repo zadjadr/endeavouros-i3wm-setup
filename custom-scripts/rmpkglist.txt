@@ -5,6 +5,7 @@ htop
 i3blocks
 nano
 nano-syntax-highlighting
+picom
 waybar
 xed
 xfce4-terminal
