@@ -15,7 +15,7 @@ chmod 700 get_helm.sh
 rm ./get_helm.sh
 
 ## kind
-go install sigs.k8s.io/kind@v0.17.0
+go install sigs.k8s.io/kind@latest
 
 ## cilium
 CILIUM_CLI_VERSION=$(curl -s https://raw.githubusercontent.com/cilium/cilium-cli/master/stable.txt)
