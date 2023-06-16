@@ -1,5 +1,6 @@
 endeavouros-xfce4-terminal-colors
 feh
+fish
 galculator
 htop
 i3blocks
