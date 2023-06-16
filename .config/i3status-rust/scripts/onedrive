@@ -7,22 +7,22 @@ LAST_LOG=$(journalctl -b --user-unit onedrive.service -r -n 1 | sed -e 's/.*: //
 
 case $LAST_LOG in
     *complete)
-        echo " synched" > ~/.meta/status/onedrive
+        echo "☁️ synched" > ~/.meta/status/onedrive
     ;;
     Starting*|Synching*|Moving*|Uploading*|Downloading*|Creating*|Uploading*|Deleting*|Received*|done*|*check*|skipped*|*300*)
-        echo " syncing" > ~/.meta/status/onedrive
+        echo "⛅ syncing" > ~/.meta/status/onedrive
     ;;
     Initializing*|Started*|Notification*|Config*|OneDrive*)
-        echo " init." > ~/.meta/status/onedrive
+        echo "⛅ init." > ~/.meta/status/onedrive
     ;;
     Stopped*|"-- No entries --")
-        echo "󰏊 inactive" > ~/.meta/status/onedrive
+        echo "🌧️ inactive" > ~/.meta/status/onedrive
     ;;
     *'resolve host name'*)
-        echo "󰏊 inet" > ~/.meta/status/onedrive
+        echo "⛈️ inet" > ~/.meta/status/onedrive
     ;;
     *)
         TEXT="$(echo $LAST_LOG | cut -d ' ' -f1).."
-        echo "󰏊 $TEXT" > ~/.meta/status/onedrive
+        echo "⛈️ $TEXT" > ~/.meta/status/onedrive
     ;;
 esac
