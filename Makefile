@@ -3,14 +3,17 @@ SHELL := /usr/bin/env bash
 list:
 	@echo "0. make endeavour-default"
 	@echo "1. make packages"
+	@echo "1.1 make i3-packages"
+	@echo "1.2 make sway-packages"
 	@echo "2. make work"
-	@echo "3. make k8s"
-	@echo "4. make docker"
+	@echo "3. make docker"
+	@echo "4. make k8s"
 	@echo "5. make albert"
-	@echo "7. make config 'user.name' 'user.mail'"
-	@echo "8. make fonts"
-	@echo "9. make zsh"
-	@echo "10. make system"
+	@echo "6. make config"
+	@echo "7. make theme"
+	@echo "8. make zsh"
+	@echo "9. make system"
+	@echo "10. make git 'user.name' 'user.mail'"
 	@echo "==== EXTRA ===="
 	@echo "11. make background BACKGROUNDS_DIR_PATH BACKGROUND_FULL_NAME"
 	@echo "12. make fstab (make sure to change this according to your needs)"
@@ -29,6 +32,8 @@ background:
 config:
 	./custom-scripts/install-configs.sh
 	./custom-scripts/install-mirrorlist-updater.sh
+
+git:
 	./custom-scripts/git-config.sh $(name) $(email)
 
 docker:
@@ -37,9 +42,11 @@ docker:
 endeavour-default:
 	./i3_install
 
-fonts:
+theme:
 	./custom-scripts/install-fonts.sh
+	./custom-scripts/install-cursor.sh
 	./custom-scripts/fix-icons.sh
+	killall picom
 
 fstab:
 	./custom-scripts/only-for-me/set-fstab.sh
@@ -55,7 +62,12 @@ packages:
 	./custom-scripts/install-packages.sh
 	./custom-scripts/install-external-packages.sh
 	./custom-scripts/install-timeshift.sh
-	./custom-scripts/install-firewall.sh
+
+packages-i3:
+	./custom-scripts/install-packages-i3.sh
+
+packages-sway:
+	./custom-scripts/install-packages-sway.sh
 
 system:
 	./custom-scripts/system.sh
