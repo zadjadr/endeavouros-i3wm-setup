@@ -8,12 +8,13 @@ set -euxo pipefail
 sudo tee /usr/local/bin/10-update-mirrorlists.sh > /dev/null <<EOT
 #!/bin/bash
 #
-cp /etc/pacman.d/mirrorlist /etc/pacman.d/mirrorlist.bak
-reflector --verbose -c DE --protocol https --sort rate --latest 10 --download-timeout 2 > /tmp/mirrorlist
-cp /tmp/mirrorlist /etc/pacman.d/mirrorlist
+if output=$(reflector --verbose -c DE --protocol https --sort rate --latest 10 --download-timeout 2 > /tmp/mirrorlist); then
+    cp /etc/pacman.d/mirrorlist /etc/pacman.d/mirrorlist.bak
+    cp /tmp/mirrorlist /etc/pacman.d/mirrorlist
+    exit 0
+fi
 
-eos-rankmirrors --timeout 2 --sort age
-
+sudo pacman-mirrors --country Germany --api --protocol https
 EOT
 
 sudo chmod +x /usr/local/bin/10-update-mirrorlists.sh
