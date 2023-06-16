@@ -505,19 +505,6 @@ exec --no-startup-id /usr/bin/gnome-keyring-daemon --replace --components=ssh,pk
 # assign [id="firefox"] 2
 # for_window [id="firefox"] focus
 
-# bind program to workspace and focus to them on startup:
-# assign [class="Alacritty"] $ws1
-assign [class="code"] $ws2
-assign [class="Lapce"] $ws2
-assign [class="(?i)chromium"] $ws3
-assign [class="org.gnome.Nautilus"] $ws6
-
-# automatic set focus new window if it opens on another workspace than the current:
-for_window [class=Alacritty] focus
-for_window [class=(?i)chromium] focus
-for_window [class=code] focus
-for_window [class=Lapce] focus
-
 assign [class="chromium"] $ws3
 for_window [class="chromium"] focus
 
