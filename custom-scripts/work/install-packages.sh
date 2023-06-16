@@ -14,19 +14,15 @@ sudo pacman -Sy --needed --noconfirm \
     virtualbox-guest-iso
 
 # Install pip packages
-python -m pip install --upgrade pip
-python -m pip install --user --upgrade \
-    pipenv \
-    ruff \
-    salt-lint \
-    sops
+for pak in pipenv ruff salt-lint sops black; do
+    pipx install $pak;
+done
 
 # Install AUR packages
 yay -S --removemake --cleanafter --norebuild --noredownload --noconfirm \
     keybase-bin \
     onedrive-abraunegg \
     slack-desktop \
-    teams \
     tfswitch-bin
 
 # Setup onedrive as systemd service

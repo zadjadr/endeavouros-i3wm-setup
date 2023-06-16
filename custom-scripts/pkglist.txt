@@ -19,3 +19,4 @@ rustup
 seahorse
 vim
 xreader
+python-pipx
