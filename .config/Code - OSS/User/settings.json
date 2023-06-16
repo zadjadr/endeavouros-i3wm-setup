@@ -1,15 +1,25 @@
 {
-    "editor.fontFamily": "'FiraCode Nerd Font', 'Droid Sans Mono', 'monospace', monospace",
-    "editor.codeLensFontFamily": "'FiraCode Nerd Font'",
-    "editor.fontLigatures": false,
-    "files.trimFinalNewlines": true,
-    "files.insertFinalNewline": true,
-    "explorer.confirmDelete": false,
-    "files.trimTrailingWhitespace": true,
-    "workbench.startupEditor": "none",
-    "git.enableSmartCommit": true,
-    "redhat.telemetry.enabled": false,
-    "security.workspace.trust.untrustedFiles": "open",
-    "editor.tabSize": 2,
-    "editor.formatOnSave": true
+  "editor.fontFamily": "'FiraCode Nerd Font', 'Droid Sans Mono', 'monospace', monospace",
+  "editor.codeLensFontFamily": "'FiraCode Nerd Font'",
+  "editor.fontLigatures": false,
+  "files.trimFinalNewlines": true,
+  "files.insertFinalNewline": true,
+  "explorer.confirmDelete": false,
+  "files.trimTrailingWhitespace": true,
+  "workbench.startupEditor": "none",
+  "git.enableSmartCommit": true,
+  "redhat.telemetry.enabled": false,
+  "security.workspace.trust.untrustedFiles": "open",
+  "editor.tabSize": 2,
+  "editor.formatOnSave": true,
+  "[python]": {
+    "editor.formatOnType": true
+  },
+  "extensions.ignoreRecommendations": true,
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
 }
