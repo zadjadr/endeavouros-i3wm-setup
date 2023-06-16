@@ -114,7 +114,7 @@ export GPG_TTY=$(tty)
 export SSH_AUTH_SOCK=$XDG_RUNTIME_DIR/keyring/ssh
 
 # PATH
-export PATH=$HOME/.local/bin:$HOME/go/bin:$HOME/bin:$HOME/.cargo/bin:$PATH
+export PATH=$HOME/.local/bin:$HOME/go/bin:$HOME/bin:$HOME/.cargo/bin:${KREW_ROOT:-$HOME/.krew}/bin:$HOME/.linkerd2/bin:$PATH
 
 # PYENV
 export PYENV_ROOT="$HOME/.pyenv"
@@ -132,4 +132,4 @@ eval "$(direnv hook zsh)"
 # https://github.com/alacritty/alacritty/issues/4357
 export TERM=xterm-256color
 
-export PASSWORD_STORE_DIR="$HOME"/.config/ioki/terraform.envrc
+export PASSWORD_STORE_DIR=/mnt/BACKUP/Documents/.config/ioki/terraform.envrc
