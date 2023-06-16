@@ -9,7 +9,7 @@ icons = "material-nf"
 [theme]
 theme = "dracula"
 [theme.overrides]
-idle_bg = "#123456"
+idle_bg = "#383c4a"
 idle_fg = "#abcdef"
 
 [[block]]
@@ -78,7 +78,7 @@ interval = 10
 
 [[block]]
 block = "battery"
-format = "$percentage {$time |}"
+format = " $percentage {$time |}"
 device = "DisplayDevice"
 driver = "upower"
 
@@ -86,5 +86,5 @@ driver = "upower"
 block = "time"
 interval = 60
 [block.format]
-full = "$icon $timestamp.datetime(f:'%a %d.%m %R', l:de_DE)"
-short = "$icon $timestamp.datetime(f:%R)"
+full = " $icon $timestamp.datetime(f:'%a %d.%m %R', l:de_DE) "
+short = " $icon $timestamp.datetime(f:%R) "
