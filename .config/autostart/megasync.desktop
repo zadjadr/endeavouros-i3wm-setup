@@ -11,4 +11,3 @@ Terminal=false
 Categories=Network;System;
 StartupNotify=false
 X-GNOME-Autostart-Delay=60
-
