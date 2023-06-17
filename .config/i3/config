@@ -333,7 +333,7 @@ bindsym XF86AudioPrev exec playerctl previous
 # bindsym $mod+p exec /usr/local/bin/switch-audio-port
 
 ## App shortcuts
-bindsym $mod+o exec /usr/bin/firefox
+bindsym $mod+b exec /sbin/cachy-browser
 bindsym $mod+c exec /usr/bin/code
 # bindsym $mod+n exec /usr/bin/alacritty --class Ranger --title Ranger --command ranger
 bindsym $mod+n exec /usr/bin/nautilus
@@ -359,23 +359,6 @@ bindsym $mod+Shift+p exec ~/.config/i3/scripts/power-profiles
 #workspace $ws5 output HDMI-0
 bindsym $mod+Control+Right move workspace to output right
 bindsym $mod+Control+Left move workspace to output left
-
-# bind program to workspace and focus to them on startup:
-# assign [class="Alacritty"] $ws1
-assign [class="(?i)code"] $ws2
-assign [class="Lapce"] $ws2
-assign [class="(?i)firefox"] $ws3
-assign [class="Thunderbird"] $ws4
-assign [class="Ranger"] $ws6
-
-# automatic set focus new window if it opens on another workspace than the current:
-for_window [class=Alacritty] focus
-for_window [class=(?i)firefox] focus
-for_window [class=code] focus
-for_window [class=Lapce] focus
-for_window [class=Thunar] focus
-for_window [class=Thunderbird] focus
-for_window [class=TelegramDesktop] focus
 
 ##############
 # compositor #
@@ -505,14 +488,20 @@ exec --no-startup-id /usr/bin/gnome-keyring-daemon --replace --components=ssh,pk
 # assign [id="firefox"] 2
 # for_window [id="firefox"] focus
 
+# automatic set focus new window if it opens on another workspace than the current:
+for_window [class=Alacritty] focus
+
+assign [class="cachybrowser"] $ws3
+for_window [class=cachybrowser] focus
+
 assign [class="chromium"] $ws3
 for_window [class="chromium"] focus
 
 assign [class="org.gnome.Nautilus"] $ws6
 for_window [class="org.gnome.Nautilus"] focus
 
-assign [class="code"] $ws2
-for_window [class="code"] focus
+assign [class="(?i)code"] $ws2
+for_window [class="(?i)code"] focus
 
 assign [class="Keybase"] $ws5
 assign [class="Slack"] $ws5
