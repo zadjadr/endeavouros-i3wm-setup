@@ -50,6 +50,7 @@ theme:
 
 fstab:
 	./custom-scripts/only-for-me/set-fstab.sh
+	./custom-scripts/only-for-me/auto-unmount.sh
 
 k8s:
 	./custom-scripts/install-k8s.sh
