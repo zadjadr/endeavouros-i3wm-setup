@@ -1,11 +1,13 @@
-arc-gtk-theme
 acpi
 acpilight
 alacritty
+arc-gtk-theme
 atuin
 chromium
+fwupd
 gnome-disk-utility
 gnome-keyring
+gnome-firmware
 go
 gthumb
 i3status-rust
@@ -14,8 +16,8 @@ mpg123
 obsidian
 openvpn
 python
+python-pipx
 rustup
 seahorse
 vim
 xreader
-python-pipx
