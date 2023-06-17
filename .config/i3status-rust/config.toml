@@ -75,6 +75,9 @@ step_width = 5
 block = "net"
 device = '^wl\S+|^en\S+'
 interval = 10
+[[block.click]]
+button = "left"
+cmd = "alacritty -e nmtui"
 
 [[block]]
 block = "battery"
