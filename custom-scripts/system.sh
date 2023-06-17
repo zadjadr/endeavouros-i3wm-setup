@@ -11,6 +11,7 @@ sudo systemctl enable dbus-broker
 systemctl --user enable dbus-broker
 
 sudo systemctl restart NetworkManager
+sudo systemctl restart systemd-networkd
 
 echo "A reboot is needed."
 
