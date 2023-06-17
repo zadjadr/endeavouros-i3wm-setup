@@ -47,6 +47,7 @@ WantedBy=timers.target
 EOT
 
 sudo systemctl enable 10-update-mirrorlists.timer
+sudo systemctl daemon-reload
 sudo systemctl start 10-update-mirrorlists.timer
 sudo systemctl list-timers --all
 

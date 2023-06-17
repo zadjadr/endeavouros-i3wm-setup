@@ -28,6 +28,7 @@ yay -S --removemake --cleanafter --norebuild --noredownload --noconfirm \
 # Setup onedrive as systemd service
 sudo systemctl stop onedrive@$USER.service
 sudo systemctl disable onedrive@$USER.service
+sudo systemctl daemon-reload
 
 systemctl --user enable onedrive
 systemctl --user start onedrive

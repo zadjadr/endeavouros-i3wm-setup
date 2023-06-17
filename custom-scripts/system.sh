@@ -13,6 +13,7 @@ systemctl --user enable dbus-broker
 sudo systemctl restart NetworkManager
 sudo systemctl restart systemd-networkd
 
+sudo systemctl daemon-reload
 echo "A reboot is needed."
 
 ## Allow special keys to be sent as user in 'video' group

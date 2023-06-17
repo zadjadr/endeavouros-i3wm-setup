@@ -8,6 +8,7 @@ yay -S --removemake --cleanafter --norebuild --noredownload --noconfirm \
 
 ## Setup timeshift
 sudo systemctl enable cronie
+sudo systemctl daemon-reload
 sudo systemctl start cronie
 
 # create empty cronfiles, otherwise 'crontab -l' will fail in timeshift

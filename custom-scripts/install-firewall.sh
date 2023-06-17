@@ -8,4 +8,5 @@ yay -S --removemake --cleanafter --norebuild --noredownload --noconfirm\
     opensnitch-ebpf-module
 
 sudo systemctl enable --now opensnitchd
+sudo systemctl daemon-reload
 sudo systemctl start opensnitchd

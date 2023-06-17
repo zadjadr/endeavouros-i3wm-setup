@@ -12,5 +12,6 @@ EOT
 # deactivate sddm
 sudo systemctl stop sddm
 sudo systemctl disable sddm
+sudo systemctl daemon-reload
 
 sudo pacman -Rs sddm eos-sddm-theme
