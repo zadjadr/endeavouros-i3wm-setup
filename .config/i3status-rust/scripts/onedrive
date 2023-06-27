@@ -9,10 +9,10 @@ case $LAST_LOG in
     *complete)
         echo "☁️ synched" > ~/.meta/status/onedrive
     ;;
-    Starting*|Synching*|Moving*|Uploading*|Downloading*|Creating*|Uploading*|Deleting*|Received*|done*|*check*|skipped*|*300*)
+    Starting*|Synching*|Moving*|Uploading*|Downloading*|Creating*|Deleting*|Received*|done*|*check*|skipped*|*300*)
         echo "⛅ syncing" > ~/.meta/status/onedrive
     ;;
-    Initializing*|Started*|Notification*|Config*|OneDrive*)
+    Initializing*|Started*|Notification*|Config*|OneDrive*|ProtectHostname*)
         echo "⛅ init." > ~/.meta/status/onedrive
     ;;
     Stopped*|"-- No entries --")
@@ -22,7 +22,7 @@ case $LAST_LOG in
         echo "⛈️ inet" > ~/.meta/status/onedrive
     ;;
     *)
-        TEXT="$(echo $LAST_LOG | cut -d ' ' -f1).."
+        TEXT="$(echo "$LAST_LOG" | cut -d ' ' -f1).."
         echo "⛈️ $TEXT" > ~/.meta/status/onedrive
     ;;
 esac
