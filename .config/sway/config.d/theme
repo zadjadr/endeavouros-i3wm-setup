@@ -9,13 +9,13 @@ gaps outer 0
 default_border pixel 1
 
 # Default Font
-font pango:Noto Sans Regular 10
+font pango:FiraCode Nerd Font 10
 
 # Thin borders:
 smart_borders on
 
 # Set wallpaper:
-exec swaybg -i ~/.config/sway/sway.png
+exec swaybg -i /mnt/BACKUP/MEGA/03_data/backgrounds/106956.jpg
 
 # Title format for windows
 for_window [shell="xdg_shell"] title_format "%title (%app_id)"
@@ -62,8 +62,8 @@ client.background       	$white
 # Start i3bar to display a workspace bar
 # (plus the system information i3status finds out, if available)
 bar {
-    # font pango: FiraCode Nerd Font Retina 10
-    font pango: Noto Sans Regular 10
+    font pango: FiraCode Nerd Font 10
+    # font pango: FiraCode Nerd Font 10
     status_command i3status-rs ~/.config/i3status-rust/config.toml
     position top
     # tray_output primary

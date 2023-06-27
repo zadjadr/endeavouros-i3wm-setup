@@ -26,6 +26,7 @@ for_window [class="code"] focus
 
 assign [class="Keybase"] $ws5
 assign [class="Slack"] $ws5
+assign [class="Element"] $ws5
 # Disable "On close, keep the application running" setting
 ## Otherwise CTRL+Q will not be able to close teams
 assign [class="Microsoft Teams - Preview"] $ws10

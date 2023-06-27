@@ -22,8 +22,8 @@
 # is used in the bar {} block below.
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
-font pango: Noto Sans Regular 10
-# font pango: FiraCode Nerd Font Retina 10
+# font pango: Noto Sans Regular 10
+font pango: FiraCode Nerd Font 10
 
 # set the mod key to the winkey:
 set $mod Mod4
@@ -333,7 +333,7 @@ bindsym XF86AudioPrev exec playerctl previous
 # bindsym $mod+p exec /usr/local/bin/switch-audio-port
 
 ## App shortcuts
-bindsym $mod+b exec /sbin/cachy-browser
+bindsym $mod+o exec /sbin/cachy-browser
 bindsym $mod+c exec /usr/bin/code
 # bindsym $mod+n exec /usr/bin/alacritty --class Ranger --title Ranger --command ranger
 bindsym $mod+n exec /usr/bin/nautilus
@@ -505,6 +505,7 @@ for_window [class="(?i)code"] focus
 
 assign [class="Keybase"] $ws5
 assign [class="Slack"] $ws5
+assign [class="Element"] $ws5
 # Disable "On close, keep the application running" setting
 ## Otherwise CTRL+Q will not be able to close teams
 assign [class="Microsoft Teams - Preview"] $ws10

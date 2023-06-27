@@ -27,8 +27,8 @@ set $powermenu ~/.config/waybar/scripts/power-menu.sh
 
 ### Idle configuration
 exec swayidle -w\
-    timeout 1070 'swaylock -f -C ~/.config/swaylock/config'\
-    timeout 770 'swaymsg "output * power off"' \
+    timeout 300 'swaylock -f -C ~/.config/swaylock/config'\
+    timeout 600 'swaymsg "output * power off"' \
     resume 'swaymsg "output * power on"' \
     before-sleep 'swaylock -C ~/.config/swaylock/config'
 # This will lock your screen after 300 seconds of inactivity, then turn off
@@ -264,9 +264,9 @@ bindsym $mod+r mode "resize"
 #
 # App shortcuts
 #
-    bindsym $mod+o exec /usr/bin/firefox
+    bindsym $mod+o exec /sbin/cachy-browser
     bindsym $mod+c exec /usr/bin/code
-    bindsym $mod+n exec /usr/bin/thunar
+    bindsym $mod+n exec /usr/bin/nautilus
     bindsym $mod+space exec /usr/bin/albert show
     bindsym $mod+p exec --no-startup-id ~/.config/i3status-rust/scripts/pomodoro
 #
