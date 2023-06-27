@@ -21,5 +21,15 @@
   },
   "[json]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
-  }
+  },
+  "vs-kubernetes": {
+    "vscode-kubernetes.kubectl-path.linux": "/home/xcalizorz/.local/bin/kubectl",
+    "vscode-kubernetes.minikube-path.linux": "/usr/bin/minikube"
+  },
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "terminal.integrated.enableMultiLinePasteWarning": false,
+  "go.toolsManagement.autoUpdate": true,
+  "diffEditor.ignoreTrimWhitespace": false
 }
