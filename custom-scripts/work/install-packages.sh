@@ -14,9 +14,16 @@ sudo pacman -Sy --needed --noconfirm \
     virtualbox-guest-iso
 
 # Install pip packages
-for pak in pipenv ruff salt-lint sops black; do
+for pak in pipenv ruff salt-lint black; do
     pipx install $pak;
 done
+
+# Install sops
+go install go.mozilla.org/sops/cmd/sops@latest
+
+# Install atuin
+cargo install atuin
+
 
 # Install AUR packages
 yay -S --removemake --cleanafter --norebuild --noredownload --noconfirm \
