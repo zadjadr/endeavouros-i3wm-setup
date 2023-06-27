@@ -3,8 +3,8 @@ SHELL := /usr/bin/env bash
 list:
 	@echo "0. make endeavour-default"
 	@echo "1. make packages"
-	@echo "1.1 make i3-packages"
-	@echo "1.2 make sway-packages"
+	@echo "1.1 make packages-i3"
+	@echo "1.2 make packages-sway"
 	@echo "2. make work"
 	@echo "3. make docker"
 	@echo "4. make k8s"
@@ -75,6 +75,7 @@ system:
 
 work:
 	./custom-scripts/work/install-packages.sh
+	./custom-scripts/work/stop-onedrive.sh
 
 zsh:
 	./custom-scripts/install-zsh.sh

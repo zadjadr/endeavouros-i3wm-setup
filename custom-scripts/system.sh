@@ -10,8 +10,15 @@ sudo pacman -Sy dbus-broker --needed --noconfirm
 sudo systemctl enable dbus-broker
 systemctl --user enable dbus-broker
 
-sudo systemctl restart NetworkManager
-sudo systemctl restart systemd-networkd
+sudo systemctl enable NetworkManager
+sudo systemctl enable systemd-networkd
+sudo systemctl enable systemd-resolved
+sudo systemctl enable systemd-homed
+
+sudo systemctl start NetworkManager
+sudo systemctl start systemd-networkd
+sudo systemctl start systemd-resolved
+sudo systemctl start systemd-homed
 
 sudo systemctl daemon-reload
 echo "A reboot is needed."
