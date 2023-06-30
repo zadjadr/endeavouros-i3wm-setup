@@ -39,7 +39,7 @@ Description=Update mirrors
 [Timer]
 OnCalendar=Mon,Thu 14:00
 Persistent=true
-RandomizedDelaySec=true
+RandomizedDelaySec=30
 
 [Install]
 WantedBy=timers.target
