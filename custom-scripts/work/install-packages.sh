@@ -4,11 +4,13 @@ set -euxo pipefail
 
 # Install pacman packages
 sudo pacman -Sy --needed --noconfirm \
+    atuin \
     bitwarden \
     direnv \
     pass \
     pyenv \
     ruby \
+    sops \
     vagrant \
     virtualbox \
     virtualbox-guest-iso
@@ -17,13 +19,6 @@ sudo pacman -Sy --needed --noconfirm \
 for pak in pipenv ruff salt-lint black; do
     pipx install $pak;
 done
-
-# Install sops
-go install go.mozilla.org/sops/cmd/sops@latest
-
-# Install atuin
-cargo install atuin
-
 
 # Install AUR packages
 yay -S --removemake --cleanafter --norebuild --noredownload --noconfirm \

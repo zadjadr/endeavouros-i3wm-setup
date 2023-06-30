@@ -3,16 +3,7 @@
 set -euxo pipefail
 
 # Install Kubernetes related packages
-## kubectl
-curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
-chmod +x kubectl
-mv kubectl ~/.local/bin/kubectl
-
-## helm
-curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3
-chmod 700 get_helm.sh
-./get_helm.sh
-rm ./get_helm.sh
+sudo pacman -Sy --needed --noconfirm - < custom-scripts/k8s.list
 
 ## kind
 go install sigs.k8s.io/kind@latest
