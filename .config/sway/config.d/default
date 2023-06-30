@@ -264,9 +264,9 @@ bindsym $mod+r mode "resize"
 #
 # App shortcuts
 #
-    bindsym $mod+o exec /sbin/cachy-browser
+    bindsym $mod+o exec /usr/bin/chromium
     bindsym $mod+c exec /usr/bin/code
-    bindsym $mod+n exec /usr/bin/nautilus
+    bindsym $mod+n exec /usr/bin/pcmanfm
     bindsym $mod+space exec /usr/bin/albert show
     bindsym $mod+p exec --no-startup-id ~/.config/i3status-rust/scripts/pomodoro
 #

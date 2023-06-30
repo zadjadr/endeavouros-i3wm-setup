@@ -333,10 +333,10 @@ bindsym XF86AudioPrev exec playerctl previous
 # bindsym $mod+p exec /usr/local/bin/switch-audio-port
 
 ## App shortcuts
-bindsym $mod+o exec /sbin/cachy-browser
+bindsym $mod+o exec /usr/bin/chromium
 bindsym $mod+c exec /usr/bin/code
 # bindsym $mod+n exec /usr/bin/alacritty --class Ranger --title Ranger --command ranger
-bindsym $mod+n exec /usr/bin/nautilus
+bindsym $mod+n exec /usr/bin/pcmanfm
 bindsym $mod+space exec /usr/bin/albert show
 # bindsym Print exec scrot ~/%Y-%m-%d-%T-screenshot.png && notify-send --urgency=low --transient --expire-time=500 "Screenshot saved to ~/$(date +"%Y-%m-%d-%T")-screenshot.png"
 
@@ -459,8 +459,8 @@ exec --no-startup-id /usr/bin/redshift -x && /usr/bin/redshift -O 3000
 exec --no-startup-id ~/.config/i3/scripts/lid
 exec --no-startup-id ~/.config/i3status-rust/scripts/clean-custom-blocks
 
-# get auth to work with polkit-gnome
-exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
+# get auth to work with polkit
+exec --no-startup-id /usr/lib/polkit-1/polkitd --replace
 
 # make sure that gnome-keyring starts an SSH agent
 exec --no-startup-id /usr/bin/gnome-keyring-daemon --replace --components=ssh,pkcs11,secrets --control-directory=/run/user/1000/keyring
@@ -497,8 +497,8 @@ for_window [class=cachybrowser] focus
 assign [class="chromium"] $ws3
 for_window [class="chromium"] focus
 
-assign [class="org.gnome.Nautilus"] $ws6
-for_window [class="org.gnome.Nautilus"] focus
+assign [class="org.gnome.pcmanfm"] $ws6
+for_window [class="org.gnome.pcmanfm"] focus
 
 assign [class="(?i)code"] $ws2
 for_window [class="(?i)code"] focus

@@ -2,6 +2,7 @@ acpi
 acpilight
 alacritty
 arc-gtk-theme
+bolt
 chromium
 fwupd
 gnome-disk-utility

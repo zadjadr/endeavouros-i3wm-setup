@@ -17,12 +17,13 @@ exec hash dbus-update-activation-environment 2>/dev/null && \
 # exec python3 ~/.config/sway/scripts/swayfader.py
 
 # Get auth to work with polkit-gnome
-exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
+exec --no-startup-id /usr/lib/polkit-1/polkitd --replace
+
 ## Make sure that gnome-keyring starts an SSH agent
 exec --no-startup-id /usr/bin/gnome-keyring-daemon --replace --components=ssh,pkcs11,secrets --control-directory=/run/user/1000/keyring
 
 # OpenSnitch
-exec --no-startup-id /usr/bin/opensnitch-ui
+# exec --no-startup-id /usr/bin/opensnitch-ui
 
 # Autoset Display settings
 exec_always pkill kanshi; exec kanshi
