@@ -23,7 +23,7 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "vs-kubernetes": {
-    "vscode-kubernetes.kubectl-path.linux": "/home/xcalizorz/.local/bin/kubectl",
+    "vscode-kubernetes.kubectl-path.linux": "/usr/bin/kubectl",
     "vscode-kubernetes.minikube-path.linux": "/usr/bin/minikube"
   },
   "[html]": {
