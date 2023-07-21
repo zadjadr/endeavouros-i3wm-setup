@@ -111,6 +111,7 @@ alias k=kubectl
 export GPG_TTY=$(tty)
 
 # Use gnome-keyring ssh-agent
+export GNOME_KEYRING_CONTROL=/run/user/1000/keyring
 export SSH_AUTH_SOCK=$XDG_RUNTIME_DIR/keyring/ssh
 
 # PATH
