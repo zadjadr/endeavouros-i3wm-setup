@@ -13,23 +13,25 @@
   "editor.tabSize": 2,
   "editor.formatOnSave": true,
   "[python]": {
-    "editor.formatOnType": true
+    "editor.formatOnType": true,
+    "editor.defaultFormatter": "ms-python.black-formatter"
   },
   "extensions.ignoreRecommendations": true,
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[json]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "vscode.json-language-features"
   },
   "vs-kubernetes": {
     "vscode-kubernetes.kubectl-path.linux": "/usr/bin/kubectl",
-    "vscode-kubernetes.minikube-path.linux": "/usr/bin/minikube"
+    "vscode-kubernetes.minikube-path.linux": "/usr/bin/minikube",
   },
   "[html]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "terminal.integrated.enableMultiLinePasteWarning": false,
   "go.toolsManagement.autoUpdate": true,
-  "diffEditor.ignoreTrimWhitespace": false
+  "diffEditor.ignoreTrimWhitespace": false,
+  "git.ignoreMissingGitWarning": true
 }
