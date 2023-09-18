@@ -12,5 +12,5 @@ profile home0 {
 	output "Acer Technologies Acer CB241HY T53EE0014201" mode 1920x1080 position 0,0
 }
 profile work {
-	output eDP-1 mode 1920x1080 position 0,0
+	output eDP-1 mode 1920x1200 position 0,0
 }

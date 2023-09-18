@@ -1,6 +1,6 @@
 {
-  "editor.fontFamily": "'FiraCode Nerd Font', 'Droid Sans Mono', 'monospace', monospace",
-  "editor.codeLensFontFamily": "'FiraCode Nerd Font'",
+  "editor.fontFamily": "'FiraCode Nerd Font', 'CaskaydiaCove Nerd Font Mono', 'JetBrainsMono Nerd Font','mononoki Nerd Font'",
+  "editor.codeLensFontFamily": "'FiraCode Nerd Font', 'CaskaydiaCove Nerd Font Mono', 'JetBrainsMono Nerd Font','mononoki Nerd Font'",
   "editor.fontLigatures": false,
   "files.trimFinalNewlines": true,
   "files.insertFinalNewline": true,
@@ -28,10 +28,18 @@
     "vscode-kubernetes.minikube-path.linux": "/usr/bin/minikube",
   },
   "[html]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "vscode.html-language-features"
   },
   "terminal.integrated.enableMultiLinePasteWarning": false,
   "go.toolsManagement.autoUpdate": true,
   "diffEditor.ignoreTrimWhitespace": false,
-  "git.ignoreMissingGitWarning": true
+  "git.ignoreMissingGitWarning": true,
+  "git.openRepositoryInParentFolders": "never",
+  "[terraform]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "hashicorp.terraform",
+  },
+  "terraform.codelens.referenceCount": true,
+  "terraform.experimentalFeatures.prefillRequiredFields": true,
+  "diffEditor.maxComputationTime": 0
 }

@@ -31,7 +31,6 @@ background:
 
 config:
 	./custom-scripts/install-configs.sh
-	./custom-scripts/install-mirrorlist-updater.sh
 
 git:
 	./custom-scripts/git-config.sh $(name) $(email)

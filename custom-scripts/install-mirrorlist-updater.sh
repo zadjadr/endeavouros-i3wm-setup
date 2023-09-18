@@ -13,7 +13,7 @@ if output=$(reflector --verbose -c DE --protocol https --sort rate --latest 10 -
     exit 0
 fi
 
-curl -s "https://archlinux.org/mirrorlist/?country=DE&protocol=https&use_mirror_status=on" | sed -e 's/^#Server/Server/' -e '/^#/d' | rankmirrors -n 10 - > /etc/pacman.d/mirrorlist
+pacman-mirrors -c Germany
 
 EOT
 

@@ -29,7 +29,7 @@ interval = 60
 hide_when_empty = true
 [[block.click]]
 button = "left"
-cmd = "if [[ $(systemctl is-active docker.service) == active ]]; then alacritty -e sudo systemctl stop docker; else alacritty -e sudo systemctl start docker; fi"
+cmd = "if [[ $(systemctl is-active docker.service) == active ]]; then kitty -e sudo systemctl stop docker; else kitty -e sudo systemctl start docker; fi"
 [block.theme_overrides]
 idle_bg = "#1c92f4"
 idle_fg = "#123456"
@@ -42,7 +42,7 @@ interval = "once"
 hide_when_empty = true
 [[block.click]]
 button = "left"
-cmd = "if [[ $(systemctl --user is-active onedrive.service) == active ]]; then alacritty -e systemctl --user stop onedrive; else systemctl --user start onedrive; fi"
+cmd = "if [[ $(systemctl --user is-active onedrive.service) == active ]]; then kitty -e systemctl --user stop onedrive; else systemctl --user start onedrive; fi"
 [block.theme_overrides]
 idle_bg = "#ffa500"
 idle_fg = "#123456"
@@ -77,7 +77,7 @@ device = '^wl\S+|^en\S+'
 interval = 10
 [[block.click]]
 button = "left"
-cmd = "alacritty -e nmtui"
+cmd = "kitty -e nmtui"
 
 [[block]]
 block = "battery"

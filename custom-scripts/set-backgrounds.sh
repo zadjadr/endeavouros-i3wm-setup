@@ -29,7 +29,7 @@ sudo tee /etc/lightdm/slick-greeter.conf > /dev/null <<EOT
 background=$LIGHTDM_BACKGROUND
 draw-user-backgrounds=false
 draw-grid=true
-theme-name=Arc-Darker
+theme-name=Arc-Dark
 icon-theme-name=Papirus-Dark
 cursor-theme-name=Bibata-Modern-Classic
 cursor-theme-size=16

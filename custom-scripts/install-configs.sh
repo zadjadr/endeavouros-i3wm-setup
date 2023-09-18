@@ -7,46 +7,56 @@ set -euxo pipefail
 # Replace configs
 ## i3 config
 rm -rf \
-	~/.config/i3 \
-	~/.config/i3status-rust \
-	~/.config/dunst \
-	~/.config/sway \
-	~/.config/swaylock \
-	~/.config/waybar \
-	~/.config/mako \
-	~/.config/kanshi \
 	~/.config/alacritty \
 	~/.config/albert \
-	~/.config/autostart \
 	~/.config/autorandr \
+	~/.config/autostart \
+	~/.config/dunst \
 	~/.config/gtk-3.0 \
 	~/.config/gtk-4.0 \
+	~/.config/hypr \
+	~/.config/i3 \
+	~/.config/i3status-rust \
+	~/.config/kanshi \
+	~/.config/kitty \
+	~/.config/mako \
 	~/.config/nitrogen \
 	~/.config/onedrive \
+	~/.config/polybar \
 	~/.config/ranger \
 	~/.config/rofi \
+	~/.config/sway \
+	~/.config/swaylock \
+	~/.config/swww \
+	~/.config/waybar \
+	~/.config/wlogout \
 	~/.config/wofi \
 	~/.config/yay
 
 ln -s \
-	"$PWD"/.config/i3 \
-	"$PWD"/.config/i3status-rust \
-	"$PWD"/.config/dunst \
-	"$PWD"/.config/sway \
-	"$PWD"/.config/swaylock \
-	"$PWD"/.config/waybar \
-	"$PWD"/.config/mako \
-	"$PWD"/.config/kanshi \
 	"$PWD"/.config/alacritty \
 	"$PWD"/.config/albert \
-	"$PWD"/.config/autostart \
 	"$PWD"/.config/autorandr \
+	"$PWD"/.config/autostart \
+	"$PWD"/.config/dunst \
 	"$PWD"/.config/gtk-3.0 \
 	"$PWD"/.config/gtk-4.0 \
+	"$PWD"/.config/hypr \
+	"$PWD"/.config/i3 \
+	"$PWD"/.config/i3status-rust \
+	"$PWD"/.config/kanshi \
+	"$PWD"/.config/kitty \
+	"$PWD"/.config/mako \
 	"$PWD"/.config/nitrogen \
 	"$PWD"/.config/onedrive \
+	"$PWD"/.config/polybar \
 	"$PWD"/.config/ranger \
 	"$PWD"/.config/rofi \
+	"$PWD"/.config/sway \
+	"$PWD"/.config/swaylock \
+	"$PWD"/.config/swww \
+	"$PWD"/.config/waybar \
+	"$PWD"/.config/wlogout \
 	"$PWD"/.config/wofi \
 	"$PWD"/.config/yay \
 	~/.config

@@ -15,3 +15,10 @@ curl -L --fail --remote-name-all https://github.com/cilium/cilium-cli/releases/d
 sha256sum --check cilium-linux-${CLI_ARCH}.tar.gz.sha256sum
 tar xzvfC cilium-linux-${CLI_ARCH}.tar.gz ~/.local/bin
 rm cilium-linux-${CLI_ARCH}.tar.gz*
+
+## linkerd
+curl --proto '=https' --tlsv1.2 -sSfL https://run.linkerd.io/install | sh
+
+## Others
+yay -S --removemake --cleanafter --norebuild --noredownload --noconfirm \
+    openlens-bin

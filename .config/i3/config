@@ -182,12 +182,12 @@ bindsym $mod+r mode "resize"
 
 # autorandr
 bindsym $mod+Shift+a mode "$mode_autorandr"
-set $mode_autorandr autorandr (c)ycle, (1) t430___monitor, (2) t430_monitor_monitor, (3) t430_laptop
+set $mode_autorandr autorandr (c)ycle, (1) dell_monitor_monitor (2) t430___monitor, (3) t430_monitor_monitor
 mode "$mode_autorandr" {
     bindsym c exec --no-startup-id autorandr --cycle, mode "default"
-    bindsym 1 exec --no-startup-id autorandr t430___monitor, mode "default"
-    bindsym 2 exec --no-startup-id autorandr t430_monitor_monitor, mode "default"
-    bindsym 3 exec --no-startup-id autorandr t430_laptop, mode "default"
+    bindsym 1 exec --no-startup-id autorandr dell_monitor_monitor, mode "default"
+    bindsym 2 exec --no-startup-id autorandr t430___monitor, mode "default"
+    bindsym 3 exec --no-startup-id autorandr t430_monitor_monitor, mode "default"
 
     # exit system mode: "Enter" or "Escape"
     bindsym Return mode "default"
@@ -208,7 +208,7 @@ bindsym $mod+q kill
 # bindsym $mod+Shift+e exec ~/.config/i3/scripts/powermenu
 
 # Set shut down, restart and locking features
-bindsym $mod+0 mode "$mode_system"
+bindsym $mod+Shift+e mode "$mode_system"
 set $mode_system (l)ock, (e)xit, (s)uspend, (h)ibernate, (r)eboot, (Shift+s)hutdown
 mode "$mode_system" {
     bindsym l exec --no-startup-id ~/.config/i3/scripts/lock, mode "default"
@@ -245,8 +245,8 @@ bindsym $mod+F1 exec ~/.config/i3/scripts/keyhint-2
 # Backlight setting using dunst osc
 # bindsym XF86MonBrightnessUp exec --no-startup-id ~/.config/i3/scripts/volume_brightness.sh brightness_up
 # bindsym XF86MonBrightnessDown exec --no-startup-id ~/.config/i3/scripts/volume_brightness.sh brightness_down
-bindsym XF86MonBrightnessUp exec xbacklight +5 && VALUE=$(xbacklight -get | cut -d '.' -f 1) && notify-send --urgency=low --transient --expire-time=500 --app-name=Backlight "🔆   $VALUE%" -h int:value:${VALUE}
-bindsym XF86MonBrightnessDown exec xbacklight -5 && VALUE=$(xbacklight -get | cut -d '.' -f 1) && notify-send --urgency=low --transient --expire-time=500 --app-name=Backlight "🔅    $VALUE%" -h int:value:${VALUE}
+bindsym XF86MonBrightnessUp exec brightnessctl s +5%
+bindsym XF86MonBrightnessDown exec brightnessctl s 5%-
 
 # change focus
 # bindsym $mod+j focus left
@@ -338,7 +338,8 @@ bindsym $mod+c exec /usr/bin/code
 # bindsym $mod+n exec /usr/bin/alacritty --class Ranger --title Ranger --command ranger
 bindsym $mod+n exec /usr/bin/pcmanfm
 bindsym $mod+space exec /usr/bin/albert show
-# bindsym Print exec scrot ~/%Y-%m-%d-%T-screenshot.png && notify-send --urgency=low --transient --expire-time=500 "Screenshot saved to ~/$(date +"%Y-%m-%d-%T")-screenshot.png"
+bindsym Print exec scrot -s capture -e 'xclip -selection clipboard -t image/png -i $f'
+bindsym $mod+Print exec scrot -s capture ~/%Y-%m-%d-%T-screenshot.png && notify-send --urgency=low --transient --expire-time=500 "Screenshot saved to ~/$(date +"%Y-%m-%d-%T")-screenshot.png"
 
 bindsym $mod+p exec --no-startup-id ~/.config/i3status-rust/scripts/pomodoro
 
@@ -489,10 +490,7 @@ exec --no-startup-id /usr/bin/gnome-keyring-daemon --replace --components=ssh,pk
 # for_window [id="firefox"] focus
 
 # automatic set focus new window if it opens on another workspace than the current:
-for_window [class=Alacritty] focus
-
-assign [class="cachybrowser"] $ws3
-for_window [class=cachybrowser] focus
+for_window [class=alacritty] focus
 
 assign [class="chromium"] $ws3
 for_window [class="chromium"] focus
@@ -505,7 +503,7 @@ for_window [class="(?i)code"] focus
 
 assign [class="Keybase"] $ws5
 assign [class="Slack"] $ws5
-assign [class="Element"] $ws5
+assign [class="SchildiChat"] $ws5
 # Disable "On close, keep the application running" setting
 ## Otherwise CTRL+Q will not be able to close teams
 assign [class="Microsoft Teams - Preview"] $ws10

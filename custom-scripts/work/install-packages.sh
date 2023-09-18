@@ -10,10 +10,7 @@ sudo pacman -Sy --needed --noconfirm \
     pass \
     pyenv \
     ruby \
-    sops \
-    vagrant \
-    virtualbox \
-    virtualbox-guest-iso
+    sops
 
 # Install pip packages
 for pak in pipenv ruff salt-lint black; do
@@ -26,6 +23,7 @@ yay -S --removemake --cleanafter --norebuild --noredownload --noconfirm \
     onedrive-abraunegg \
     slack-desktop \
     tfswitch-bin
+    # schildichat-desktop-bin
 
 # Setup onedrive as systemd service
 sudo systemctl stop onedrive@$USER.service

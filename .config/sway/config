@@ -1,4 +1,4 @@
-# Initial Setup 
+# Initial Setup
 # exec ~/set_once.sh
 
 # Config for sway
@@ -7,6 +7,7 @@
 
 # user config directory
 include $HOME/.config/sway/config.d/*
+include $HOME/.config/sway/definitions.d/*
 
 # only enable this if every app you use is compatible with wayland
 # xwayland disable

@@ -11,8 +11,8 @@ https://discovery.endeavouros.com/window-tiling-managers/i3-wm/
 
  = windows key
 
-# start alacritty
-+Return 
+# start kitty
++Return
 
 # kill focused window
 +q
