@@ -29,6 +29,7 @@ rm -rf \
 	~/.config/swaylock \
 	~/.config/swww \
 	~/.config/waybar \
+	~/.config/way-displays \
 	~/.config/wlogout \
 	~/.config/wofi \
 	~/.config/yay
@@ -56,6 +57,7 @@ ln -s \
 	"$PWD"/.config/swaylock \
 	"$PWD"/.config/swww \
 	"$PWD"/.config/waybar \
+	"$PWD"/.config/way-displays \
 	"$PWD"/.config/wlogout \
 	"$PWD"/.config/wofi \
 	"$PWD"/.config/yay \

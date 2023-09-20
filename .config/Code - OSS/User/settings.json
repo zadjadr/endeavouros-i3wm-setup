@@ -41,5 +41,8 @@
   },
   "terraform.codelens.referenceCount": true,
   "terraform.experimentalFeatures.prefillRequiredFields": true,
-  "diffEditor.maxComputationTime": 0
+  "diffEditor.maxComputationTime": 0,
+  "files.associations": {
+    "config": "bat"
+  }
 }
