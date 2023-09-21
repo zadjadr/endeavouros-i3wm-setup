@@ -31,9 +31,9 @@ AUTO_SCALE: TRUE
 
 
 # Auto scale may be overridden for each display.
-# SCALE:
-  #- NAME_DESC: 'monitor description'
-  #  SCALE: 1.75
+SCALE:
+  - NAME_DESC: "Lenovo Group Limited D32u-40 URB69DVW"
+    SCALE: 1.3
 
 # Override the preferred mode.
 # WARNING: this may result in an unusable display. See https://github.com/alex-courtis/way-displays#known-issues-with-workarounds
