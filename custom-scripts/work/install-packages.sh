@@ -5,7 +5,6 @@ set -euxo pipefail
 # Install pacman packages
 sudo pacman -Sy --needed --noconfirm \
     atuin \
-    bitwarden \
     direnv \
     pass \
     pyenv \
@@ -22,8 +21,8 @@ yay -S --removemake --cleanafter --norebuild --noredownload --noconfirm \
     keybase-bin \
     onedrive-abraunegg \
     slack-desktop \
-    tfswitch-bin
-    # schildichat-desktop-bin
+    tfswitch-bin \
+    element-desktop
 
 # Setup onedrive as systemd service
 sudo systemctl stop onedrive@$USER.service
