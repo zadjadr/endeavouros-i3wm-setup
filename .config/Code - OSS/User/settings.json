@@ -23,10 +23,6 @@
   "[json]": {
     "editor.defaultFormatter": "vscode.json-language-features"
   },
-  "vs-kubernetes": {
-    "vscode-kubernetes.kubectl-path.linux": "/usr/bin/kubectl",
-    "vscode-kubernetes.minikube-path.linux": "/usr/bin/minikube",
-  },
   "[html]": {
     "editor.defaultFormatter": "vscode.html-language-features"
   },
@@ -44,5 +40,6 @@
   "diffEditor.maxComputationTime": 0,
   "files.associations": {
     "config": "bat"
-  }
+  },
+  "terminal.integrated.defaultProfile.linux": "zsh",
 }

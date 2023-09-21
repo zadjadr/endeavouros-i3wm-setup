@@ -122,6 +122,7 @@ alias k=kubectl
 alias kubeseal="kubeseal --controller-namespace sealed-secrets"
 
 export GPG_TTY=$(tty)
+export GNUPGHOME=$HOME/.gnupg
 
 # Use gnome-keyring ssh-agent
 export GNOME_KEYRING_CONTROL=/run/user/1000/keyring
@@ -130,15 +131,8 @@ export SSH_AUTH_SOCK=$XDG_RUNTIME_DIR/keyring/ssh
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-#Display specs
-#neofetch
-
-#Display Pokemon
-# pokemon-colorscripts --no-title -r 1,3,6
-
 #Display random gifs
 #kitten icat --align left $(find $HOME/.config/neofetch/gifs/ -name "*.gif" | sort -R | head -1)
-
 
 # PATH
 export PATH=$HOME/.local/bin:$HOME/go/bin:$HOME/bin:$HOME/.cargo/bin:${KREW_ROOT:-$HOME/.krew}/bin:$HOME/.linkerd2/bin:$HOME/.local/pipx/venvs:$PATH
