@@ -18,7 +18,7 @@ done
 
 # Install AUR packages
 yay -S --removemake --cleanafter --norebuild --noredownload --noconfirm \
-    keybase-bin \
+    keybase \
     onedrive-abraunegg \
     slack-desktop \
     tfswitch-bin \
