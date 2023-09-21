@@ -5,7 +5,6 @@
 set -euxo pipefail
 
 # Replace configs
-## i3 config
 rm -rf \
 	~/.config/alacritty \
 	~/.config/albert \
@@ -62,6 +61,45 @@ ln -s \
 	"$PWD"/.config/wofi \
 	"$PWD"/.config/yay \
 	~/.config
+
+BACKUP_HOME="/mnt/BACKUP/home/xcalizorz"
+
+rm -rf \
+	~/.cargo \
+	~/.docker \
+	~/.git \
+	~/.gitconfig \
+	~/.gnupg \
+	~/.krew \
+	~/.pyenv \
+	~/.rbenv \
+	~/.rustup \
+	~/.ssh \
+	~/.terraform.d \
+	~/.terraform.versions \
+	~/bin \
+	~/Documents \
+	~/Downloads \
+	~/go
+
+ln -s \
+	"$BACKUP_HOME"/.cargo \
+	"$BACKUP_HOME"/.docker \
+	"$BACKUP_HOME"/.git \
+	"$BACKUP_HOME"/.gitconfig \
+	"$BACKUP_HOME"/.gnupg \
+	"$BACKUP_HOME"/.krew \
+	"$BACKUP_HOME"/.pyenv \
+	"$BACKUP_HOME"/.rbenv \
+	"$BACKUP_HOME"/.rustup \
+	"$BACKUP_HOME"/.ssh \
+	"$BACKUP_HOME"/.terraform.d \
+	"$BACKUP_HOME"/.terraform.versions \
+	"$BACKUP_HOME"/bin \
+	"$BACKUP_HOME"/Documents \
+	"$BACKUP_HOME"/Downloads \
+	"$BACKUP_HOME"/go \
+	$HOME
 
 ## VScode
 rm -rf "$HOME/.config/Code/User/settings.json"
