@@ -13,7 +13,7 @@ list:
 	@echo "7. make theme"
 	@echo "8. make zsh"
 	@echo "9. make system"
-	@echo "10. make name='user.name' email='user.mail' git
+	@echo "10. make name='user.name' email='user.mail' git"
 	@echo "==== EXTRA ===="
 	@echo "11. make background BACKGROUNDS_DIR_PATH BACKGROUND_FULL_NAME"
 	@echo "12. make fstab (make sure to change this according to your needs)"

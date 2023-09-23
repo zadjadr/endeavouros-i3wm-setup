@@ -4,8 +4,8 @@ set -euxo pipefail
 
 sudo pacman -Sy
 
-# Install nerd fonts
-sudo pacman -S ttf-firacode-nerd --needed --noconfirm
+# Install nerd fonts & emojis
+sudo pacman -S ttf-firacode-nerd noto-fonts-emoji --needed --noconfirm
 
 # Install icons
 ## papirus
