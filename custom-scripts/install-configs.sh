@@ -18,6 +18,7 @@ rm -rf \
 	~/.config/i3status-rust \
 	~/.config/kanshi \
 	~/.config/kitty \
+	~/.config/foot \
 	~/.config/mako \
 	~/.config/nitrogen \
 	~/.config/onedrive \
@@ -46,6 +47,7 @@ ln -s \
 	"$PWD"/.config/i3status-rust \
 	"$PWD"/.config/kanshi \
 	"$PWD"/.config/kitty \
+	"$PWD"/.config/foot \
 	"$PWD"/.config/mako \
 	"$PWD"/.config/nitrogen \
 	"$PWD"/.config/onedrive \
@@ -70,6 +72,11 @@ rm -rf \
 	~/.git \
 	~/.gitconfig \
 	~/.gnupg \
+	~/.icons \
+	~/.config/Slack \
+	~/.config/BraveSoftware \
+	~/.config/OpenLens \
+	~/.config/Code \
 	~/.krew \
 	~/.pyenv \
 	~/.rbenv \
@@ -80,6 +87,7 @@ rm -rf \
 	~/bin \
 	~/Documents \
 	~/Downloads \
+	~/Pictures \
 	~/go
 
 ln -s \
@@ -88,6 +96,7 @@ ln -s \
 	"$BACKUP_HOME"/.git \
 	"$BACKUP_HOME"/.gitconfig \
 	"$BACKUP_HOME"/.gnupg \
+	"$BACKUP_HOME"/.icons \
 	"$BACKUP_HOME"/.krew \
 	"$BACKUP_HOME"/.pyenv \
 	"$BACKUP_HOME"/.rbenv \
@@ -98,8 +107,16 @@ ln -s \
 	"$BACKUP_HOME"/bin \
 	"$BACKUP_HOME"/Documents \
 	"$BACKUP_HOME"/Downloads \
+	"$BACKUP_HOME"/Pictures \
 	"$BACKUP_HOME"/go \
 	$HOME
+
+ln -s \
+	"$BACKUP_HOME"/.config/Slack \
+	"$BACKUP_HOME"/.config/BraveSoftware \
+	"$BACKUP_HOME"/.config/OpenLens \
+	"$BACKUP_HOME"/.config/Code \
+	$HOME/.config
 
 ## VScode
 rm -rf "$HOME/.config/Code/User/settings.json"
