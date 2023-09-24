@@ -185,7 +185,8 @@
         "exec": "~/.config/hypr/scripts/systemupdate.sh",
         "on-click": "~/.config/hypr/scripts/systemupdate.sh up",
         "interval": 86400, // once every day
-        "tooltip": true
+        "tooltip": true,
+        "return-type": "json"
     },
     "tray": {
         "icon-size": 12,
