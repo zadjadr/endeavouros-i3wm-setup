@@ -134,6 +134,8 @@ export SSH_AUTH_SOCK=$XDG_RUNTIME_DIR/keyring/ssh
 #Display random gifs
 #kitten icat --align left $(find $HOME/.config/neofetch/gifs/ -name "*.gif" | sort -R | head -1)
 
+pokemon-colorscripts --no-title -r 1,3,6
+
 # PATH
 export PATH=$HOME/.local/bin:$HOME/go/bin:$HOME/bin:$HOME/.cargo/bin:${KREW_ROOT:-$HOME/.krew}/bin:$HOME/.linkerd2/bin:$HOME/.local/pipx/venvs:$PATH
 
