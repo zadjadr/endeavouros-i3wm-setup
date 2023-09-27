@@ -10,6 +10,10 @@ rm -rf \
 	~/.config/albert \
 	~/.config/autorandr \
 	~/.config/autostart \
+	~/.config/code-flags.conf \
+	~/.config/brave-flags.conf \
+	~/.config/electron-flags.conf \
+	~/.config/electron25-flags.conf \
 	~/.config/dunst \
 	~/.config/gtk-3.0 \
 	~/.config/gtk-4.0 \
@@ -39,6 +43,10 @@ ln -s \
 	"$PWD"/.config/albert \
 	"$PWD"/.config/autorandr \
 	"$PWD"/.config/autostart \
+	"$PWD"/.config/code-flags.conf \
+	"$PWD"/.config/brave-flags.conf \
+	"$PWD"/.config/electron-flags.conf \
+	"$PWD"/.config/electron25-flags.conf \
 	"$PWD"/.config/dunst \
 	"$PWD"/.config/gtk-3.0 \
 	"$PWD"/.config/gtk-4.0 \

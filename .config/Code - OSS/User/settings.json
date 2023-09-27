@@ -42,5 +42,6 @@
     "config": "bat"
   },
   "terminal.integrated.defaultProfile.linux": "zsh",
-  "window.zoomLevel": 1,
+  "terminal.integrated.gpuAcceleration": "off",
+  "window.titleBarStyle": "custom",
 }
