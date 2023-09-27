@@ -110,23 +110,19 @@ alias ls='eza -1  --icons'
 alias ll='eza -la --icons'
 alias ld='eza -lD --icons'
 
-alias in='sudo pacman -S' # install package
-alias un='sudo pacman -Rns' # uninstall package
-alias up='sudo pacman -Syu' # update system/package/aur
-alias pl='pacman -Qs' # list installed package
-alias pa='pacman -Ss' # list availabe package
-alias pc='sudo pacman -Sc' # remove unused cache
-alias po='pacman -Qtdq | sudo pacman -Rns -' # remove unused packages, also try > pacman -Qqd | pacman -Rsu --print -
-alias vc='code'  # gui code editor
-alias k=kubectl
-alias kubeseal="kubeseal --controller-namespace sealed-secrets"
+alias gpr='git pull -pr'
+alias gpu='git push'
+alias grbi='git rebase -i'
+alias grb='git rebase'
+alias k='kubectl'
 
 export GPG_TTY=$(tty)
 export GNUPGHOME=$HOME/.gnupg
 
 # Use gnome-keyring ssh-agent
 export GNOME_KEYRING_CONTROL=/run/user/1000/keyring
-export SSH_AUTH_SOCK=$XDG_RUNTIME_DIR/keyring/ssh
+# export SSH_AUTH_SOCK=$XDG_RUNTIME_DIR/keyring/ssh
+export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
