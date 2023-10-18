@@ -13,7 +13,6 @@ rm -rf \
 	~/.config/code-flags.conf \
 	~/.config/brave-flags.conf \
 	~/.config/electron-flags.conf \
-	~/.config/electron25-flags.conf \
 	~/.config/dunst \
 	~/.config/gtk-3.0 \
 	~/.config/gtk-4.0 \
@@ -43,10 +42,7 @@ ln -s \
 	"$PWD"/.config/albert \
 	"$PWD"/.config/autorandr \
 	"$PWD"/.config/autostart \
-	"$PWD"/.config/code-flags.conf \
 	"$PWD"/.config/brave-flags.conf \
-	"$PWD"/.config/electron-flags.conf \
-	"$PWD"/.config/electron25-flags.conf \
 	"$PWD"/.config/dunst \
 	"$PWD"/.config/gtk-3.0 \
 	"$PWD"/.config/gtk-4.0 \
@@ -72,9 +68,28 @@ ln -s \
 	"$PWD"/.config/yay \
 	~/.config
 
+electron_version=$(electron --version | sed -E 's/v([0-9]+)\..*/\1/')
+rm -rf \
+	~/.config/electron${electron_version}-flags.conf \
+	~/.config/code-flags.conf \
+	~/.config/slack-flags.conf
+
+ln -s \
+	"$PWD"/.config/electron-flags.conf \
+	~/.config/electron${electron_version}-flags.conf
+
+ln -s \
+	"$PWD"/.config/electron-flags.conf \
+	~/.config/code-flags.conf
+
+ln -s \
+	"$PWD"/.config/electron-flags.conf \
+	~/.config/slack-flags.conf
+
 BACKUP_HOME="/mnt/BACKUP/home/xcalizorz"
 
 rm -rf \
+	~/.cache \
 	~/.cargo \
 	~/.docker \
 	~/.git \
@@ -86,12 +101,14 @@ rm -rf \
 	~/.config/OpenLens \
 	~/.config/Code \
 	~/.krew \
+	~/.local \
 	~/.pyenv \
 	~/.rbenv \
 	~/.rustup \
 	~/.ssh \
 	~/.terraform.d \
 	~/.terraform.versions \
+	~/.vscode \
 	~/bin \
 	~/Documents \
 	~/Downloads \
@@ -99,6 +116,7 @@ rm -rf \
 	~/go
 
 ln -s \
+	"$BACKUP_HOME"/.cache \
 	"$BACKUP_HOME"/.cargo \
 	"$BACKUP_HOME"/.docker \
 	"$BACKUP_HOME"/.git \
@@ -106,12 +124,14 @@ ln -s \
 	"$BACKUP_HOME"/.gnupg \
 	"$BACKUP_HOME"/.icons \
 	"$BACKUP_HOME"/.krew \
+	"$BACKUP_HOME"/.local \
 	"$BACKUP_HOME"/.pyenv \
 	"$BACKUP_HOME"/.rbenv \
 	"$BACKUP_HOME"/.rustup \
 	"$BACKUP_HOME"/.ssh \
 	"$BACKUP_HOME"/.terraform.d \
 	"$BACKUP_HOME"/.terraform.versions \
+	"$BACKUP_HOME"/.vscode \
 	"$BACKUP_HOME"/bin \
 	"$BACKUP_HOME"/Documents \
 	"$BACKUP_HOME"/Downloads \

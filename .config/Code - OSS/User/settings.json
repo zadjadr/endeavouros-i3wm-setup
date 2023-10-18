@@ -44,4 +44,18 @@
   "terminal.integrated.defaultProfile.linux": "zsh",
   "terminal.integrated.gpuAcceleration": "off",
   "window.titleBarStyle": "custom",
+  "window.menuBarVisibility": "toggle",
+  "editor.fontSize": 12,
+  "editor.scrollbar.vertical": "hidden",
+  "editor.scrollbar.verticalScrollbarSize": 0,
+  "security.workspace.trust.startupPrompt": "never",
+  "security.workspace.trust.enabled": false,
+  "editor.minimap.side": "left",
+  "extensions.autoUpdate": false,
+  "workbench.statusBar.visible": false,
+  "terminal.external.linuxExec": "kitty",
+  "terminal.explorerKind": "both",
+  "terminal.sourceControlRepositoriesKind": "both",
+  "telemetry.telemetryLevel": "off",
+  "window.zoomLevel": 1
 }

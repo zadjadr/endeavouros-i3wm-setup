@@ -13,7 +13,6 @@ git clone https://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/custom/p
 
 chsh -s $(which zsh)
 sudo chsh -s $(which zsh)
-
 rm -f ~/.zshrc ~/.zshenv ~/.zcompdump*
 
 ln -s \

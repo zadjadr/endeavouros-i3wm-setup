@@ -5,7 +5,6 @@
 ScrDir=`dirname $(realpath $0)`
 source $ScrDir/globalcontrol.sh
 dcoDir="$HOME/.config/hypr/wallbash"
-
 input_wall=$1
 cacheImg=$(basename "${input_wall}")
 
@@ -32,17 +31,17 @@ do
     appexe=`head -1 $tplt | cut -d '|' -f 2`
     target=`head -1 $tplt | cut -d '|' -f 3`
 
-    if [ "$EnableWallDcol" -eq 1 ] ; then
-        sed '1d' $tplt > $HOME/$target
-        for (( i=0 ; i<${dcolct} ; i++ ))
-        do
-            if [ -z "${dcol[i]}" ] ; then
-                dcol[i]="${dcol[i-1]}"
-            fi
-            sed -i "s/<dcol_${i}>/${dcol[i]}/g" $HOME/$target
-        done
-    fi
+    sed '1d' $tplt > $HOME/$target
+    for (( i=0 ; i<${dcolct} ; i++ ))
+    do
+        if [ -z "${dcol[i]}" ] ; then
+            dcol[i]="${dcol[i-1]}"
+        fi
+        sed -i "s/<dcol_${i}>/${dcol[i]}/g" $HOME/$target
+    done
 
-    $ScrDir/$appexe
+    if [ ! -z "$appexe" ] ; then
+        sh -c "ScrDir=`dirname $(realpath $0)` && $appexe"
+    fi
 done
 
