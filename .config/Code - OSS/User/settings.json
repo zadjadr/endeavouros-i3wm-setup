@@ -51,11 +51,12 @@
   "security.workspace.trust.startupPrompt": "never",
   "security.workspace.trust.enabled": false,
   "editor.minimap.side": "left",
-  "extensions.autoUpdate": false,
-  "workbench.statusBar.visible": false,
+  "extensions.autoUpdate": true,
+  "workbench.statusBar.visible": true,
   "terminal.external.linuxExec": "kitty",
   "terminal.explorerKind": "both",
   "terminal.sourceControlRepositoriesKind": "both",
   "telemetry.telemetryLevel": "off",
+  "explorer.confirmDragAndDrop": false,
   "window.zoomLevel": 1
 }

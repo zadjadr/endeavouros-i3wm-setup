@@ -3,7 +3,7 @@
     border-radius: 0px;
     font-family: "JetBrainsMono Nerd Font";
     font-weight: bold;
-    font-size: 11px;
+    font-size: 13px;
     min-height: 10px;
 }
 
@@ -16,7 +16,7 @@ window#waybar {
 tooltip {
     background: @main-bg;
     color: @main-fg;
-    border-radius: 7px;
+    border-radius: 9px;
     border-width: 0px;
 }
 
@@ -24,7 +24,7 @@ tooltip {
     box-shadow: none;
 	text-shadow: none;
     padding: 0px;
-    border-radius: 9px;
+    border-radius: 10px;
     margin-top: 3px;
     margin-bottom: 3px;
     padding-left: 3px;
@@ -38,8 +38,8 @@ tooltip {
     background: @wb-act-bg;
     color: @wb-act-fg;
     margin-left: 3px;
-    padding-left: 12px;
-    padding-right: 12px;
+    padding-left: 14px;
+    padding-right: 14px;
     margin-right: 3px;
     animation: gradient_f 20s ease-in infinite;
     transition: all 0.3s cubic-bezier(.55,-0.68,.48,1.682);
@@ -58,7 +58,7 @@ tooltip {
     box-shadow: none;
 	text-shadow: none;
     padding: 0px;
-    border-radius: 9px;
+    border-radius: 10px;
     margin-top: 3px;
     margin-bottom: 3px;
     padding-left: 3px;
@@ -72,8 +72,8 @@ tooltip {
     background: @wb-act-bg;
     color: @wb-act-color;
     margin-left: 3px;
-    padding-left: 12px;
-    padding-right: 12px;
+    padding-left: 14px;
+    padding-right: 14px;
     margin-right: 3px;
     animation: gradient_f 20s ease-in infinite;
     transition: all 0.3s cubic-bezier(.55,-0.68,.48,1.682);
@@ -88,6 +88,7 @@ tooltip {
     transition: all 0.3s cubic-bezier(.55,-0.68,.48,1.682);
 }
 
+#backlight,
 #battery,
 #bluetooth,
 #custom-cliphist,
@@ -119,9 +120,9 @@ tooltip {
     color: @main-fg;
     background: @main-bg;
     opacity: 1;
-    margin: 4px 0px 4px 0px;
-    padding-left: 4px;
-    padding-right: 4px;
+    margin: 5px 0px 5px 0px;
+    padding-left: 5px;
+    padding-right: 5px;
 }
 
 #workspaces,
@@ -130,37 +131,37 @@ tooltip {
 }
 
 #custom-r_end {
-    border-radius: 0px 21px 21px 0px;
-    margin-right: 9px;
+    border-radius: 0px 25px 25px 0px;
+    margin-right: 10px;
     padding-right: 3px;
 }
 
 #custom-l_end {
-    border-radius: 21px 0px 0px 21px;
-    margin-left: 9px;
+    border-radius: 25px 0px 0px 25px;
+    margin-left: 10px;
     padding-left: 3px;
 }
 
 #custom-sr_end {
     border-radius: 0px;
-    margin-right: 9px;
+    margin-right: 10px;
     padding-right: 3px;
 }
 
 #custom-sl_end {
     border-radius: 0px;
-    margin-left: 9px;
+    margin-left: 10px;
     padding-left: 3px;
 }
 
 #custom-rr_end {
-    border-radius: 0px 7px 7px 0px;
-    margin-right: 9px;
+    border-radius: 0px 9px 9px 0px;
+    margin-right: 10px;
     padding-right: 3px;
 }
 
 #custom-rl_end {
-    border-radius: 7px 0px 0px 7px;
-    margin-left: 9px;
+    border-radius: 9px 0px 0px 9px;
+    margin-left: 10px;
     padding-left: 3px;
 }
