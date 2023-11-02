@@ -23,6 +23,7 @@ rm -rf \
 	~/.config/kitty \
 	~/.config/foot \
 	~/.config/mako \
+	~/.config/neofetch \
 	~/.config/nitrogen \
 	~/.config/onedrive \
 	~/.config/polybar \
@@ -53,6 +54,7 @@ ln -s \
 	"$PWD"/.config/kitty \
 	"$PWD"/.config/foot \
 	"$PWD"/.config/mako \
+	"$PWD"/.config/neofetch \
 	"$PWD"/.config/nitrogen \
 	"$PWD"/.config/onedrive \
 	"$PWD"/.config/polybar \
@@ -158,3 +160,6 @@ touch ~/.meta/status/pomodoro
 rm -rf "$HOME"/.config/atuin
 mkdir -p "$HOME"/.config/atuin
 ln -s "$PWD"/.config/atuin/config.toml "$HOME"/.config/atuin/config.toml
+
+## dunstrc
+sudo chattr +i "$PWD"/.config/dunst/dunstrc

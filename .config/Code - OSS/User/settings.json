@@ -28,12 +28,11 @@
   },
   "terminal.integrated.enableMultiLinePasteWarning": false,
   "go.toolsManagement.autoUpdate": true,
-  "diffEditor.ignoreTrimWhitespace": false,
   "git.ignoreMissingGitWarning": true,
   "git.openRepositoryInParentFolders": "never",
   "[terraform]": {
     "editor.formatOnSave": true,
-    "editor.defaultFormatter": "hashicorp.terraform",
+    "editor.defaultFormatter": "hashicorp.terraform"
   },
   "terraform.codelens.referenceCount": true,
   "terraform.experimentalFeatures.prefillRequiredFields": true,
