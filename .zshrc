@@ -115,6 +115,7 @@ alias gpu='git push'
 alias grbi='git rebase -i'
 alias grb='git rebase'
 alias k='kubectl'
+alias vim='nvim'
 
 export GPG_TTY=$(tty)
 export GNUPGHOME=$HOME/.gnupg
