@@ -1,0 +1,58 @@
+
+[[keymaps]]
+command = "new_window"
+key = "Ctrl+Shift+N"
+
+[[keymaps]]
+command = "redo"
+mode = "i"
+key = "Ctrl+Z"
+
+[[keymaps]]
+command = "-redo"
+mode = "i"
+key = "Ctrl+Y"
+
+[[keymaps]]
+command = "undo"
+mode = "i"
+key = "Ctrl+Y"
+
+[[keymaps]]
+command = "-undo"
+mode = "i"
+key = "Ctrl+Z"
+
+[[keymaps]]
+command = "redo"
+mode = "i"
+key = "Ctrl+Shift+Y"
+
+[[keymaps]]
+command = "-redo"
+mode = "i"
+key = "Ctrl+Shift+Z"
+
+[[keymaps]]
+command = "palette"
+key = "Ctrl+P"
+
+[[keymaps]]
+command = "-palette"
+key = "Ctrl+P"
+
+[[keymaps]]
+command = "-up"
+mode = "i"
+when = "!list_focus"
+key = "Ctrl+P"
+
+[[keymaps]]
+command = "-down"
+mode = "i"
+when = "!list_focus"
+key = "Ctrl+N"
+
+[[keymaps]]
+command = "new_window_tab"
+key = "Ctrl+Alt+N"

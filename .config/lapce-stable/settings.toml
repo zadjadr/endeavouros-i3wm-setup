@@ -1,0 +1,16 @@
+[core]
+icon-theme = "Material Icons"
+color-theme = "Dark+"
+custom-titlebar = true
+
+[editor]
+font-family = "FiraCode Nerd Font"
+font-size = 14
+code-lens-font-size = 14
+tab-width = 2
+show-tab = false
+format-on-save = true
+modal-mode-relative-line-numbers = false
+
+[ui]
+font-size = 13

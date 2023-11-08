@@ -7,6 +7,8 @@ __pycache__
 
 .cache
 
+lapce.db
+
 # Sensitive
 .config/onedrive/*
 !.config/onedrive/config
