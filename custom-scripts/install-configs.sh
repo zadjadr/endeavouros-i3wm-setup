@@ -152,6 +152,9 @@ ln -s \
 rm -rf "$HOME/.config/Code/User/settings.json"
 ln -s "$PWD/.config/Code - OSS/User/settings.json" "$HOME/.config/Code/User/settings.json"
 
+rm -rf "$HOME/.config/Code - Insiders/User/settings.json"
+ln -s "$PWD/.config/Code - OSS/User/settings.json" "$HOME/.config/Code - Insiders/User/settings.json"
+
 ## i3rust-status custom blocks
 mkdir -p ~/.meta/status
 touch ~/.meta/status/pomodoro
