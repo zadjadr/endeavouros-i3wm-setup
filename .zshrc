@@ -74,7 +74,6 @@ zstyle ':omz:update' frequency 13
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git)
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.plugin.zsh
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
@@ -115,7 +114,7 @@ alias gpu='git push'
 alias grbi='git rebase -i'
 alias grb='git rebase'
 alias k='kubectl'
-alias vim='nvim'
+# alias vim='nvim'
 
 export GPG_TTY=$(tty)
 export GNUPGHOME=$HOME/.gnupg

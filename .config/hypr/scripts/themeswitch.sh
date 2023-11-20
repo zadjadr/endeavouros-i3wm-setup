@@ -71,11 +71,11 @@ fi
 
 # swwwallpaper
 getWall=`grep '^1|' $ThemeCtl | cut -d '|' -f 3`
-getWall=`eval echo $getWall`
-getName=`basename $getWall`
-ln -fs $getWall $ConfDir/swww/wall.set
-ln -fs $cacheDir/${ThemeSet}/${getName}.rofi $ConfDir/swww/wall.rofi
-ln -fs $cacheDir/${ThemeSet}/${getName}.blur $ConfDir/swww/wall.blur
+getWall=`eval echo "$getWall"`
+getName=`basename "$getWall"`
+ln -fs "$getWall" "$ConfDir/swww/wall.set"
+ln -fs "$cacheDir/${ThemeSet}/${getName}.rofi" "$ConfDir/swww/wall.rofi"
+ln -fs "$cacheDir/${ThemeSet}/${getName}.blur" "$ConfDir/swww/wall.blur"
 ${ScrDir}/swwwallpaper.sh
 
 if [ $? -ne 0 ] ; then
@@ -91,6 +91,10 @@ sed -i "/workbench.colorTheme/c\    \"workbench.colorTheme\": \"${ThemeSet}\"," 
 # kitty
 ln -fs $ConfDir/kitty/themes/${ThemeSet}.conf $ConfDir/kitty/themes/theme.conf
 killall -SIGUSR1 kitty
+
+
+# kvantum QT
+kvantummanager --set "${ThemeSet}"
 
 
 # qt5ct
@@ -115,5 +119,5 @@ hyprctl reload
 
 
 # rofi & waybar
-${ScrDir}/swwwallbash.sh $getWall
+${ScrDir}/swwwallbash.sh "$getWall"
 
