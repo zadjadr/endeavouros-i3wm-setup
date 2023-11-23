@@ -166,3 +166,6 @@ ln -s "$PWD"/.config/atuin/config.toml "$HOME"/.config/atuin/config.toml
 
 ## dunstrc
 sudo chattr +i "$PWD"/.config/dunst/dunstrc
+
+## Work
+ln -s /mnt/BACKUP/Documents/.config/ioki "$HOME"/.config
