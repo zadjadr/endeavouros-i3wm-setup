@@ -1,7 +1,6 @@
 #!/bin/bash
 #
 set -euxo pipefail
-exit 0
 DIR=/tmp/
 # Install external packages
 ## Install megasync
