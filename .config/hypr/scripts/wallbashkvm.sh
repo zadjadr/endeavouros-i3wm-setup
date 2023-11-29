@@ -14,11 +14,10 @@ else
     kvantummanager --set $gtkTheme
 fi
 
-# reload dolphin
+# reload pcmanfm
 
 a_ws=$(hyprctl -j activeworkspace | jq '.id')
-if [ "$(hyprctl -j clients | jq --arg wid "$a_ws" '.[] | select(.workspace.id == ($wid | tonumber)) | select(.class == "org.kde.dolphin") | .mapped')" == "true" ] ; then
-    pkill -x dolphin
-    dolphin &
+if [ "$(hyprctl -j clients | jq --arg wid "$a_ws" '.[] | select(.workspace.id == ($wid | tonumber)) | select(.class == "pcmanfm-qt") | .mapped')" == "true" ] ; then
+    pkill -x pcmanfm-qt
+    pcmanfm-qt &
 fi
-

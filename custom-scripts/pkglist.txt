@@ -3,7 +3,6 @@ chromium
 kitty
 fwupd
 gnome-disk-utility
-gnome-firmware
 gnome-keyring
 go
 gthumb
