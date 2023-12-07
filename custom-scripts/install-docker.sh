@@ -13,7 +13,7 @@ sudo tee /etc/docker/daemon.json > /dev/null <<EOT
             "runtimeArgs": []
         }
     },
-    "data-root": "/mnt/APPS/var/lib/docker",
+    "data-root": "/mnt/BACKUP/var/lib/docker",
     "ipv6": true,
     "fixed-cidr-v6": "fd00::/80"
 }

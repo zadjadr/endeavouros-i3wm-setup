@@ -1,7 +1,7 @@
 {
 	"aururl": "https://aur.archlinux.org",
 	"aurrpcurl": "https://aur.archlinux.org/rpc?",
-	"buildDir": "/mnt/APPS/cache/yay",
+	"buildDir": "/mnt/BACKUP/cache/yay",
 	"editor": "vim",
 	"editorflags": "",
 	"makepkgbin": "makepkg",
