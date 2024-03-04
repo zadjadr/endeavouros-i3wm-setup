@@ -155,3 +155,19 @@ eval "$(direnv hook zsh)"
 export TERM=xterm-256color
 
 export PASSWORD_STORE_DIR=/mnt/BACKUP/Documents/.config/ioki/terraform.envrc
+
+kubeconfig_path="$HOME/.kube/creds/"
+
+# Check if the directory exists
+if [ -d "$kubeconfig_path" ]; then
+  # List all files in the directory and concatenate them with ":"
+  kubeconfig_files=$(find "$kubeconfig_path" -mindepth 1 -type f| tr '\n' ':')
+
+  # Remove the trailing ":" if there are files
+  kubeconfig_files=${kubeconfig_files%:}
+
+  # Append the concatenated files to the KUBECONFIG environment variable
+  export KUBECONFIG="$kubeconfig_files"
+else
+  echo "Directory $kubeconfig_path does not exist."
+fi
