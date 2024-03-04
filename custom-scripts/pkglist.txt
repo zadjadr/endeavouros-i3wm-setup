@@ -1,6 +1,5 @@
 bolt
 chromium
-kitty
 fwupd
 gnome-disk-utility
 gnome-keyring
@@ -9,6 +8,7 @@ gthumb
 i3status-rust
 jq
 keepassxc
+kitty
 mpg123
 obsidian
 openvpn

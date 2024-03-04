@@ -10,10 +10,11 @@ rm -rf \
 	~/.config/albert \
 	~/.config/autorandr \
 	~/.config/autostart \
-	~/.config/code-flags.conf \
 	~/.config/brave-flags.conf \
-	~/.config/electron-flags.conf \
+	~/.config/code-flags.conf \
 	~/.config/dunst \
+	~/.config/electron-flags.conf \
+	~/.config/foot \
 	~/.config/gtk-3.0 \
 	~/.config/gtk-4.0 \
 	~/.config/hypr \
@@ -21,19 +22,19 @@ rm -rf \
 	~/.config/i3status-rust \
 	~/.config/kanshi \
 	~/.config/kitty \
-	~/.config/foot \
 	~/.config/mako \
 	~/.config/neofetch \
 	~/.config/nitrogen \
 	~/.config/onedrive \
+	~/.config/paru \
 	~/.config/polybar \
 	~/.config/ranger \
 	~/.config/rofi \
 	~/.config/sway \
 	~/.config/swaylock \
 	~/.config/swww \
-	~/.config/waybar \
 	~/.config/way-displays \
+	~/.config/waybar \
 	~/.config/wlogout \
 	~/.config/wofi \
 	~/.config/yay
@@ -45,6 +46,7 @@ ln -s \
 	"$PWD"/.config/autostart \
 	"$PWD"/.config/brave-flags.conf \
 	"$PWD"/.config/dunst \
+	"$PWD"/.config/foot \
 	"$PWD"/.config/gtk-3.0 \
 	"$PWD"/.config/gtk-4.0 \
 	"$PWD"/.config/hypr \
@@ -52,19 +54,19 @@ ln -s \
 	"$PWD"/.config/i3status-rust \
 	"$PWD"/.config/kanshi \
 	"$PWD"/.config/kitty \
-	"$PWD"/.config/foot \
 	"$PWD"/.config/mako \
 	"$PWD"/.config/neofetch \
 	"$PWD"/.config/nitrogen \
 	"$PWD"/.config/onedrive \
+	"$PWD"/.config/paru \
 	"$PWD"/.config/polybar \
 	"$PWD"/.config/ranger \
 	"$PWD"/.config/rofi \
 	"$PWD"/.config/sway \
 	"$PWD"/.config/swaylock \
 	"$PWD"/.config/swww \
-	"$PWD"/.config/waybar \
 	"$PWD"/.config/way-displays \
+	"$PWD"/.config/waybar \
 	"$PWD"/.config/wlogout \
 	"$PWD"/.config/wofi \
 	"$PWD"/.config/yay \

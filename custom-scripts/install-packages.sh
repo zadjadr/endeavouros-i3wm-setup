@@ -15,5 +15,6 @@ rustup default stable
 
 # Install AUR packages
 yay -S --removemake --cleanafter --norebuild --noredownload --noconfirm\
+    paru \
     visual-studio-code-bin \
     xournalpp
