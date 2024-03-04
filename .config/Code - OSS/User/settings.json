@@ -38,7 +38,8 @@
   "terraform.experimentalFeatures.prefillRequiredFields": true,
   "diffEditor.maxComputationTime": 0,
   "files.associations": {
-    "config": "bat"
+    "config": "bat",
+    "*.ndjson": "json"
   },
   "terminal.integrated.defaultProfile.linux": "zsh",
   "terminal.integrated.gpuAcceleration": "off",
@@ -57,5 +58,9 @@
   "terminal.sourceControlRepositoriesKind": "both",
   "telemetry.telemetryLevel": "off",
   "explorer.confirmDragAndDrop": false,
-  "window.zoomLevel": 1
+  "window.zoomLevel": 1,
+  "cSpell.userWords": [
+    "Triebwerk"
+  ],
+  "continue.telemetryEnabled": false
 }
