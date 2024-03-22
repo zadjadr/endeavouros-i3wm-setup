@@ -155,6 +155,7 @@ eval "$(direnv hook zsh)"
 export TERM=xterm-256color
 
 export PASSWORD_STORE_DIR=/mnt/BACKUP/Documents/.config/ioki/terraform.envrc
+export TF_PLUGIN_CACHE_DIR="$HOME/.terraform.d/plugin-cache"
 
 kubeconfig_path="$HOME/.kube/creds/"
 
