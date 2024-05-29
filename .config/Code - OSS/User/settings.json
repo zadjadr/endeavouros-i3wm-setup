@@ -62,5 +62,7 @@
   "cSpell.userWords": [
     "Triebwerk"
   ],
-  "continue.telemetryEnabled": false
+  "continue.telemetryEnabled": false,
+  "diffEditor.codeLens": true,
+  "continue.enableTabAutocomplete": false
 }

@@ -1,4 +1,4 @@
-1|Catppuccin-Mocha|~/.config/swww/Catppuccin-Mocha/aesthetic_deer.png
+1|Catppuccin-Mocha|~/.config/swww/Catppuccin-Mocha/escape_velocity.jpg
 0|Catppuccin-Latte|~/.config/swww/Catppuccin-Latte/jormungandr.jpg
 0|Decay-Green|~/.config/swww/Decay-Green/moments_before_desk.png
 0|Rose-Pine|~/.config/swww/Rose-Pine/mountain_dragon_pink.jpg

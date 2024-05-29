@@ -75,8 +75,7 @@ ln -s \
 electron_version=$(electron --version | sed -E 's/v([0-9]+)\..*/\1/')
 rm -rf \
 	~/.config/electron${electron_version}-flags.conf \
-	~/.config/code-flags.conf \
-	~/.config/slack-flags.conf
+	~/.config/code-flags.conf
 
 ln -s \
 	"$PWD"/.config/electron-flags.conf \
@@ -86,9 +85,12 @@ ln -s \
 	"$PWD"/.config/electron-flags.conf \
 	~/.config/code-flags.conf
 
-ln -s \
-	"$PWD"/.config/electron-flags.conf \
-	~/.config/slack-flags.conf
+ls -s \
+	"$PWD"/.vimrc \
+	~/.vimrc \
+
+# Deactivate wayland flags for Slack as it supports wayland now
+touch ~/.config/slack-flags.conf
 
 BACKUP_HOME="/mnt/BACKUP/home/xcalizorz"
 
