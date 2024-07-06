@@ -3,18 +3,26 @@
 # Creates a systemd.timer that updates the pacman mirrorlist
 # You might want to set your country in the reflector argument `-c`
 #
-set -euxo pipefail
+set -uxo pipefail
 
 sudo tee /usr/local/bin/10-update-mirrorlists.sh > /dev/null <<EOT
 #!/bin/bash
 #
 cp /etc/pacman.d/mirrorlist /etc/pacman.d/mirrorlist.bak
-if output=$(reflector --verbose -c DE --protocol https --sort rate --latest 10 --download-timeout 2 > /etc/pacman.d/mirrorlist); then
+if output=$(grep EndeavourOS -q /etc/lsb-release); then
+    eos-rankmirrors
+fi
+if output=$(which reflector); then
+    reflector --verbose -c DE --protocol https --sort rate --latest 10 --download-timeout 2 > /etc/pacman.d/mirrorlist
+    exit 0
+fi
+if output=$(which pacman-mirrors); then
+    pacman-mirrors -c Germany
     exit 0
 fi
 
-pacman-mirrors -c Germany
-
+echo "Failed to update pacman mirrors.."
+exit 1
 EOT
 
 sudo chmod +x /usr/local/bin/10-update-mirrorlists.sh

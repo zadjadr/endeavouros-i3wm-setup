@@ -71,6 +71,7 @@ packages-sway:
 
 system:
 	./custom-scripts/system.sh
+	./custom-scripts/install-mirrorlist-updater.sh
 
 work:
 	./custom-scripts/work/install-packages.sh
