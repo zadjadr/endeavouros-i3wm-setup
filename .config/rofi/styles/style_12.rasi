@@ -18,55 +18,57 @@ configuration {
 // Main //
 window {
     height:                      30em;
-    width:                       37em;
+    width:                       60em;
     transparency:                "real";
     fullscreen:                  false;
     enabled:                     true;
     cursor:                      "default";
     spacing:                     0em;
     padding:                     0em;
-    border-color:                @main-br;
-    background-color:            @main-bg;
+    border-color:                transparent;
+    background-color:            transparent;
 }
 mainbox {
     enabled:                     true;
     spacing:                     0em;
     padding:                     0em;
-    orientation:                 vertical;
-    children:                    [ "inputbar" , "dummybox" ];
-    background-color:            transparent;
-    background-image:            url("~/.cache/hyde/wall.blur", height);
-}
-dummybox {
-    padding:                     0.5em;
-    spacing:                     0em;
     orientation:                 horizontal;
-    children:                    [ "mode-switcher" , "listbox" ];
+    children:                    [ "listbox" , "inputbar" ];
     background-color:            transparent;
-    background-image:            transparent;
 }
 
 
 // Inputs //
 inputbar {
+    enabled:                     true;
+    width:                       30em;
+    spacing:                     0em;
+    padding:                     0em;
+    children:                    [ "entry" ];
+    expand:                      false;
+    background-color:            transparent;
+    background-image:            url("~/.cache/hyde/wall.quad", width);
+}
+entry {
     enabled:                     false;
 }
 
 
 // Lists //
 listbox {
-    padding:                     0em;
     spacing:                     0em;
+    padding:                     0em;
     children:                    [ "dummy" , "listview" , "dummy" ];
-    background-color:            transparent;
-    background-image:            transparent;
+    background-color:            @main-bg;
+    expand:                      false;
+    width:                       27em;
 }
 listview {
-    padding:                     1em;
-    spacing:                     0em;
     enabled:                     true;
+    spacing:                     0em;
+    padding:                     1em 2em 1em 2em;
     columns:                     1;
-    lines:                       7;
+    lines:                       8;
     cycle:                       true;
     dynamic:                     true;
     scrollbar:                   false;
@@ -76,33 +78,12 @@ listview {
     fixed-height:                true;
     fixed-columns:               true;
     cursor:                      "default";
-    background-color:            @main-bg;
+    background-color:            transparent;
     text-color:                  @main-fg;
-    border-radius:               1.5em;
 }
 dummy {
     background-color:            transparent;
-}
-
-
-// Modes //
-mode-switcher {
-    orientation:                 vertical;
-    width:                       6.8em;
-    enabled:                     true;
-    padding:                     3.2em 1em 3.2em 1em;
-    spacing:                     1em;
-    background-color:            transparent;
-}
-button {
-    cursor:                      pointer;
-    border-radius:               3em;
-    background-color:            @main-bg;
-    text-color:                  @main-fg;
-}
-button selected {
-    background-color:            @main-fg;
-    text-color:                  @main-bg;
+    expand:                      true;
 }
 
 
@@ -110,7 +91,7 @@ button selected {
 element {
     enabled:                     true;
     spacing:                     1em;
-    padding:                     0.4em;
+    padding:                     0.5em;
     cursor:                      pointer;
     background-color:            transparent;
     text-color:                  @main-fg;
@@ -120,7 +101,7 @@ element selected.normal {
     text-color:                  @select-fg;
 }
 element-icon {
-    size:                        3em;
+    size:                        2.2em;
     cursor:                      inherit;
     background-color:            transparent;
     text-color:                  inherit;

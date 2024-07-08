@@ -3,7 +3,7 @@ configuration {
     modi:                        "drun";
     show-icons:                  true;
     drun-display-format:         "{name}";
-    font:                        "JetBrainsMono Nerd Font 8";
+    font:                        "JetBrainsMono Nerd Font 9";
 }
 
 @theme "~/.config/rofi/theme.rasi"
@@ -13,75 +13,81 @@ configuration {
 window {
     enabled:                     true;
     fullscreen:                  false;
-    width:                       20%;
-    height:                      100%;
-    location:                    west;
-    x-offset:                    10%;
+    width:                       40em;
+    height:                      32.8em;
     transparency:                "real";
     cursor:                      "default";
-    spacing:                     0px;
-    padding:                     0px;
-    border:                      0px;
-    border-radius:               0px;
+    spacing:                     0em;
+    padding:                     0em;
+    border:                      0em;
+    border-radius:               0em;
     border-color:                transparent;
     background-color:            transparent;
+    background-image:            url("~/.config/rofi/assets/notification.png", width);
 }
 mainbox {
     enabled:                     true;
-    children:                    [ "listview" ];
-    background-color:            @main-bg;
+    orientation:                 vertical;
+    children:                    [ "dummy" , "frame" ];
+    background-color:            transparent;
 }
-
+dummy {
+    padding:                     6em;
+    expand:                      false;
+    background-color:            transparent;
+}
+frame {
+    enabled:                     true;
+    orientation:                 vertical;
+    children:                    [ "dummy2" , "listview" , "dummy2" ];
+    background-color:            transparent;
+}
 
 // Lists //
 listview {
     enabled:                     true;
+    spacing:                     0em;
+    padding:                     0em;
     columns:                     1;
-    spacing:                     17px;
-    padding:                     10px 20px 10px 20px;
+    lines:                       5;
     cycle:                       true;
-    dynamic:                     false;
+    dynamic:                     true;
     scrollbar:                   false;
     layout:                      vertical;
-    reverse:                     true;
+    reverse:                     false;
+    expand:                      false;
     fixed-height:                true;
     fixed-columns:               true;
     cursor:                      "default";
     background-color:            transparent;
-    text-color:                  @main-fg;
+}
+dummy2 {
+    spacing:                     0em;
+    padding:                     0em;
+    background-color:            transparent;
 }
 
 
 // Elements //
 element {
     enabled:                     true;
-    orientation:                 horizontal;
-    spacing:                     0px;
-    padding:                     0px;
-    border-radius:               0px;
+    spacing:                     1em;
+    padding:                     1em;
     cursor:                      pointer;
     background-color:            transparent;
     text-color:                  @main-fg;
+    border-radius:               0em;
 }
 element selected.normal {
     background-color:            @select-bg;
     text-color:                  @select-fg;
 }
 element-icon {
-    size:                        15%;
-    spacing:                     0px;
-    padding:                     0px;
-    cursor:                      inherit;
-    border-radius:               35px;
-    background-color:            transparent;
-    text-color:                  inherit;
+    enabled:                     false;
 }
 element-text {
-    enabled:                     true;
     vertical-align:              0.5;
-    horizontal-align:            0;
-    spacing:                     0px;
-    padding:                     0px;
+    horizontal-align:            0.5;
     cursor:                      inherit;
     background-color:            transparent;
     text-color:                  inherit;
