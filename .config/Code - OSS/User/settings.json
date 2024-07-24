@@ -64,5 +64,7 @@
   ],
   "continue.telemetryEnabled": false,
   "diffEditor.codeLens": true,
-  "continue.enableTabAutocomplete": false
+  "continue.enableTabAutocomplete": true,
+  "continue.showInlineTip": true,
+  "update.mode": "none"
 }
