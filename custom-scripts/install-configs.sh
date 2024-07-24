@@ -4,42 +4,7 @@
 # ./custom-scripts/install-configs.sh
 set -euxo pipefail
 
-# Replace configs
-rm -rf \
-	~/.config/alacritty \
-	~/.config/albert \
-	~/.config/autorandr \
-	~/.config/autostart \
-	~/.config/brave-flags.conf \
-	~/.config/code-flags.conf \
-	~/.config/dunst \
-	~/.config/electron-flags.conf \
-	~/.config/foot \
-	~/.config/gtk-3.0 \
-	~/.config/gtk-4.0 \
-	~/.config/hypr \
-	~/.config/i3 \
-	~/.config/i3status-rust \
-	~/.config/kanshi \
-	~/.config/kitty \
-	~/.config/mako \
-	~/.config/neofetch \
-	~/.config/nitrogen \
-	~/.config/onedrive \
-	~/.config/paru \
-	~/.config/polybar \
-	~/.config/ranger \
-	~/.config/rofi \
-	~/.config/sway \
-	~/.config/swaylock \
-	~/.config/swww \
-	~/.config/way-displays \
-	~/.config/waybar \
-	~/.config/wlogout \
-	~/.config/wofi \
-	~/.config/yay
-
-ln -s \
+ln -s -f \
 	"$PWD"/.config/alacritty \
 	"$PWD"/.config/albert \
 	"$PWD"/.config/autorandr \
@@ -53,7 +18,6 @@ ln -s \
 	"$PWD"/.config/i3 \
 	"$PWD"/.config/i3status-rust \
 	"$PWD"/.config/kanshi \
-	"$PWD"/.config/kitty \
 	"$PWD"/.config/mako \
 	"$PWD"/.config/neofetch \
 	"$PWD"/.config/nitrogen \
@@ -73,19 +37,16 @@ ln -s \
 	~/.config
 
 electron_version=$(electron --version | sed -E 's/v([0-9]+)\..*/\1/')
-rm -rf \
-	~/.config/electron${electron_version}-flags.conf \
-	~/.config/code-flags.conf
 
-ln -s \
+ln -s -f \
 	"$PWD"/.config/electron-flags.conf \
 	~/.config/electron${electron_version}-flags.conf
 
-ln -s \
+ln -s -f \
 	"$PWD"/.config/electron-flags.conf \
 	~/.config/code-flags.conf
 
-ls -s \
+ls -s -f \
 	"$PWD"/.vimrc \
 	~/.vimrc \
 
@@ -94,34 +55,7 @@ touch ~/.config/slack-flags.conf
 
 BACKUP_HOME="/mnt/BACKUP/home/xcalizorz"
 
-rm -rf \
-	~/.cache \
-	~/.cargo \
-	~/.docker \
-	~/.git \
-	~/.gitconfig \
-	~/.gnupg \
-	~/.icons \
-	~/.config/Slack \
-	~/.config/BraveSoftware \
-	~/.config/OpenLens \
-	~/.config/Code \
-	~/.krew \
-	~/.local \
-	~/.pyenv \
-	~/.rbenv \
-	~/.rustup \
-	~/.ssh \
-	~/.terraform.d \
-	~/.terraform.versions \
-	~/.vscode \
-	~/bin \
-	~/Documents \
-	~/Downloads \
-	~/Pictures \
-	~/go
-
-ln -s \
+ln -s -f \
 	"$BACKUP_HOME"/.cache \
 	"$BACKUP_HOME"/.cargo \
 	"$BACKUP_HOME"/.docker \
@@ -145,7 +79,7 @@ ln -s \
 	"$BACKUP_HOME"/go \
 	$HOME
 
-ln -s \
+ln -s -f \
 	"$BACKUP_HOME"/.config/Slack \
 	"$BACKUP_HOME"/.config/BraveSoftware \
 	"$BACKUP_HOME"/.config/OpenLens \
@@ -153,23 +87,23 @@ ln -s \
 	$HOME/.config
 
 ## VScode
-rm -rf "$HOME/.config/Code/User/settings.json"
-ln -s "$PWD/.config/Code - OSS/User/settings.json" "$HOME/.config/Code/User/settings.json"
+ln -s -f "$PWD/.config/Code - OSS/User/settings.json" "$HOME/.config/Code/User/settings.json"
 
-rm -rf "$HOME/.config/Code - Insiders/User/settings.json"
-ln -s "$PWD/.config/Code - OSS/User/settings.json" "$HOME/.config/Code - Insiders/User/settings.json"
+ln -s -f "$PWD/.config/Code - OSS/User/settings.json" "$HOME/.config/Code - Insiders/User/settings.json"
 
-## i3rust-status custom blocks
-mkdir -p ~/.meta/status
-touch ~/.meta/status/pomodoro
+## Kitty
+ln -s -f "$PWD"/.config/kitty/kitty.conf "$HOME/.config/kitty/kitty.conf"
 
 ## atuin
 rm -rf "$HOME"/.config/atuin
 mkdir -p "$HOME"/.config/atuin
-ln -s "$PWD"/.config/atuin/config.toml "$HOME"/.config/atuin/config.toml
+ln -s -f "$PWD"/.config/atuin/config.toml "$HOME"/.config/atuin/config.toml
 
 ## dunstrc
 sudo chattr +i "$PWD"/.config/dunst/dunstrc
 
 ## Work
-ln -s /mnt/BACKUP/Documents/.config/ioki "$HOME"/.config
+ln -s -f /mnt/BACKUP/Documents/.config/ioki "$HOME"/.config
+
+## Personal
+sudo ln -s -f "$PWD"/custom-scripts/only-for-me/lpass.sh /usr/local/bin/lpass
