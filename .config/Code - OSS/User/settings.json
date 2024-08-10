@@ -14,19 +14,30 @@
   "editor.formatOnSave": true,
   "[python]": {
     "editor.formatOnType": true,
-    "editor.defaultFormatter": "ms-python.black-formatter"
+    "editor.defaultFormatter": "ms-python.black-formatter",
   },
+  "python.analysis.typeCheckingMode": "strict",
   "extensions.ignoreRecommendations": true,
-  "[javascript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  "python.analysis.completeFunctionParens": true,
+  "python.analysis.inlayHints.variableTypes": true,
+  "python.analysis.inlayHints.functionReturnTypes": true,
+  "python.analysis.inlayHints.callArgumentNames": "partial",
+  "python.analysis.inlayHints.pytestParameters": true,
+  "python.analysis.fixAll": [
+    "source.convertImportFormat",
+    "source.unusedImports"
+  ],
+  "gopls": {
+    "ui.semanticTokens": true
   },
+  "python.analysis.autoFormatStrings": true,
   "[json]": {
     "editor.defaultFormatter": "vscode.json-language-features"
   },
   "[html]": {
     "editor.defaultFormatter": "vscode.html-language-features"
   },
-  "terminal.integrated.enableMultiLinePasteWarning": false,
+  "terminal.integrated.enableMultiLinePasteWarning": "auto",
   "go.toolsManagement.autoUpdate": true,
   "git.ignoreMissingGitWarning": true,
   "git.openRepositoryInParentFolders": "never",
