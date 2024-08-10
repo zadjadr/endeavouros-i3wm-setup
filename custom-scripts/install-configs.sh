@@ -19,6 +19,7 @@ rm -rf \
 	~/.config/gtk-4.0 \
 	~/.config/hyde \
 	~/.config/hypr \
+	~/.config/helix \
 	~/.config/i3 \
 	~/.config/i3status-rust \
 	~/.config/kanshi \
@@ -37,7 +38,8 @@ rm -rf \
 	~/.config/waybar \
 	~/.config/wlogout \
 	~/.config/wofi \
-	~/.config/yay
+	~/.config/yay \
+	~/.config/zed
 
 ln -s \
 	"$PWD"/.config/alacritty \
@@ -51,6 +53,7 @@ ln -s \
 	"$PWD"/.config/gtk-4.0 \
 	"$PWD"/.config/hyde \
 	"$PWD"/.config/hypr \
+	"$PWD"/.config/helix \
 	"$PWD"/.config/i3 \
 	"$PWD"/.config/i3status-rust \
 	"$PWD"/.config/kanshi \
@@ -70,6 +73,7 @@ ln -s \
 	"$PWD"/.config/wlogout \
 	"$PWD"/.config/wofi \
 	"$PWD"/.config/yay \
+	"$PWD"/.config/zed \
 	~/.config
 
 electron_version=$(electron --version | sed -E 's/v([0-9]+)\..*/\1/')
@@ -95,19 +99,19 @@ touch ~/.config/slack-flags.conf
 BACKUP_HOME="/mnt/BACKUP/home/xcalizorz"
 
 rm -rf \
-	~/.cache \
 	~/.cargo \
+	~/.config/BraveSoftware \
+	~/.config/Code \
+	~/.config/OpenLens \
+	~/.config/Slack \
 	~/.docker \
 	~/.git \
 	~/.gitconfig \
 	~/.gnupg \
 	~/.icons \
-	~/.config/Slack \
-	~/.config/BraveSoftware \
-	~/.config/OpenLens \
-	~/.config/Code \
 	~/.krew \
 	~/.local \
+	~/.megaCmd \
 	~/.pyenv \
 	~/.rbenv \
 	~/.rustup \
@@ -118,11 +122,10 @@ rm -rf \
 	~/bin \
 	~/Documents \
 	~/Downloads \
-	~/Pictures \
 	~/go
+	~/Pictures \
 
 ln -s \
-	"$BACKUP_HOME"/.cache \
 	"$BACKUP_HOME"/.cargo \
 	"$BACKUP_HOME"/.docker \
 	"$BACKUP_HOME"/.git \
@@ -131,6 +134,7 @@ ln -s \
 	"$BACKUP_HOME"/.icons \
 	"$BACKUP_HOME"/.krew \
 	"$BACKUP_HOME"/.local \
+	"$BACKUP_HOME"/.megaCmd \
 	"$BACKUP_HOME"/.pyenv \
 	"$BACKUP_HOME"/.rbenv \
 	"$BACKUP_HOME"/.rustup \
@@ -141,16 +145,16 @@ ln -s \
 	"$BACKUP_HOME"/bin \
 	"$BACKUP_HOME"/Documents \
 	"$BACKUP_HOME"/Downloads \
-	"$BACKUP_HOME"/Pictures \
 	"$BACKUP_HOME"/go \
-	$HOME
+	"$BACKUP_HOME"/Pictures \
+	"$HOME"
 
 ln -s \
-	"$BACKUP_HOME"/.config/Slack \
 	"$BACKUP_HOME"/.config/BraveSoftware \
-	"$BACKUP_HOME"/.config/OpenLens \
 	"$BACKUP_HOME"/.config/Code \
-	$HOME/.config
+	"$BACKUP_HOME"/.config/OpenLens \
+	"$BACKUP_HOME"/.config/Slack \
+	"$HOME"/.config
 
 ## VScode
 rm -rf "$HOME/.config/Code/User/settings.json"
