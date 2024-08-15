@@ -1,7 +1,4 @@
-cachyos-i3wm-settings
-cachyos-nord-gtk-theme-git
 cachyos-picom-config
-endeavouros-xfce4-terminal-colors
 feh
 fish
 galculator
@@ -10,7 +7,6 @@ i3blocks
 nano
 nano-syntax-highlighting
 picom
-waybar
 xed
 xfce4-terminal
 xterm

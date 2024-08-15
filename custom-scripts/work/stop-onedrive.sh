@@ -68,4 +68,4 @@ EOT
 sudo systemctl daemon-reload
 sudo systemctl enable stop-onedrive-before-unmount.service
 sudo systemctl start stop-onedrive-before-unmount.service
-sudo systemctl status stop-onedrive-before-unmount.service
+sudo systemctl status stop-onedrive-before-unmount.service | cat

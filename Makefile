@@ -3,12 +3,9 @@ SHELL := /usr/bin/env bash
 list:
 	@echo "0. make endeavour-default"
 	@echo "1. make packages"
-	@echo "1.1 make packages-i3"
-	@echo "1.2 make packages-sway"
 	@echo "2. make work"
-	@echo "3. make docker"
+	@echo "3. make containerd"
 	@echo "4. make k8s"
-	@echo "5. make albert"
 	@echo "6. make config"
 	@echo "7. make theme"
 	@echo "8. make zsh"
@@ -23,9 +20,6 @@ list:
 acpid:
 	./custom-scripts/install-acpid-events.sh $(display_name) $(autorandr_setting)
 
-albert:
-	./custom-scripts/install-albert.sh
-
 background:
 	./custom-scripts/set-backgrounds.sh $(backgrounds_path) $(background)
 
@@ -35,8 +29,8 @@ config:
 git:
 	./custom-scripts/git-config.sh $(name) $(email)
 
-docker:
-	./custom-scripts/install-docker.sh
+containerd:
+	./custom-scripts/install-containerd.sh
 
 endeavour-default:
 	./i3_install
@@ -44,7 +38,6 @@ endeavour-default:
 theme:
 	./custom-scripts/install-fonts.sh
 	./custom-scripts/install-cursor.sh
-	./custom-scripts/fix-icons.sh
 	killall picom
 
 fstab:
@@ -61,13 +54,6 @@ nvidia:
 packages:
 	./custom-scripts/install-packages.sh
 	./custom-scripts/install-external-packages.sh
-	./custom-scripts/install-timeshift.sh
-
-packages-i3:
-	./custom-scripts/install-packages-i3.sh
-
-packages-sway:
-	./custom-scripts/install-packages-sway.sh
 
 system:
 	./custom-scripts/system.sh

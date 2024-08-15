@@ -2,15 +2,9 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="$HOME/.oh-my-zsh"
-#ZSH=/usr/share/oh-my-zsh/
+ZSH="/usr/share/oh-my-zsh/"
 
-# Set name of the theme to load --- if set to "random", it will
-# load a random theme each time oh-my-zsh is loaded, in which case,
-# to know which specific one was loaded, run: echo $RANDOM_THEME
-# See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-#ZSH_THEME="powerlevel10k"
-source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
+#ZSH_THEME="agnoster"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -54,7 +48,7 @@ zstyle ':omz:update' frequency 7
 # Uncomment the following line if you want to disable marking untracked files
 # under VCS as dirty. This makes repository status check for large repositories
 # much, much faster.
-# DISABLE_UNTRACKED_FILES_DIRTY="true"
+DISABLE_UNTRACKED_FILES_DIRTY="true"
 
 # Uncomment the following line if you want to change the command execution time
 # stamp shown in the history command output.
@@ -75,7 +69,6 @@ zstyle ':omz:update' frequency 7
 plugins=(git)
 source /usr/share/zsh/plugins/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.plugin.zsh
-source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
@@ -84,31 +77,25 @@ source $ZSH/oh-my-zsh.sh
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
 
+ZSH_CACHE_DIR=$HOME/.cache/oh-my-zsh
+if [[ ! -d $ZSH_CACHE_DIR ]]; then
+  mkdir $ZSH_CACHE_DIR
+fi
+
+source $ZSH/oh-my-zsh.sh
+
 # Preferred editor for local and remote sessions
 export EDITOR='vim'
 export VISUAL='vim'
-
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
-
-# Compilation flags
-# export ARCHFLAGS="-arch x86_64"
 
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
 #
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
-alias  l='eza -l  --icons'
-alias ls='eza -1  --icons'
-alias ll='eza -la --icons'
-alias ld='eza -lD --icons'
+alias l='eza -l --icons'
+alias ls='eza -la --icons'
+alias lt='eza -a --tree --level=1 --icons'
 
 alias gpr='git pull -pr'
 alias gpu='git push'
@@ -117,23 +104,16 @@ alias grb='git rebase'
 alias k='kubectl'
 alias yay='paru'
 alias yeet='paru -Rcs'
-# alias vim='nvim'
+alias lpass='source lpass'
+alias bwu='bw unlock --passwordenv BW_PASSWORD'
 
 export GPG_TTY=$(tty)
 export GNUPGHOME=$HOME/.gnupg
 
 # Use gnome-keyring ssh-agent
-export GNOME_KEYRING_CONTROL=/run/user/1000/keyring
+# export GNOME_KEYRING_CONTROL=/run/user/1000/keyring
 # export SSH_AUTH_SOCK=$XDG_RUNTIME_DIR/keyring/ssh
 export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
-
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-
-#Display random gifs
-#kitten icat --align left $(find $HOME/.config/neofetch/gifs/ -name "*.gif" | sort -R | head -1)
-
-# pokemon-colorscripts --no-title -r 1,3,6
 
 # PATH
 export PATH=$HOME/.local/bin:$HOME/go/bin:$HOME/bin:$HOME/.cargo/bin:${KREW_ROOT:-$HOME/.krew}/bin:$HOME/.linkerd2/bin:$HOME/.local/pipx/venvs:$PATH
@@ -172,3 +152,5 @@ if [ -d "$kubeconfig_path" ]; then
 else
   echo "Directory $kubeconfig_path does not exist."
 fi
+
+eval "$(starship init zsh)"

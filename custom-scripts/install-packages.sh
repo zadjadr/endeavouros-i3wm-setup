@@ -10,11 +10,8 @@ set -euxo pipefail
 
 sudo pacman -Sy --needed --noconfirm - < custom-scripts/pkglist.txt
 
-# Install rust via rustup
-rustup default stable
-
 # Install AUR packages
 yay -S --removemake --cleanafter --norebuild --noredownload --noconfirm\
     paru \
-    visual-studio-code-bin \
+    visual-studio-code-insiders-bin \
     xournalpp
