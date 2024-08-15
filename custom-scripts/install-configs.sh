@@ -21,6 +21,7 @@ rm -rf \
 	~/.config/paru \
 	~/.config/rofi \
 	~/.config/swaync \
+	~/.config/starship.toml \
 	~/.config/waybar \
 	~/.config/wlogout \
 	~/.config/yay \
@@ -39,6 +40,7 @@ ln -s \
 	"$PWD"/.config/kanshi \
 	"$PWD"/.config/paru \
 	"$PWD"/.config/rofi \
+	"$PWD"/.config/starship.toml \
 	"$PWD"/.config/swaync \
 	"$PWD"/.config/waybar \
 	"$PWD"/.config/wlogout \
