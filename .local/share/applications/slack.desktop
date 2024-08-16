@@ -1,0 +1,11 @@
+[Desktop Entry]
+Name=Slack
+StartupWMClass=Slack
+Comment=Slack Desktop
+GenericName=Slack Client for Linux
+Exec=/usr/bin/brave --app=https://app.slack.com/client/T3CFEV690
+Icon=slack
+Type=Application
+StartupNotify=true
+Categories=GTK;Network;InstantMessaging;
+MimeType=x-scheme-handler/slack;
