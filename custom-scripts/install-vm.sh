@@ -1,7 +1,7 @@
 #!/bin/bash
 #
 
-sudo pacman -S libvirt qemu-base virt-manager iptables-nft firewalld
+sudo pacman -S libvirt qemu-full guestfs-tools virt-manager iptables-nft firewalld
 
 sudo tee /etc/libvirt/network.conf > /dev/null <<EOT
 # Master configuration file for the network driver.

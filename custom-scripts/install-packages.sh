@@ -12,6 +12,5 @@ sudo pacman -Sy --needed --noconfirm - < custom-scripts/pkglist.txt
 
 # Install AUR packages
 yay -S --removemake --cleanafter --norebuild --noredownload --noconfirm\
-    paru \
     visual-studio-code-insiders-bin \
     xournalpp
