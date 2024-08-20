@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+#
+# Cleans all status files created for the custom blocks of i3status-rust
+#
+find $HOME/.meta/status -type f -exec sh -c '>"{}"' \;

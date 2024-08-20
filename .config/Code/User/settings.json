@@ -55,7 +55,6 @@
   "terminal.integrated.defaultProfile.linux": "zsh",
   "window.titleBarStyle": "custom",
   "window.menuBarVisibility": "toggle",
-  "editor.fontSize": 12,
   "editor.scrollbar.vertical": "hidden",
   "editor.scrollbar.verticalScrollbarSize": 0,
   "security.workspace.trust.startupPrompt": "never",

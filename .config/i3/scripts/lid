@@ -1,0 +1,7 @@
+#!/bin/bash
+
+if grep -q closed /proc/acpi/button/lid/LID/state; then
+    /etc/acpi/actions/lid.sh button/lid LID close
+else
+    /etc/acpi/actions/lid.sh button/lid LID open
+fi

@@ -1,0 +1,93 @@
+# NOTE: this example targets the master branch of i3status-rust.
+#
+# For latest stable version, refer to
+# https://github.com/greshake/i3status-rust/blob/v0.22.0/examples/config.toml
+
+[icons]
+icons = "material-nf"
+
+[theme]
+theme = "dracula"
+[theme.overrides]
+idle_bg = "#383c4a"
+idle_fg = "#abcdef"
+
+[[block]]
+block = "custom"
+command = "cat ~/.meta/status/pomodoro"
+watch_files = ["~/.meta/status/pomodoro"]
+interval = "once"
+hide_when_empty = true
+[block.theme_overrides]
+idle_bg = "#ffa500"
+idle_fg = "#123456"
+
+[[block]]
+block = "custom"
+command = "echo   $(systemctl is-active docker.service)"
+interval = 60
+hide_when_empty = true
+[[block.click]]
+button = "left"
+cmd = "if [[ $(systemctl is-active docker.service) == active ]]; then kitty -e sudo systemctl stop docker; else kitty -e sudo systemctl start docker; fi"
+[block.theme_overrides]
+idle_bg = "#1c92f4"
+idle_fg = "#123456"
+
+[[block]]
+block = "custom"
+command = "cat ~/.meta/status/onedrive"
+watch_files = ["~/.meta/status/onedrive"]
+interval = "once"
+hide_when_empty = true
+[[block.click]]
+button = "left"
+cmd = "if [[ $(systemctl --user is-active onedrive.service) == active ]]; then kitty -e systemctl --user stop onedrive; else systemctl --user start onedrive; fi"
+[block.theme_overrides]
+idle_bg = "#ffa500"
+idle_fg = "#123456"
+
+[[block]]
+block = "custom"
+command = "~/.config/i3status-rust/scripts/onedrive"
+interval = 300
+hide_when_empty = true
+
+[[block]]
+block = "disk_space"
+path = "/"
+info_type = "available"
+alert_unit = "GB"
+interval = 600
+warning = 20.0
+alert = 10.0
+
+[[block]]
+block = "memory"
+interval = 15
+format = "$icon $mem_avail.eng(prefix:M)/$mem_total.eng(prefix:M)($mem_total_used_percents.eng(w:2))"
+
+[[block]]
+block = "sound"
+step_width = 5
+
+[[block]]
+block = "net"
+device = '^wl\S+|^en\S+'
+interval = 10
+[[block.click]]
+button = "left"
+cmd = "kitty -e nmtui"
+
+[[block]]
+block = "battery"
+format = " $percentage {$time |}"
+device = "DisplayDevice"
+driver = "upower"
+
+[[block]]
+block = "time"
+interval = 60
+[block.format]
+full = " $icon $timestamp.datetime(f:'%a %d.%m %R', l:de_DE) "
+short = " $icon $timestamp.datetime(f:%R) "
