@@ -1,0 +1,15 @@
+[Unit]
+Description=BuildKit (Rootless)
+PartOf=containerd.service
+
+[Service]
+Environment=PATH=/sbin:/sbin:/usr/sbin:/home/xcalizorz/.pyenv/bin:/home/xcalizorz/.local/bin:/home/xcalizorz/go/bin:/home/xcalizorz/bin:/home/xcalizorz/.cargo/bin:/home/xcalizorz/.krew/bin:/home/xcalizorz/.linkerd2/bin:/home/xcalizorz/.local/pipx/venvs:/sbin:/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/opt/cuda/bin:/opt/cuda/nsight_compute:/opt/cuda/nsight_systems/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl:/home/xcalizorz/.local/share/bin
+ExecStart="/usr/bin/containerd-rootless-setuptool.sh" nsenter -- buildkitd 
+ExecReload=/bin/kill -s HUP $MAINPID
+RestartSec=2
+Restart=always
+Type=simple
+KillMode=mixed
+
+[Install]
+WantedBy=default.target

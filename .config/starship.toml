@@ -9,3 +9,9 @@ disabled = true
 
 [username]
 disabled = true
+
+[python]
+disabled = true
+
+[terraform]
+disabled = true

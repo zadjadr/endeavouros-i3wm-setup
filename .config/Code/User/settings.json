@@ -77,5 +77,6 @@
   "continue.enableTabAutocomplete": true,
   "continue.showInlineTip": true,
   "update.mode": "none",
-  "workbench.sideBar.location": "right"
+  "workbench.sideBar.location": "right",
+  "window.experimentalControlOverlay": false
 }
