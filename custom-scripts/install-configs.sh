@@ -9,6 +9,7 @@ rm -rf \
 	~/.vimrc \
 	~/.Xresources \
 	~/.config/autostart \
+	~/.config/direnv \
 	~/.config/dunst \
 	~/.config/gtk-3.0 \
 	~/.config/gtk-4.0 \
@@ -27,6 +28,7 @@ rm -rf \
 
 ln -s \
 	"$PWD"/.config/autostart \
+	"$PWD"/.config/direnv \
 	"$PWD"/.config/dunst \
 	"$PWD"/.config/gtk-3.0 \
 	"$PWD"/.config/gtk-4.0 \
@@ -108,6 +110,8 @@ ln -s \
 ## VScode
 rm -rf "$HOME/.config/Code - Insiders/User/settings.json"
 ln -s "$PWD/.config/Code/User/settings.json" "$HOME/.config/Code - Insiders/User/settings.json"
+rm -rf "$HOME/.config/Code - OSS/User/settings.json"
+ln -s "$PWD/.config/Code/User/settings.json" "$HOME/.config/Code - OSS/User/settings.json"
 
 ## Kitty
 rm -rf "$HOME/.config/kitty/kitty.conf"
