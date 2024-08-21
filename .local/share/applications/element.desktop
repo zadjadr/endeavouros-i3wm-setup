@@ -3,7 +3,7 @@ Name=Element
 StartupWMClass=Element
 Comment=Element Desktop
 GenericName=Element Client for Linux
-Exec=/usr/bin/brave --app=https://app.element.io/
+Exec=/usr/bin/chromium --app=https://app.element.io/
 Icon=element
 Type=Application
 StartupNotify=true
