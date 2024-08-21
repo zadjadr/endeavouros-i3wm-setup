@@ -16,13 +16,11 @@
     "editor.formatOnType": true,
     "editor.defaultFormatter": "ms-python.black-formatter",
   },
-  "python.analysis.typeCheckingMode": "strict",
   "extensions.ignoreRecommendations": true,
   "python.analysis.completeFunctionParens": true,
   "python.analysis.inlayHints.variableTypes": true,
   "python.analysis.inlayHints.functionReturnTypes": true,
   "python.analysis.inlayHints.callArgumentNames": "partial",
-  "python.analysis.inlayHints.pytestParameters": true,
   "python.analysis.fixAll": [
     "source.convertImportFormat",
     "source.unusedImports"
@@ -77,5 +75,6 @@
   "continue.showInlineTip": true,
   "update.mode": "none",
   "workbench.sideBar.location": "right",
-  "window.experimentalControlOverlay": false
+  "window.experimentalControlOverlay": false,
+  "python.analysis.cacheLSPData": true
 }
