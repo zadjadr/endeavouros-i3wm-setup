@@ -8,7 +8,7 @@ current_value_percent=$((current_value * 100 / max_value))
 set_minimum_brightness() {
     new_value=$((max_value / 100))
     brightnessctl s "$new_value"
-    notify-send "󰃠 1%" -t 500
+    notify-send "1%" -t 500 --icon ~/.config/dunst/icons/brightness.svg
     exit 0
 }
 
@@ -23,7 +23,7 @@ if [ "$current_value_percent" -lt 5 ] && [[ "$1" == *"%"* ]]; then
     current_value=$(brightnessctl g)
     [ "$current_value" -eq 0 ] && set_minimum_brightness
     current_value_percent=$((current_value * 100 / max_value))
-    notify-send "󰃠 $current_value_percent %" -t 500
+    notify-send "$current_value_percent%" -t 500 --icon ~/.config/dunst/icons/brightness.svg
     exit 0
 fi
 
@@ -34,4 +34,4 @@ current_value=$(brightnessctl g)
 
 # Recalculate and notify the user of the current brightness percentage
 current_value_percent=$((current_value * 100 / max_value))
-notify-send "󰃠 $current_value_percent %" -t 500
+notify-send "$current_value_percent%" -t 500 --icon ~/.config/dunst/icons/brightness.svg
