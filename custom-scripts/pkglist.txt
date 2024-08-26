@@ -13,4 +13,3 @@ python-pipx
 seahorse
 siege
 vim
-kanshi

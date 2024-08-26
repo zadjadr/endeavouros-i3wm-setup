@@ -14,16 +14,6 @@ idle_fg = "#abcdef"
 
 [[block]]
 block = "custom"
-command = "cat ~/.meta/status/pomodoro"
-watch_files = ["~/.meta/status/pomodoro"]
-interval = "once"
-hide_when_empty = true
-[block.theme_overrides]
-idle_bg = "#ffa500"
-idle_fg = "#123456"
-
-[[block]]
-block = "custom"
 command = "echo   $(systemctl is-active docker.service)"
 interval = 60
 hide_when_empty = true

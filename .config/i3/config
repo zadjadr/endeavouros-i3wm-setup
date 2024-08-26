@@ -6,19 +6,17 @@
 set $mod Mod4
 
 # set font
-font pango:Cantarell 11
+font pango:Cantarell 12
 
 ### Runnig apps in background ###
 
 # run dunst
 exec_always --no-startup-id dunst &
 
-# set wallpaper with fed
-exec_always feh --no-fehbg --bg-scale $HOME/Pictures/wallpapers/Dynamic-Wallpapers/Dark/Fuji-Dark.png
+# launch monitor, background
+exec_always --no-startup-id $HOME/.config/i3/scripts/monitor.sh "$HOME/Pictures/wallpapers/Dynamic-Wallpapers/Dark/Fuji-Dark.png"
 
-# launch polybar
-exec_always --no-startup-id killall -q
-exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+# launch autotiling
 
 # run battery low warning
 exec_always --no-startup-id battery &
@@ -27,6 +25,9 @@ exec_always --no-startup-id battery &
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 exec --no-startup-id nm-applet
 exec --no-startup-id mega-sync
+exec --no-startup-id picom
+exec --no-startup-id autotiling
+exec --no-startup-id libinput-gestures-setup start
 
 ### Shortcuts ###
 
@@ -41,6 +42,7 @@ bindsym $mod+q kill
 # apps
 bindsym $mod+c exec "code-insiders"
 bindsym $mod+o exec "brave"
+bindsym $mod+n exec "pcmanfm"
 
 # change focus
 bindsym $mod+Left focus left
@@ -79,7 +81,7 @@ bindsym $mod+Shift+space floating toggle
 bindsym $mod+space focus mode_toggle
 
 # run lockscreen
-bindsym $mod+l exec lock
+bindsym $mod+l exec ~/.config/i3/scripts/lock.sh "$HOME/Pictures/wallpapers/Dynamic-Wallpapers/Dark/Fuji-Dark.png"
 
 # move workspaces between monitors
 # bindsym $mod+b move workspace to output right
@@ -94,27 +96,22 @@ bindsym $mod+l exec lock
 # launch desktop applications
 bindsym $mod+d exec "pkill rofi || $HOME/.local/share/bin/rofilaunch.sh d"
 # switch between desktop applications
-bindsym $mod+Tab exec "pkill rofi || $HOME/.local/share/bin/rofilaunch.sh w"
+# bindsym $mod+Tab exec "pkill rofi || $HOME/.local/share/bin/rofilaunch.sh w"
 
 # bindsym $mod+a exec "rofi -show window -no-default-config -config ~/.config/rofi/main.rasi"
 # bindsym $mod+d exec "rofi -show drun -no-default-config -config ~/.config/rofi/main.rasi"
 # bindsym $mod+s exec "rofi -show drun -no-default-config -config ~/.config/rofi/full_screen.rasi"
 # bindsym $mod+z exec "rofi -show  -modi ':rofi-bookmarks' -no-default-config -config ~/.config/rofi/main.rasi"
-bindsym $mod+x exec "rofi-powermenu"
+# bindsym $mod+x exec "rofi-powermenu"
 # bindsym $mod+c exec "rofi-screenshot"
 
 # take a screenshot
-bindsym Pause exec screenshot -sa
-bindsym Print exec screenshot -sf
+bindsym SHIFT+Print exec flameshot screen
+bindsym Print exec flameshot gui
 
 # brightness control
-exec_always --no-startup-id light -I
-bindsym XF86MonBrightnessUp exec light -A 2 && light -O && brightness &
-bindsym XF86MonBrightnessDown exec light -U 2 && light -O && brightness &
-
-# brightness control hdmi
-bindsym Ctrl+F7 exec brightness_hdmi down
-bindsym Ctrl+F8 exec brightness_hdmi up
+bindsym XF86MonBrightnessUp exec ~/.config/i3/scripts/brightness.sh "5%+"
+bindsym XF86MonBrightnessDown exec ~/.config/i3/scripts/brightness.sh "5%-"
 
 # audio control
 bindsym XF86AudioRaiseVolume exec --no-startup-id amixer -D pulse sset Master 5%+ && volume &
@@ -194,6 +191,18 @@ bindsym $mod+Shift+9    move container to workspace  $ws9
 bindsym $mod+Shift+0    move container to workspace  $ws10
 
 # move focused container to workspace with numpad keys
+bindcode $mod+Shift+87 	move container to workspace  $ws1
+bindcode $mod+Shift+88 	move container to workspace  $ws2
+bindcode $mod+Shift+89 	move container to workspace  $ws3
+bindcode $mod+Shift+83 	move container to workspace  $ws4
+bindcode $mod+Shift+84 	move container to workspace  $ws5
+bindcode $mod+Shift+85 	move container to workspace  $ws6
+bindcode $mod+Shift+79 	move container to workspace  $ws7
+bindcode $mod+Shift+80 	move container to workspace  $ws8
+bindcode $mod+Shift+81 	move container to workspace  $ws9
+bindcode $mod+Shift+90 	move container to workspace  $ws10
+
+# move focused container to workspace with numpad keys
 bindcode $mod+Shift+Mod2+87 	move container to workspace  $ws1
 bindcode $mod+Shift+Mod2+88 	move container to workspace  $ws2
 bindcode $mod+Shift+Mod2+89 	move container to workspace  $ws3
@@ -212,7 +221,20 @@ bindsym $mod+Shift+c reload
 bindsym $mod+Shift+r restart
 
 # exit i3 (logs you out of your X session)
-bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
+bindsym $mod+Shift+e mode "$mode_system"
+set $mode_system (l)ock, (e)xit, (s)uspend, (h)ibernate, (r)eboot, (Shift+s)hutdown
+mode "$mode_system" {
+    bindsym l exec --no-startup-id ~/.config/i3/scripts/lock.sh "$HOME/Pictures/wallpapers/Dynamic-Wallpapers/Dark/Fuji-Dark.png", mode "default"
+    bindsym s exec --no-startup-id systemctl suspend, mode "default"
+    bindsym e exec --no-startup-id i3-msg exit, mode "default"
+    bindsym h exec --no-startup-id systemctl hibernate, mode "default"
+    bindsym r exec --no-startup-id systemctl reboot, mode "default"
+    bindsym Shift+s exec --no-startup-id systemctl poweroff, mode "default"
+
+    # exit system mode: "Enter" or "Escape"
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+}
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
@@ -258,15 +280,39 @@ mode "$mode_autorandr" {
 default_border pixel 2
 
 #border colors
-client.focused #343746 #343746 #F8F8F2 #343746 #343746
-client.focused_inactive #343746 #343746 #F8F8F2 #21222C #21222C
-client.unfocused #343746 #343746 #F8F8F2 #21222C #21222C
+client.focused #ccccff #ccccff #F8F8F2 #ccccff #ccccff
+client.focused_inactive #ccccff #ccccff #F8F8F2 #21222C #21222C
+client.unfocused #ccccff #ccccff #F8F8F2 #21222C #21222C
 
 ### SETTINGS FOR i3 BAR ###
 
+# bar {
+#         mode invisible
+#         tray_output none
+# }
+
 bar {
-        mode invisible
-        tray_output none
+    font pango:Iosevka Nerd Font 10
+    status_command i3status-rs ~/.config/i3status-rust/config.toml
+    position top
+    # tray_output primary
+    tray_padding 2
+
+    # When strip_workspace_numbers is set to yes,
+    # any workspace that has a name of the form
+    # “[n][:][NAME]” will display only the name.
+    strip_workspace_numbers no
+    # strip_workspace_name no
+
+    colors {
+        separator #666666
+        background #222222
+        statusline #dddddd
+        focused_workspace #0088CC #0088CC #ffffff
+        active_workspace #333333 #333333 #ffffff
+        inactive_workspace #333333 #333333 #888888
+        urgent_workspace #2f343a #900000 #ffffff
+    }
 }
 
 ### SETTINGS FOR i3-gaps ###

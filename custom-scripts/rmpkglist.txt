@@ -1,5 +1,4 @@
 cachyos-picom-config
-feh
 fish
 galculator
 htop

@@ -1,3 +1,0 @@
-#!/bin/bash
-#
-i3lock --nofork --show-failed-attempts --image "/usr/share/backgrounds/1920x1080_106956.png"

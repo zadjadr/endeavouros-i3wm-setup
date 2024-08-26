@@ -9,17 +9,18 @@ rm -rf \
 	~/.vimrc \
 	~/.Xresources \
 	~/.config/autostart \
+	~/.config/autorandr \
 	~/.config/direnv \
 	~/.config/dunst \
 	~/.config/gtk-3.0 \
 	~/.config/gtk-4.0 \
 	~/.config/hypr \
 	~/.config/helix \
+	~/.config/i3 \
+	~/.config/i3status-rust \
 	~/.config/kanshi \
 	~/.config/onedrive \
 	~/.config/paru \
-	~/.config/rofi \
-	~/.config/swaync \
 	~/.config/starship.toml \
 	~/.config/waybar \
 	~/.config/wlogout \
@@ -28,18 +29,19 @@ rm -rf \
 
 ln -s \
 	"$PWD"/.config/autostart \
+	"$PWD"/.config/autorandr \
 	"$PWD"/.config/direnv \
 	"$PWD"/.config/dunst \
 	"$PWD"/.config/gtk-3.0 \
 	"$PWD"/.config/gtk-4.0 \
 	"$PWD"/.config/hypr \
 	"$PWD"/.config/helix \
+	"$PWD"/.config/i3 \
+	"$PWD"/.config/i3status-rust \
 	"$PWD"/.config/kanshi \
 	"$PWD"/.config/onedrive \
 	"$PWD"/.config/paru \
-	"$PWD"/.config/rofi \
 	"$PWD"/.config/starship.toml \
-	"$PWD"/.config/swaync \
 	"$PWD"/.config/waybar \
 	"$PWD"/.config/wlogout \
 	"$PWD"/.config/yay \

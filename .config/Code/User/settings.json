@@ -1,5 +1,5 @@
 {
-  "editor.fontFamily": "'FiraCode Nerd Font', 'CaskaydiaCove Nerd Font Mono', 'JetBrainsMono Nerd Font','mononoki Nerd Font'",
+  "editor.fontFamily": "'FiraCode Nerd Font','Iosevka Nerd Font','CaskaydiaCove Nerd Font Mono', 'JetBrainsMono Nerd Font','mononoki Nerd Font'",
   "editor.codeLensFontFamily": "'FiraCode Nerd Font', 'CaskaydiaCove Nerd Font Mono', 'JetBrainsMono Nerd Font','mononoki Nerd Font'",
   "editor.fontLigatures": false,
   "files.trimFinalNewlines": true,
@@ -51,7 +51,6 @@
     "*.ndjson": "json"
   },
   "terminal.integrated.defaultProfile.linux": "zsh",
-  "window.titleBarStyle": "custom",
   "window.menuBarVisibility": "toggle",
   "editor.scrollbar.vertical": "hidden",
   "editor.scrollbar.verticalScrollbarSize": 0,

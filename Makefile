@@ -3,8 +3,10 @@ SHELL := /usr/bin/env bash
 list:
 	@echo "0. make endeavour-default"
 	@echo "1. make packages"
+	@echo "1.1 make xpackages"
+	@echo "1.2 make waylandpackages"
 	@echo "2. make work"
-	@echo "3. make containerd"
+	@echo "3. make docker"
 	@echo "4. make k8s"
 	@echo "6. make config"
 	@echo "7. make theme"
@@ -29,8 +31,9 @@ config:
 git:
 	./custom-scripts/git-config.sh $(name) $(email)
 
-containerd:
+docker:
 	./custom-scripts/install-containerd.sh
+	./custom-scripts/install-docker.sh
 
 endeavour-default:
 	./i3_install
@@ -55,12 +58,19 @@ packages:
 	./custom-scripts/install-packages.sh
 	./custom-scripts/install-external-packages.sh
 
+xpackages:
+	./custom-scripts/install-specific-packages.sh "custom-scripts/xpkglist.txt"
+
+waylandpackages:
+	./custom-scripts/install-specific-packages.sh "custom-scripts/waylandpkglist.txt"
+
 system:
 	./custom-scripts/system.sh
 	./custom-scripts/install-mirrorlist-updater.sh
 
 work:
 	./custom-scripts/work/install-packages.sh
+	./custom-scripts/work/install-vm.sh
 	./custom-scripts/work/stop-onedrive.sh
 
 zsh:
