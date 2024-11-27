@@ -7,40 +7,48 @@ set -euxo pipefail
 # Replace configs
 rm -rf \
 	~/.vimrc \
-	~/.Xresources \
-	~/.config/autostart \
 	~/.config/autorandr \
+	~/.config/autostart \
 	~/.config/direnv \
 	~/.config/dunst \
+	~/.config/fastfetch \
 	~/.config/gtk-3.0 \
 	~/.config/gtk-4.0 \
-	~/.config/hypr \
 	~/.config/helix \
+	~/.config/hyde \
+	~/.config/hypr \
 	~/.config/i3 \
 	~/.config/i3status-rust \
 	~/.config/kanshi \
 	~/.config/onedrive \
 	~/.config/paru \
+	~/.config/pcmanfm \
+	~/.config/rofi \
 	~/.config/starship.toml \
 	~/.config/waybar \
 	~/.config/wlogout \
 	~/.config/yay \
+	~/.Xresources \
 	~/.config/zed
 
 ln -s \
-	"$PWD"/.config/autostart \
 	"$PWD"/.config/autorandr \
+	"$PWD"/.config/autostart \
 	"$PWD"/.config/direnv \
 	"$PWD"/.config/dunst \
+	"$PWD"/.config/fastfetch \
 	"$PWD"/.config/gtk-3.0 \
 	"$PWD"/.config/gtk-4.0 \
-	"$PWD"/.config/hypr \
 	"$PWD"/.config/helix \
+	"$PWD"/.config/hyde \
+	"$PWD"/.config/hypr \
 	"$PWD"/.config/i3 \
 	"$PWD"/.config/i3status-rust \
 	"$PWD"/.config/kanshi \
 	"$PWD"/.config/onedrive \
 	"$PWD"/.config/paru \
+	"$PWD"/.config/pcmanfm \
+	"$PWD"/.config/rofi \
 	"$PWD"/.config/starship.toml \
 	"$PWD"/.config/waybar \
 	"$PWD"/.config/wlogout \
@@ -136,9 +144,5 @@ sudo ln -s -f "$PWD"/custom-scripts/only-for-me/lpass.sh /usr/local/bin/lpass
 
 mkdir -p "$HOME"/.local/share/applications
 ln -s \
-	"$PWD"/.local/share/applications/element.desktop \
 	"$PWD"/.local/share/applications/slack.desktop \
 	"$HOME"/.local/share/applications/
-
-ln -s \
-	"$PWD"
