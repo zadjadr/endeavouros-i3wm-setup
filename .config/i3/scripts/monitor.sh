@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Get the list of connected monitors
-connected_monitors=$(xrandr --listmonitors | awk 'NR>1 {print $4}')
+connected_monitors=$(xrandr | grep " connected" | cut -d ' ' -f1)
 
 # Function to disable all monitors except the specified one
 disable_others() {
@@ -21,16 +21,28 @@ enable_and_scale() {
     xrandr --output "$monitor" --scale "$scale"
 }
 
+# Check if DP-4 is connected
+if echo "$connected_monitors" | grep -q "^DP-4$"; then
+    disable_others "DP-4"
+    enable_and_scale "DP-4" "1.1x1.1"
+
 # Check if DP-4-3 is connected
-if echo "$connected_monitors" | grep -q "^DP-4-3$"; then
+elif echo "$connected_monitors" | grep -q "^DP-4-3$"; then
     disable_others "DP-4-3"
     enable_and_scale "DP-4-3" "1.1x1.1"
+# Check if DP-2 is connected
+elif echo "$connected_monitors" | grep -q "^DP-2$"; then
+    disable_others "DP-2"
+    enable_and_scale "DP-2" "1.1x1.1"
+# Check if DP-3 is connected
+elif echo "$connected_monitors" | grep -q "^DP-3$"; then
+    disable_others "DP-3"
+    enable_and_scale "DP-3" "1.1x1.1"
 
 # Check if eDP-1 is connected
 elif echo "$connected_monitors" | grep -q "^eDP-1$"; then
     disable_others "eDP-1"
     enable_and_scale "eDP-1" "1.5x1.5"
-
 fi
 
 # Set the wallpaper

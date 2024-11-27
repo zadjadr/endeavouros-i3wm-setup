@@ -110,8 +110,8 @@ bindsym SHIFT+Print exec flameshot screen
 bindsym Print exec flameshot gui
 
 # brightness control
-bindsym XF86MonBrightnessUp exec ~/.config/i3/scripts/brightness.sh "5%+"
-bindsym XF86MonBrightnessDown exec ~/.config/i3/scripts/brightness.sh "5%-"
+bindsym XF86MonBrightnessUp exec ~/.config/i3/scripts/brightness -brightness "5%+"
+bindsym XF86MonBrightnessDown exec ~/.config/i3/scripts/brightness -brightness "5%-"
 
 # audio control
 bindsym XF86AudioRaiseVolume exec --no-startup-id amixer -D pulse sset Master 5%+ && volume &
@@ -153,6 +153,7 @@ bindsym $mod+6    workspace  $ws6
 bindsym $mod+7    workspace  $ws7
 bindsym $mod+8    workspace  $ws8
 bindsym $mod+9    workspace  $ws9
+bindsym $mod+0    workspace  $ws10
 
 # switch to workspace with numpad keys
 bindcode $mod+87 workspace $ws1

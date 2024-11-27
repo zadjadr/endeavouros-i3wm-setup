@@ -14,12 +14,12 @@ idle_fg = "#abcdef"
 
 [[block]]
 block = "custom"
-command = "echo   $(systemctl is-active docker.service)"
+command = "echo 📦  $(systemctl is-active containerd.service)"
 interval = 60
 hide_when_empty = true
 [[block.click]]
 button = "left"
-cmd = "if [[ $(systemctl is-active docker.service) == active ]]; then kitty -e sudo systemctl stop docker; else kitty -e sudo systemctl start docker; fi"
+cmd = "if [[ $(systemctl is-active containerd.service) == active ]]; then kitty -e sudo systemctl stop containerd; else kitty -e sudo systemctl start containerd; fi"
 [block.theme_overrides]
 idle_bg = "#1c92f4"
 idle_fg = "#123456"
@@ -43,14 +43,14 @@ command = "~/.config/i3status-rust/scripts/onedrive"
 interval = 300
 hide_when_empty = true
 
-[[block]]
-block = "disk_space"
-path = "/"
-info_type = "available"
-alert_unit = "GB"
-interval = 600
-warning = 20.0
-alert = 10.0
+# [[block]]
+# block = "disk_space"
+# path = "/"
+# info_type = "available"
+# alert_unit = "GB"
+# interval = 600
+# warning = 20.0
+# alert = 10.0
 
 [[block]]
 block = "memory"

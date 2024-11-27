@@ -12,3 +12,4 @@ lapce.db
 # Sensitive
 .config/onedrive/*
 !.config/onedrive/config
+.config/pulse/cookie

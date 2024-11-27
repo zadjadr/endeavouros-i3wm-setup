@@ -48,7 +48,8 @@
   "diffEditor.maxComputationTime": 0,
   "files.associations": {
     "config": "bat",
-    "*.ndjson": "json"
+    "*.ndjson": "json",
+    "*.jinja": "jinja-shell"
   },
   "terminal.integrated.defaultProfile.linux": "zsh",
   "window.menuBarVisibility": "toggle",
@@ -64,7 +65,7 @@
   "terminal.sourceControlRepositoriesKind": "both",
   "telemetry.telemetryLevel": "off",
   "explorer.confirmDragAndDrop": false,
-  "window.zoomLevel": 1,
+  "window.zoomLevel": -1.5,
   "cSpell.userWords": [
     "Triebwerk"
   ],
