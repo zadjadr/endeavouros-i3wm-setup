@@ -142,6 +142,7 @@ ln -s /mnt/BACKUP/Documents/.config/ioki "$HOME"/.config
 ## Personal
 sudo ln -s -f "$PWD"/custom-scripts/only-for-me/lpass.sh /usr/local/bin/lpass
 
+rm -rf "$HOME"/.local/share/applications
 mkdir -p "$HOME"/.local/share/applications
 ln -s \
 	"$PWD"/.local/share/applications/slack.desktop \

@@ -35,7 +35,7 @@
   "[html]": {
     "editor.defaultFormatter": "vscode.html-language-features"
   },
-  "terminal.integrated.enableMultiLinePasteWarning": false,
+  "terminal.integrated.enableMultiLinePasteWarning": "never",
   "go.toolsManagement.autoUpdate": true,
   "git.ignoreMissingGitWarning": true,
   "git.openRepositoryInParentFolders": "never",

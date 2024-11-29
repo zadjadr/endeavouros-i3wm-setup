@@ -12,4 +12,5 @@ python
 python-pipx
 seahorse
 siege
+signal-desktop
 vim
