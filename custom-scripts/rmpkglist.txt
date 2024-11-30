@@ -1,3 +1,4 @@
+alacritty
 cachyos-picom-config
 fish
 galculator
@@ -9,3 +10,4 @@ picom
 xed
 xfce4-terminal
 xterm
+yay

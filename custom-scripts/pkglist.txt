@@ -2,8 +2,10 @@ base-devel
 bolt
 brave-browser
 eza
+flameshot
 fwupd
 gnome-disk-utility
+gnome-keyring
 go
 gthumb
 jq
@@ -11,6 +13,8 @@ keepassxc
 kitty
 mpg123
 obsidian
+paru
+polkit-gnome
 python
 python-pipx
 seahorse

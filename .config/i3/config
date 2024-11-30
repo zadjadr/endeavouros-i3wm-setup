@@ -25,10 +25,9 @@ exec_always --no-startup-id battery &
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 exec --no-startup-id nm-applet
 exec --no-startup-id mega-sync
-exec --no-startup-id picom
 exec --no-startup-id autotiling
 exec --no-startup-id libinput-gestures-setup start
-exec --no-startup-id gpgconf --launch gpg-agent
+# exec --no-startup-id gpgconf --launch gpg-agent
 exec --no-startup-id $HOME/.local/share/bin/polkitkdeauth.sh
 
 ### Shortcuts ###
@@ -43,7 +42,8 @@ bindsym $mod+q kill
 
 # apps
 bindsym $mod+c exec "code-insiders"
-bindsym $mod+o exec "brave"
+bindsym $mod+o exec "prime-run brave"
+bindsym $mod+b exec "prime-run obs"
 bindsym $mod+n exec "pcmanfm"
 
 # change focus

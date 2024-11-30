@@ -12,6 +12,7 @@ rm -rf \
 	~/.config/direnv \
 	~/.config/dunst \
 	~/.config/fastfetch \
+	~/.config/flameshot \
 	~/.config/gtk-3.0 \
 	~/.config/gtk-4.0 \
 	~/.config/helix \
@@ -37,6 +38,7 @@ ln -s \
 	"$PWD"/.config/direnv \
 	"$PWD"/.config/dunst \
 	"$PWD"/.config/fastfetch \
+	"$PWD"/.config/flameshot \
 	"$PWD"/.config/gtk-3.0 \
 	"$PWD"/.config/gtk-4.0 \
 	"$PWD"/.config/helix \

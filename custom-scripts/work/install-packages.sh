@@ -6,6 +6,7 @@ set -euxo pipefail
 sudo pacman -Sy --needed --noconfirm \
     atuin \
     direnv \
+    obs-studio \
     pass \
     pyenv \
     ruby \

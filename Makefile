@@ -41,6 +41,7 @@ endeavour-default:
 theme:
 	./custom-scripts/install-fonts.sh
 	./custom-scripts/install-cursor.sh
+	./custom-scripts/install-theme.sh
 	./custom-scripts/fix-icons.sh
 	killall picom
 
