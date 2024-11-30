@@ -12,7 +12,7 @@ sudo "$SCRIPT_DIR"/fix.sh
 rm -rf "$SCRIPT_DIR"
 
 ## fix hardcoded paths to tray icons
-yay -S --removemake --cleanafter --norebuild --noredownload --noconfirm \
+paru -S --removemake --cleanafter --norebuild --noredownload --noconfirm \
     hardcode-tray
 
 sudo -E hardcode-tray --conversion-tool RSVGConvert --size 24 --theme Papirus-Dark

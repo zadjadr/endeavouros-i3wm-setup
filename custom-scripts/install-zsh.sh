@@ -3,7 +3,7 @@ set -euxo pipefail
 
 sudo pacman -Sy --needed --noconfirm zsh zsh-completions
 
-yay -S --removemake --cleanafter --norebuild --noredownload --noconfirm \
+paru -S --removemake --cleanafter --norebuild --noredownload --noconfirm \
     oh-my-zsh-git \
     starship \
     zsh-fast-syntax-highlighting \

@@ -3,7 +3,7 @@
 set -euxo pipefail
 
 # Install AUR packages
-yay -S --removemake --cleanafter --norebuild --noredownload --noconfirm \
+paru -S --removemake --cleanafter --norebuild --noredownload --noconfirm \
     timeshift-bin
 
 ## Setup timeshift

@@ -9,5 +9,5 @@ sudo pacman -Sy --needed --noconfirm - < custom-scripts/k8s.list
 go install sigs.k8s.io/kind@latest
 
 ## Others
-yay -S --removemake --cleanafter --norebuild --noredownload --noconfirm \
+paru -S --removemake --cleanafter --norebuild --noredownload --noconfirm \
     openlens-bin

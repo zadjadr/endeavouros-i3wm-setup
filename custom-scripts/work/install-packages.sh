@@ -19,7 +19,7 @@ for pak in pipenv ruff salt-lint black; do
 done
 
 # Install AUR packages
-yay -S --removemake --cleanafter --norebuild --noredownload --noconfirm \
+paru -S --removemake --cleanafter --norebuild --noredownload --noconfirm \
     onedrive-abraunegg \
     tfswitch-bin \
 
