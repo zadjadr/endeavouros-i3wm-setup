@@ -1,3 +1,4 @@
 autorandr
 autotiling
 arandr
+i3status-rust

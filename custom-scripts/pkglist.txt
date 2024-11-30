@@ -1,4 +1,7 @@
+base-devel
 bolt
+brave-browser
+eza
 fwupd
 gnome-disk-utility
 go
@@ -12,5 +15,4 @@ python
 python-pipx
 seahorse
 siege
-signal-desktop
 vim

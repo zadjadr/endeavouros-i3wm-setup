@@ -120,12 +120,12 @@ ln -s \
 ## VScode
 rm -rf "$HOME/.config/Code - Insiders/User/settings.json"
 ln -s "$PWD/.config/Code/User/settings.json" "$HOME/.config/Code - Insiders/User/settings.json"
-rm -rf "$HOME/.config/Code - OSS/User/settings.json"
-ln -s "$PWD/.config/Code/User/settings.json" "$HOME/.config/Code - OSS/User/settings.json"
 
 ## Kitty
 rm -rf "$HOME/.config/kitty/kitty.conf"
 ln -s "$PWD"/.config/kitty/kitty.conf "$HOME/.config/kitty/kitty.conf"
+rm -rf "$HOME/.config/kitty/theme.conf"
+ln -s "$PWD"/.config/kitty/theme.conf "$HOME/.config/kitty/theme.conf"
 
 ## atuin
 rm -rf "$HOME"/.config/atuin
@@ -147,3 +147,5 @@ mkdir -p "$HOME"/.local/share/applications
 ln -s \
 	"$PWD"/.local/share/applications/slack.desktop \
 	"$HOME"/.local/share/applications/
+
+mkdir -p "$HOME"/.meta/status

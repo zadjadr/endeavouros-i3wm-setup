@@ -9,6 +9,7 @@ sudo pacman -Sy --needed --noconfirm \
     pass \
     pyenv \
     ruby \
+    signal-desktop \
     sops
 
 # Install pip packages
