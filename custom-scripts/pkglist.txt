@@ -1,6 +1,5 @@
 base-devel
 bolt
-brave-browser
 eza
 flameshot
 fwupd
@@ -11,9 +10,11 @@ gthumb
 jq
 keepassxc
 kitty
+libgnome-keyring
 mpg123
 obsidian
 paru
+pcmanfm
 polkit-gnome
 python
 python-pipx

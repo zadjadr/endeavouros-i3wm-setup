@@ -121,7 +121,7 @@ ln -s \
 
 ## VScode
 rm -rf "$HOME/.config/Code - Insiders/User/settings.json"
-ln -s "$PWD/.config/Code/User/settings.json" "$HOME/.config/Code - Insiders/User/settings.json"
+# ln -s "$PWD/.config/Code/User/settings.json" "$HOME/.config/Code - Insiders/User/settings.json"
 
 ## Kitty
 rm -rf "$HOME/.config/kitty/kitty.conf"
@@ -151,3 +151,8 @@ ln -s \
 	"$HOME"/.local/share/applications/
 
 mkdir -p "$HOME"/.meta/status
+
+rm -f "$HOME"/.config/libinput-gestures.conf
+ln -s \
+	"$PWD"/.config/libinput-gestures.conf \
+	"$HOME"/.config

@@ -1,4 +1,6 @@
 autorandr
 autotiling
 arandr
+brightnessctl
 i3status-rust
+xclip

@@ -104,6 +104,8 @@ alias grb='git rebase'
 alias gs='git switch'
 alias gst='git stash'
 alias k='kubectl'
+alias tf='terraform'
+
 alias pbcopy='xclip -selection clipboard'
 alias yay='paru'
 alias yeet='paru -Rcs'
@@ -139,6 +141,9 @@ export TERM=xterm-256color
 
 export PASSWORD_STORE_DIR=/mnt/BACKUP/Documents/.config/ioki/terraform.envrc
 export TF_PLUGIN_CACHE_DIR="$HOME/.terraform.d/plugin-cache"
+
+# Opt out of all Hashicorp products like Terraform
+export CHECKPOINT_DISABLE=1
 
 kubeconfig_path="$HOME/.kube/creds/"
 

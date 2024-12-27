@@ -9,8 +9,8 @@ paru -S --removemake --cleanafter --norebuild --noredownload --noconfirm \
     zsh-fast-syntax-highlighting \
     zsh-autosuggestions
 
-chsh -s $(which zsh)
-sudo chsh -s $(which zsh)
+chsh -s /bin/zsh
+sudo chsh -s /bin/zsh
 rm -f ~/.zshrc ~/.zshenv ~/.zcompdump*
 
 ln -s \

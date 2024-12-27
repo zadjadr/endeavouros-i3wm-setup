@@ -42,8 +42,8 @@ bindsym $mod+q kill
 
 # apps
 bindsym $mod+c exec "code-insiders"
-bindsym $mod+o exec "prime-run brave"
-bindsym $mod+b exec "prime-run obs"
+bindsym $mod+o exec "brave"
+bindsym $mod+b exec "obs"
 bindsym $mod+n exec "pcmanfm"
 
 # change focus
