@@ -121,7 +121,7 @@ export GNUPGHOME=$HOME/.gnupg
 export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
 
 # PATH
-export PATH=$HOME/.local/bin:$HOME/go/bin:$HOME/bin:$HOME/.cargo/bin:${KREW_ROOT:-$HOME/.krew}/bin:$HOME/.linkerd2/bin:$HOME/.local/pipx/venvs:$PATH
+export PATH=$HOME/.local/bin:$HOME/go/bin:$HOME/bin:$HOME/bin/kubectl-plugins:$HOME/.cargo/bin:${KREW_ROOT:-$HOME/.krew}/bin:$HOME/.linkerd2/bin:$HOME/.local/pipx/venvs:$PATH
 
 # PYENV
 export PYENV_ROOT="$HOME/.pyenv"
