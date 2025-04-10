@@ -29,6 +29,7 @@ exec --no-startup-id autotiling
 exec --no-startup-id libinput-gestures-setup start
 # exec --no-startup-id gpgconf --launch gpg-agent
 exec --no-startup-id $HOME/.local/share/bin/polkitkdeauth.sh
+exec --no-startup-id $HOME/.local/share/bin/autossh.sh
 
 ### Shortcuts ###
 
